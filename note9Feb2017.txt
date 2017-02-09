@@ -1,0 +1,22 @@
+Meeting with Kate / Jimmy / Steve
+2 Feb 2017
+
+Decided to stop trying differential gene expression analysis because visual genes likely too lowly expressed in skin tissue to be significant for edgeR analysis. 
+Jenna / Jules to try Gfold and GO enrichment. If that doesn't work then give it a rest.
+Instead focus on on 'descriptive' results, e.g. what genes are present/absent for each organ? 
+FPKM (Fragments per Kilobase of transcript per Million) is a good descriptive measure within a sample, whereas TPM/CPM (Transcripts/Counts Per Million) are good for statistically comparason among samples.
+We will use FPKM.
+
+Things to do:
+1) Reassemble "all_tissues_contigs" (de nova assembly for reference sequence) using mRNA reads from eye (Jenna and Jules can do this)
+2) Use Jules' interpro-scan script to annotate the new all_tissues_contigs (Jules and Jimmy can do this)
+3) Use hisat2 to align reads from each organ to refenence (Jenna and Jimmy can do this)
+4) Visualise alignment using IGV (Jenna can do this)
+5) Use counts table (or bam file?) from hisat2 output in rsem for quantification (FPKM) (Jenna can do this!)
+6) Visualise results of rsem using heatmap of FPKM of candidate visual genes (Jenna needs help making heatmaps! Maybe Steve can help with this?)
+7) Can also create gene profiling for all organs (separated into quartiles, with FPKM at cut-off levels) (something for Jenna, Jimmy and Steve, I think)
+
+Sweet!
+
+
+
