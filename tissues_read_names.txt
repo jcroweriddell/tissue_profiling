@@ -1,0 +1,47 @@
+Eye (dowload here https://cloudstor.aarnet.edu.au/plus/index.php/s/o6HmjxsvFENEgu1)
+ALA_L1_1.fq
+ALA_L1_2.fq
+
+Testis:
+1_HAJ15ADXX_CAGATC_L001_R1.fastq.gz
+1_HAJ15ADXX_CAGATC_L001_R2.fastq.gz
+
+A. tenuis tail skin A2:
+2-A_TENIUS_LIGHT_TAIL_ANT_RIGHT_CAGATC_L002_R1_001.fastq.gz
+2-A_TENIUS_LIGHT_TAIL_ANT_RIGHT_CAGATC_L002_R2_001.fastq.gz
+
+A. tenuis tail skin BV:
+2-A_TENUIS_LIGHT_BV_TAIL_M_TTAGGC_L002_R1_001.fastq.gz
+2-A_TENUIS_LIGHT_BV_TAIL_M_TTAGGC_L002_R2_001.fastq.gz
+
+A. tenuis body skin:
+2-A_TENUIS_LIGHT_DORSAL_GCCAAT_L002_R1_001.fastq.gz
+2-A_TENUIS_LIGHT_DORSAL_GCCAAT_L002_R2_001.fastq.gz
+
+A. laevis, juvenile tail skin A2:
+2-JUB_A_LAEVIS_ANT]TAIL_RIGHT__ACAGTG_L002_R1_001.fastq.gz
+2-JUB_A_LAEVIS_ANT]TAIL_RIGHT__ACAGTG_L002_R2_001.fastq.gz
+
+A. laevis, juvenile tail skin BV:
+2-JUV_A_LAEVIS_VENTRAL_TAIL_ACTTGA_L002_R1_001.fastq.gz
+2-JUV_A_LAEVIS_VENTRAL_TAIL_ACTTGA_L002_R2_001.fastq.gz
+
+A. laevis, juvenile body skin:
+2-J_A_LAEVIS__BODY_DORSAL_RIGHT_CGATGT_L002_R1_001.fastq.gz
+2-J_A_LAEVIS__BODY_DORSAL_RIGHT_CGATGT_L002_R2_001.fastq.gz
+
+Liver:
+2_HAJ15ADXX_ACTTGA_L001_R1.fastq.gz
+2_HAJ15ADXX_ACTTGA_L001_R2.fastq.gz
+
+Heart:
+3_HAJ15ADXX_GATCAG_L001_R1.fastq.gz
+3_HAJ15ADXX_GATCAG_L001_R2.fastq.gz
+
+VMO:
+4_HAJ15ADXX_TAGCTT_L001_R1.fastq.gz
+4_HAJ15ADXX_TAGCTT_L001_R2.fastq.gz
+
+A. laevis KLS0468 tail A2:
+5_HAJ15ADXX_GGCTAC_L001_R1.fastq.gz
+5_HAJ15ADXX_GGCTAC_L001_R2.fastq.gz
