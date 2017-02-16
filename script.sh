@@ -59,12 +59,12 @@ for FQGZ in $data_dir/*R1*.fastq.gz
     echo "Finished trimming of "$FQGZ" "
     
     # Use RSEM to align trimmed reads against our reference and calculate expression levels (TPM and FPKM)
-    echo "Starting to calculate expression lvels of "$FQGZ" "
+    echo "Starting to calculate expression levels of "$FQGZ" "
     rsem-calculate-expression --bowtie2 -p 8 --paired-end \
-    $output_dir/"$(basename $FQGZ _R1.fastq.gz)".trimed1.fq.gz \
-    $output_dir/"$(basename $FQGZ _R1.fastq.gz)".trimed2.fq.gz \
-    $genome_prefix \
-    $output_dir/"$(basename $FQGZ _R1.fastq.gz)".rsem_12tissues
+      $output_dir/"$(basename $FQGZ _R1.fastq.gz)".trimed1.fq.gz \
+      $output_dir/"$(basename $FQGZ _R1.fastq.gz)".trimed2.fq.gz \
+      $genome_prefix \
+      $output_dir/"$(basename $FQGZ _R1.fastq.gz)".rsem_12tissues
     echo "Finished calculating expression levels of "$FQGZ" "
   
     # Stats
