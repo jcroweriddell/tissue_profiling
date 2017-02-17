@@ -73,26 +73,4 @@ for FQGZ in $data_dir/*R1*.fastq.gz
     
 done
 
-## VISUALISATION: use R and RSEM to visualise results
-
-## load our modules
-module load R
-
-# Use R to visualise each sample, order by FPKM and display top 10 hits
-R
-data = read.table("sample_name.genes.results", header = T, stringsAsFactors = F)
-idx = order(data[,"FPKM"], decreasing = T)
-data[idx[1:10], c("gene_id", "expected_count", "FPKM")]
-quit(save = "sample_nameFPKM", status = 0, runLast = T)
-
-
-## Use RSEM to visualise read mapping depth to reference genome
-rsem-plot-model sample_name sample_name_diagnostic.pdf
-
-## Generate wiggle plot for a particular geneID, stacked wiggle plots RSEM generate stack the expected multi-mapping read depth (shown in red) over the uniquely aligned read depth (shown in black)
-rsem-plot-transcript-qiggles --gene-list --show-unique\
-sample_name gene_ids.txt geneID_transcript_wiggle.pdf
-
-## Geneate a genome-wide wiggle plot, can load this into IGV with reference sequence
-rsem-bam2wig sample_name.genome.sorted.bam sample_name.wig sample_name
 
