@@ -32,10 +32,10 @@ working=$(pwd)
 
 data_dir=/Volumes/seaSnakeDrive/AGRF_RNAseq
 output_dir=$working/output
-genome_prefix=/home/a1662801/ref_seq/tissues_12_ref
+genome_prefix=/home/a1662801/ref_seq/Trinity.fasta
 
 # You need to make a GFF annotation file on your denovo tissue transcriptome
-gff=
+gff=/home/a1662801/ref_seq/Trinity.fasta.transdecoder.cds
 
 mkdir -p $output_dir
 
