@@ -18,16 +18,6 @@ nt when the job is fail to complete)
 module load Trinity
 
 Trinity --monitoring --seqType fq --SS_lib_type FR \
---left /home/a1662801/seaSnake_reads/ALA_reads/4_HAJ15ADXX_TAGCTT_L001_R1.fastq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/5_HAJ15ADXX_GGCTAC_L001_R1.fastq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/ALA_L1_1.fq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-JUB_A_LAEVIS_ANT]TAIL_RIGHT__ACAGTG_L002_R1_001.fastq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-JUV_A_LAEVIS_VENTRAL_TAIL_ACTTGA_L002_R1_001.fastq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-J_A_LAEVIS__BODY_DORSAL_RIGHT_CGATGT_L002_R1_001.fastq.gz \
- --right /home/a1662801/seaSnake_reads/ALA_reads/4_HAJ15ADXX_TAGCTT_L001_R2.fastq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/5_HAJ15ADXX_GGCTAC_L001_R2.fastq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/ALA_L1_2.fq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-JUB_A_LAEVIS_ANT]TAIL_RIGHT__ACAGTG_L002_R2_001.fastq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-JUV_A_LAEVIS_VENTRAL_TAIL_ACTTGA_L002_R2_001.fastq.gz \
-/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-J_A_LAEVIS__BODY_DORSAL_RIGHT_CGATGT_L002_R2_001.fastq.gz\
- --CPU 32 --trimmomatic --max_memory 80G --normalize_reads
+--left /home/a1662801/seaSnake_reads/ALA_reads/4_HAJ15ADXX_TAGCTT_L001_R1.fastq.gz,/home/a1662801/seaSnake_reads/ALA_reads/5_HAJ15ADXX_GGCTAC_L001_R1.fastq.gz,home/a1662801/seaSnake_reads/ALA_reads/ALA_L1_1.fq.gz,/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-JUB_A_LAEVIS_ANT]TAIL_RIGHT__ACAGTG_L002_R1_001.fastq.gz,/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-JUV_A_LAEVIS_VENTRAL_TAIL_ACTTGA_L002_R1_001.fastq.gz,/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-J_A_LAEVIS__BODY_DORSAL_RIGHT_CGATGT_L002_R1_001.fastq.gz \
+--right /home/a1662801/seaSnake_reads/ALA_reads/4_HAJ15ADXX_TAGCTT_L001_R2.fastq.gz,/home/a1662801/seaSnake_reads/ALA_reads/5_HAJ15ADXX_GGCTAC_L001_R2.fastq.gz,/home/a1662801/seaSnake_reads/ALA_reads/ALA_L1_2.fq.gz,/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-JUB_A_LAEVIS_ANT]TAIL_RIGHT__ACAGTG_L002_R2_001.fastq.gz,/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-JUV_A_LAEVIS_VENTRAL_TAIL_ACTTGA_L002_R2_001.fastq.gz,/home/a1662801/seaSnake_reads/ALA_reads/C9FMBANXX-2-J_A_LAEVIS__BODY_DORSAL_RIGHT_CGATGT_L002_R2_001.fastq.gz \
+--CPU 32 --trimmomatic --max_memory 80G --normalize_reads
