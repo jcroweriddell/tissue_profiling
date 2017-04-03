@@ -1,8 +1,8 @@
-Eye (dowload here https://cloudstor.aarnet.edu.au/plus/index.php/s/o6HmjxsvFENEgu1)
+A.laevis, Eye (dowload here https://cloudstor.aarnet.edu.au/plus/index.php/s/o6HmjxsvFENEgu1)
 ALA_L1_1.fq
 ALA_L1_2.fq
 
-Testis:
+H. major KLS0460, Testis:
 1_HAJ15ADXX_CAGATC_L001_R1.fastq.gz
 1_HAJ15ADXX_CAGATC_L001_R2.fastq.gz
 
@@ -30,18 +30,18 @@ A. laevis, juvenile body skin:
 2-J_A_LAEVIS__BODY_DORSAL_RIGHT_CGATGT_L002_R1_001.fastq.gz
 2-J_A_LAEVIS__BODY_DORSAL_RIGHT_CGATGT_L002_R2_001.fastq.gz
 
-Liver:
+H. major KLS0460, Liver:
 2_HAJ15ADXX_ACTTGA_L001_R1.fastq.gz
 2_HAJ15ADXX_ACTTGA_L001_R2.fastq.gz
 
-Heart:
+H. major KLS0460, Heart:
 3_HAJ15ADXX_GATCAG_L001_R1.fastq.gz
 3_HAJ15ADXX_GATCAG_L001_R2.fastq.gz
 
-VMO:
+A. laevis, KLS0468, VMO:
 4_HAJ15ADXX_TAGCTT_L001_R1.fastq.gz
 4_HAJ15ADXX_TAGCTT_L001_R2.fastq.gz
 
-A. laevis KLS0468 tail A2:
+A. laevis KLS0468, tail A2:
 5_HAJ15ADXX_GGCTAC_L001_R1.fastq.gz
 5_HAJ15ADXX_GGCTAC_L001_R2.fastq.gz
