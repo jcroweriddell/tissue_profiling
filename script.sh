@@ -8,34 +8,33 @@
 #SBATCH --mail-type=FAIL   # Type of email notifications will be sent (here set to FAIL, which means an email will be sent when the job is fail to complete)
 #SBATCH --mail-user=jenna.crowe-riddell@adelaide.edu.au  # Email to which notification will be sent
 
-## DESCRIPTION: script generate gene expression profiles for each sea snake tissue 
-## 	(eye, testis, liver, heart, VMO, Atenuis tail x 2 and body, Alaevis tail x 3 and body), 
+## DESCRIPTION: script generate gene expression profiles for each sea snake tissue in just Aipysurus laevis
+## 	(6 TISSUES: eye, VMO, Alaevis tail x 3 and body), 
 ## 	to be run using phoenix HPC 
 
 
 # Load our modules
-module load HISAT2/2.0.5-foss-2016uofa
-module load HTSeq/0.6.1p1-intel-2015c-Python-2.7.11
+# module load HISAT2/2.0.5-foss-2016uofa
+# module load HTSeq/0.6.1p1-intel-2015c-Python-2.7.11
 module load Java/1.8.0_71
 module load RSEM/1.2.25-foss-2015b
-module load Bowtie2/Bowtie2/2.2.6-foss-2015b
-
+module load Bowtie2/2.2.9-GCC-5.3.0-binutils-2.25
 
 ## Build reference index
 # Using hisat2
-hisat2-build /home/a1662801/ref_seq/tissues_contigs tissues_12_ref
+# hisat2-build /home/a1662801/ref_seq/tissues_contigs tissues_12_ref
 # Using bowtie2
-# bowtie-2 /path/to/tissues_contigs tissues_12_ref
+bowtie2-build /home/a1662801/ref_seq/trinity/trinity.fasta trinity_Alaevis
 
 ## Script for fastQC reads, align to ref, and adapter removal
-working=$(pwd)
+working=$/home/a1662801/align_reads
 
-data_dir=/Volumes/seaSnakeDrive/AGRF_RNAseq
+data_dir=/home/a1662801/seaSnake_reads/ALA_reads
 output_dir=$working/output
 genome_prefix=/home/a1662801/ref_seq/Trinity.fasta
 
 # You need to make a GFF annotation file on your denovo tissue transcriptome
-gff=/home/a1662801/ref_seq/Trinity.fasta.transdecoder.cds
+gff=/home/a1662801/ref_seq/Trinity.fasta.transdecoder.gff3
 
 mkdir -p $output_dir
 
@@ -64,7 +63,7 @@ for FQGZ in $data_dir/*R1*.fastq.gz
       $output_dir/"$(basename $FQGZ _R1.fastq.gz)".trimed1.fq.gz \
       $output_dir/"$(basename $FQGZ _R1.fastq.gz)".trimed2.fq.gz \
       $genome_prefix \
-      $output_dir/"$(basename $FQGZ _R1.fastq.gz)".rsem_12tissues
+      $output_dir/"$(basename $FQGZ _R1.fastq.gz)".rsem_Alaevis
     echo "Finished calculating expression levels of "$FQGZ" "
   
     # Stats
