@@ -21,15 +21,17 @@ module load Bowtie2/Bowtie2/2.2.6-foss-2015b
 ## Script for using RSEM to generate FKPM from raw read counts
 
 # Prepare reference sequence
-rsem-prepare-reference /home/a1662801/ref_seq/all_tissues_contigs.fa --bowtie2 \
-/home/a1662801/ref_seq/all_tissues
+rsem-prepare-reference --gff3 Trinity.fasta.transdecoder.gff3 \
+Trinity.fasta \
+--bowtie2 \
+ALA_ref
 
 # Calculate expression levels
 
 rsem-calculate-expression --bowtie2 -p 8 --paired-end \
- /data/biohub/160801_Jenna_seaSnakeRNAseq/RNAseq/Trimmed/4_HAJ15ADXX_TAGCTT_truncated1.fastq.gz \ # Trimed reads 1
- /data/biohub/160801_Jenna_seaSnakeRNAseq/RNAseq/Trimmed/4_HAJ15ADXX_TAGCTT_truncated2.fastq.gz \ # Trimed reads 2
- /home/a1662801/all_tissues /home/a1662801/rsemResults/4_VMO
+/bg/raw_reads/kls/laevis_trinity_assembly/ALA_L1_1.fq.gz.P.qtrim.gz \ # Trimed reads 1
+/bg/raw_reads/kls/laevis_trinity_assembly/ALA_L1_2.fq.gz.P.qtrim.gz \ # Trimed reads 2
+/home/jenna/Trinity_Alaevis/trinity_Alaevis /home/jenna/rsemResults/ALA_L1
 
 
 
