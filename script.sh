@@ -28,7 +28,7 @@ bowtie2-build /home/jenna/Trinity_Alaevis/Trinity_index/Trinity.fasta trinity_Al
 /bg/raw_reads/kls/laevis_trinity_assembly
 
 ## Script for fastQC reads, align to ref, and adapter removal
-working=$/home/jenna
+working=/home/jenna
 
 data_dir=/bg/raw_reads/kls/Alaevis_reads
 output_dir=$working/output
