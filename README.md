@@ -4,7 +4,8 @@
 2017-08-24
 
 Jenna Crowe-Riddell
-Jimmy Breen
+Jimmy Breen (jimmymbreen@gmail.com)
+Alastair Luddington
 
 ## To Do List
 
@@ -13,7 +14,6 @@ Jimmy Breen
 - [ ] Run same BLAST search of 20 genes on tissue-specific transcriptomes and identify IDs or contigs
 - [ ] Re-run RNAseq analysis on King Cobra (might have done this already) and create count table
 - [ ] Re-run RNAseq analysis on SeaSnake assembky (if possible?) and create count table
-- [ ]
 
 ## Tissues to Analyse
 
