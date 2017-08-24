@@ -15,9 +15,13 @@ Alastair Luddington
 - [ ] Re-run RNAseq analysis on King Cobra (might have done this already) and create count table
 - [ ] Re-run RNAseq analysis on SeaSnake assembky (if possible?) and create count table
 
+
+### Jenna
+- [ ] Provide Jimmy with list of 20 visual genes to BLAST
+
 ## Tissues to Analyse
 
-Individual 1: _A. tenuis_:
+Individual 1: _A. laevis_ juvenile:
 - Juvenile body skin (2-J_A_LAEVIS__BODY_DORSAL_RIGHT_CGATGT)
 - Ventral Tail (2-JUV_A_LAEVIS_VENTRAL_TAIL_ACTTGA)
 - Anterior Tail (2-JUB_A_LAEVIS_ANT]TAIL_RIGHT__ACAGTG)
