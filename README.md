@@ -17,7 +17,8 @@ Alastair Luddington
 
 
 ### Jenna
-- [ ] Provide Jimmy with list of 20 visual genes to BLAST
+- [x] Provide Jimmy with list of 20 visual genes to BLAST
+Note: Jenna has uploaded excel sheet with list of important genes in visual pathway, and uploaded a fasta file with sequences of top genes for Jimmy to use, the list includes visual opsins, phototransduction, retinoid metabolism. Missing: non-visual genes
 
 ## Tissues to Analyse
 
