@@ -12,8 +12,8 @@ Alastair Luddington
 ### Jimmy
 - [ ] Run BLAST search of 20 genes on King Cobra genome and identify IDs
 - [ ] Run same BLAST search of 20 genes on tissue-specific transcriptomes and identify IDs or contigs
-- [ ] Re-run RNAseq analysis on King Cobra (might have done this already) and create count table
-- [ ] Re-run RNAseq analysis on SeaSnake assembky (if possible?) and create count table
+- [x] Re-run RNAseq analysis on King Cobra (might have done this already) and create count table - I got TPM and RPKM as well
+- [ ] Re-run RNAseq analysis on SeaSnake assembky (if possible?) and create count table (needs Alastair's gene annotation)
 
 
 ### Jenna
