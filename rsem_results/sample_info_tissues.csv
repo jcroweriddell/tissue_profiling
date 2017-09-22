@@ -1,0 +1,14 @@
+gene_id,experiment,species
+HMAJ_testis_FPKM,nonPhoto,Hmajor
+ATEN_tailA2_FPKM,Photo,Atenuis
+ATEN_tailB5_FPKM,nonPhoto,Atenuis
+ATEN_body_FPKM,Photo,Atenuis
+BRH_vno_FPKM,nonPhoto,Brhin
+ALAjuv_tailA2_FPKM,Photo,Alaevis
+ALAjuv_tailB5_FPKM,nonPhoto,Alaevis
+ALAjuv_body_FPKM,nonPhoto,Alaevis
+NSC_vno_FPKM,nonPhoto,Nscutatus
+HMAJ_heart_FPKM,nonPhoto,Hmajor
+ALA_vno_FPKM,nonPhoto,Alaevis
+ALA_tailA2_FPKM,Photo,Alaevis
+ALA_eye_FPKM,Photo,Alaevis
