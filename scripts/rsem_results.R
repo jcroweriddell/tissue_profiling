@@ -2,7 +2,9 @@
 ## tutorials: http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#sample-wise-correlation-analysis
 # http://www.bioconductor.org/packages/release/bioc/vignettes/gage/inst/doc/RNA-seqWorkflow.pdf
 ## What is FPKM? https://haroldpimentel.wordpress.com/2014/05/08/what-the-fpkm-a-review-rna-seq-expression-units/ 
-
+## Good workflow using DESeq http://www.bioconductor.org/help/workflows/rnaseqGene/ 
+## Explanation of RSEM expected counts https://biowize.wordpress.com/2014/03/04/understanding-rsem-raw-read-counts-vs-expected-counts/ 
+## http://www.bioconductor.org/help/workflows/RNAseq123/ 
 # set working directory
 getwd()
 setwd("C:/Users/L033060262053/Documents/Research projects/Tail_photoreception/tissue_profiling/rsem_results/")
@@ -13,6 +15,14 @@ head(FPKMresults)
 # load dplyr package
 install.packages("dplyr")
 library(dplyr)
+
+# arrange in desc order of ALA_eye_FPKM
+FPKMresults <- arrange(FPKMresults, desc(ALA_eye_FPKM))
+head(FPKMresults)
+# filter top eye genes with FPKM >5000
+FPKMtopEye <- FPKMresults %>% filter(ALA_eye_FPKM >5000)
+head(FPKMtopEye)
+dim(FPKMtopEye)
 
 #select A.laevis tissues
 #arrange in descending order of eye FPKM, 
@@ -42,24 +52,30 @@ install.packages("RColorBrewer")
 library("RColorBrewer")
 
 # transform data into matrix format
-rnames <- ALA_topEye[,1] #assign Labels from column 1 to 'rnames'
-mat_data <- data.matrix(ALA_topEye[,2:ncol(ALA_topEye)]) #tranform columns 2-5 in to matrix
+rnames <- FPKMtopEye[,1] #assign Labels from column 1 to 'rnames'
+mat_data <- data.matrix(FPKMtopEye[,2:14(FPKMtopEye)]) #tranform columns 2-14 in to matrix
 rownames(mat_data) <- rnames # assign rownames
 
 # customizing and plotting the heatmap
 
 # create colour palette from red to green
-my_palette <-colorRampPalette(c("red", "yellow", "green"))(n = 299)
+my_palette <-colorRampPalette(c("red", "yellow","green"))(n = 299)
 
 # make heatmap
-ALA_heatmap <-heatmap(mat_data, Rowv=NA, Colv = NA, col = cm.colors(256), 
+heatmap_FPKMtopE <-heatmap(mat_data, Rowv=NA, Colv = NA, col = my_palette, #can also use inbuild col, e.g. cm.color or heat.color
                       scale = 'column', margins = c(5,10))
 
 dev.off()
 
 ## 
 ######## MDS or PCA plot to check clustering of tissues ############
-# useful paper explaining data visualisation in R https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4387895/ 
+## useful paper explaining data visualisation in R https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4387895/ 
+# For DESeq, edgeR, limma, etc. count table needs to be in éxpected counts'form, i.e. not already normalised as FPKM
+
+#load in data
+countResults <- read.delim("rsem_expectedCount_all_together_names.tsv")
+head(countResults)
+
 # install bioconductor
 source("https://bioconductor.org/biocLite.R")
 biocLite()
@@ -71,12 +87,13 @@ biocLite("edgeR")
 library(limma)
 library(edgeR)   
 
-head(FPKMresults)
+head(countResults)
 # fix counts from float to int
-FPKMresultsInt <- read.table("all_counts_as_int.txt", header = TRUE)
+#FPKMresultsInt <- read.table("all_counts_as_int.txt", header = TRUE)
 
-read_counts <- FPKMresultsInt
+read_counts <- countResults
 sample_info <- read.csv("sample_info_tissues.csv")
+head(sample_info)
 #gene_anno <- 
 
 #check counts
@@ -98,7 +115,8 @@ dge <- new("DGEList",list(counts= read_counts, group = sample_info$experiment))
 names(dge)
 
 # print a summary of the dge list object
-dge
+deg
+
 
 # Ensure that both the number and order of genes in the gene_anno object be the same as
 # that in the read_counts object
@@ -106,6 +124,7 @@ dge
 
 ## Data exploration
 ##########################################################################################
+
 # Hierachical clustering of samples based on CPM values
 plot(hclust( d = dist(t(cpm(dge)),  method = "euclidean"),
              method = "ward.D"),
