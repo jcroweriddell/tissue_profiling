@@ -1,7 +1,9 @@
 
 
 library(tidyverse)
-
+# read data
+FPKMresults
+TPMresults <- read.delim("rsem_TPM_all_together.tsv")
 geneNumToName <- read_delim("gene_number_to_name.tsv", delim = "\t", col_names = c("GeneID", "GeneName"))
 
 #create FPKM
@@ -31,7 +33,8 @@ head(FPKMResults_gene)
 # filter by individual gene names
 geneList <- c("GNAT1", "GNAT2", "GNAT3", "grk7-a", "GUCY2D",
 "GUCY2F",  "CUCA1A", "LRAT", "PDE6B", "PDE6C", "RDH8", "RPE65",
-"OPN3", "OPN4", "OPN5", "ROD1", "ABCA4", "ARRB2") %>% arrange()
+"OPN3", "OPN4", "OPN5", "ROD1", "ABCA4", "ARRB2", "RHO", "L345_06817", "gar1", "L345_18159", "L345_00724",
+"L345_18159", "RDH16", "DHRS9", "RDH8")
 
 geneList
 
@@ -39,5 +42,8 @@ visGenesFPKM <- filter(FPKMresults_gene, GeneName %in% geneList)
 View(visGenesFPKM)
 visGenesTPM <- filter(TPMresults_gene, GeneName %in% geneList)
 View(visGenesTPM)
+
+# save file
+write.table(visGenesFPKM, "visGenesFPKM.txt", sep="\t")
 
 # Then create a heatmap of FPKM (or TPM) across tissues, ordered by visual genes of interest
