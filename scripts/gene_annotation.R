@@ -2,7 +2,7 @@
 
 library(tidyverse)
 # read data
-FPKMresults
+FPKMresults <- read.delim("rsem_all_together.tsv")
 TPMresults <- read.delim("rsem_TPM_all_together.tsv")
 geneNumToName <- read_delim("gene_number_to_name.tsv", delim = "\t", col_names = c("GeneID", "GeneName"))
 
@@ -13,6 +13,8 @@ FPKMresults_gene <- FPKMresults %>%
          ALAjuv_tailB5_FPKM, ALAjuv_body_FPKM, ATEN_tailA2_FPKM, ATEN_tailB5_FPKM, 
          ATEN_body_FPKM, NSC_vno_FPKM, BRH_vno_FPKM, HMAJ_heart_FPKM, 
          HMAJ_testis_FPKM) 
+
+
 # create TPM
 TPMresults_gene <- TPMresults %>%
   full_join(geneNumToName, by = c("gene_id" = "GeneID")) %>%
@@ -22,10 +24,6 @@ TPMresults_gene <- TPMresults %>%
          HMAJ_testis_TPM) 
 
 head(TPMresults_gene)
-#ALA_A2tail<- FPKMresults_gene %>% arrange(desc(ALA_tailA2_FPKM))
-
-View(ALA_A2tail)
-head(FPKMResults_gene)
 
 # I want to filter the counts by visual genes I'm interested in (create a vector then use match()?)
 

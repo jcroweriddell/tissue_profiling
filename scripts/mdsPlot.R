@@ -40,7 +40,7 @@ plot %>%
 ## Same plot but with sequence data and species overlayed
 
 plot %>%
-  ggplot(aes(x, y, colour = seqYear, label = tissue)) +
+  ggplot(aes(x, y, colour = seqYear, shape = species, label = tissue)) +
   geom_point(size = 4) +
   geom_text(hjust = 0, nudge_x = 0.2, check_overlap = TRUE) + 
   theme_bw(base_size = 16) +
