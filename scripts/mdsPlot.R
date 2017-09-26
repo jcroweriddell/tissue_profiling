@@ -18,7 +18,7 @@ dge %<>% column_to_rownames("gene_id") %>%
   calcNormFactors()
 
 ## Obtaining MDS data object 
-mds <- plotMDS(dge)
+mds <- plotMDS(dge, gene.selection = "common", method = "logFC")
 
 ## Slightly ganky way of doing this, but extracting MDS coordinate object and joining with sample information.
 plot <- mds@.Data[[3]] %>%
@@ -48,5 +48,9 @@ plot %>%
   labs(x = "Dimension 1",
        y=  "Dimension 2")
 
-#not sure why seqYear is as continuous variable not discrete, tried
-#sample$seqYear <- as.factor(sample$seqYear)
+
+
+
+
+
+

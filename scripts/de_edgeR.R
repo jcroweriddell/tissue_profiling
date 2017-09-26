@@ -3,16 +3,19 @@ library(gplots)
 library(calibrate)
 
 # Read data
+dge <- read.table(file = "FPKMresults_gene.tsv.txt", 
+                                     header = TRUE)
 sample <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
 
 # Create DGEList object to store input data 
-dge <- FPKMresults_gene %>%
+dge %<>% column_to_rownames("GeneName") %>%
   as.matrix() %>%
-  DGEList(counts = FPKMresults_gene, group = sample$experiment)
+  edgeR::DGEList() %>%
+  calcNormFactors()
 
 names(dge)
 dge
 
-# Ensure that both the number and order of genes in the gene_anno object be the same as
-# that in the read_counts object
-identical(row.names(FPKMresults), row.names(geneNumToName))
+plot(hclust( d = dist(t(cpm(dge)),  method = "euclidean"),
+             method = "ward.D"),
+     hang = -1, xlab = "Samples", sub = "Distance=euclidean; Method=ward.D")

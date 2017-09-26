@@ -13,7 +13,7 @@ FPKMresults <- read.delim("rsem_all_together.tsv")
 head(FPKMresults)
 # data exploration
 # load dplyr package
-install.packages("dplyr")
+
 library(dplyr)
 
 # arrange in desc order of ALA_eye_FPKM
@@ -33,7 +33,8 @@ View(ALA_FPKM)
 
 #filter data by 'top gene expression' for eye tissue, cutoff FPKM = >1000
 ALA_topEye <- ALA_FPKM %>% filter(ALA_eye_FPKM >1000)
-
+dim(ALA_topEye)
+dim(ALA_FPKM)
 # Option: select only one ALA column, arrange and filter out 'low expression' genes >10.0 FPKM
 #ALA_eye <- select(FPKMresults, gene_id, ALA_eye_FPKM) %>%
   #filter(ALA_eye_FPKM >10) %>%
