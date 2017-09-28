@@ -16,7 +16,7 @@ setwd("C:/Users/L033060262053/Documents/Research projects/Tail_photoreception/ti
 dge <- read.table(file = "rsem_expectedCount_all_together_names.tsv", 
                   header = TRUE)
 ## Reading in sample object 
-sample <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
+sampleinfo <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
 
 ## Turning counts object into DGElist and normalising
 dge %<>% column_to_rownames("gene_id") %>%

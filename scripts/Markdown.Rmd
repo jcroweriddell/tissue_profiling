@@ -1,0 +1,27 @@
+# Say hello to R Markdown
+Markdown is an **easy to use** format for writing reports. *Without realising it*. 
+
+THis is a list
+
+* [Github](www.github.com)
+* something else
+
+Now it's time for some code
+
+```{r}
+2+2
+```
+Exclude code from the final report like so:
+
+```{r eval=FALSE}
+2+2
+```
+It's particularly useful for displaying plots without all that messy code
+```{r echo=FALSE}
+x <- c(1,2,3,4,5)
+hist(x)
+```
+
+
+
+This is how you embed R code in line with text. Two plus two equals `r 2+2`
