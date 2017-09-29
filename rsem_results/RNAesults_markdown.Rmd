@@ -20,10 +20,25 @@ What we did to get the data:
 
 ## RNA read count data
 Consists of table of expected counts for each 'gene id' (King cobra) and snake sample. Let's view the first 6 lines of count table:
+```{r echo=FALSE}
+library(knitr)
+library(magrittr)
+library(tibble)
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(limma)
+library(edgeR)
+library(RColorBrewer)
+library(tidyverse)
+
+```
 
 ```{r load dge.RData, include = FALSE}
 load("dge.RData")
+names(dge) <- gsub("_count","",names(dge))
 ```
+
 ```{r load sampleinfo.RData, include = FALSE}
 load("sampleinfo.RData")
 ```
@@ -50,7 +65,7 @@ dge %<>% column_to_rownames("gene_id") %>%
   calcNormFactors()
 ```
 Obtain mds object:
-```{r echo=TRUE}
+```{r include= FALSE}
 mds <- plotMDS(dge, gene.selection = "common", method = "logFC")
 ```
 Then group by the sample info to overlay factors like experiment, species and tissue type:
@@ -60,7 +75,7 @@ plot <- mds@.Data[[3]] %>%
   as.data.frame() %>%
   rownames_to_column("group") %>%
   set_colnames(c("group","x","y")) %>%
-  left_join(sample, by = c("group"="gene_id"))
+  left_join(sampleinfo, by = c("group"="gene_id"))
 
 ## Plotting MDS using ggplot (nicer plot), includes overlap of experimental condition and species
 plot %>%

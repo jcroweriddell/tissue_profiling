@@ -6,6 +6,7 @@ library(ggplot2)
 library(edgeR)
 library(RColorBrewer)
 library(tidyverse)
+library(pheatmap)
 
 ## Clustering data using MDS plot and dendrograms
 
@@ -15,6 +16,8 @@ setwd("C:/Users/L033060262053/Documents/Research projects/Tail_photoreception/ti
 ## Reading in counts object 
 dge <- read.table(file = "rsem_expectedCount_all_together_names.tsv", 
                   header = TRUE)
+names(dge) <- gsub("_count","",names(dge))
+
 ## Reading in sample object 
 sampleinfo <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
 
@@ -32,7 +35,7 @@ plot <- mds@.Data[[3]] %>%
   as.data.frame() %>%
   rownames_to_column("group") %>%
   set_colnames(c("group","x","y")) %>%
-  left_join(sample, by = c("group"="gene_id"))
+  left_join(sampleinfo, by = c("group"="gene_id"))
 
 ## Plotting MDS using ggplot (nicer plot), includes overlap of experimental condition and species
 plot %>%
@@ -141,7 +144,7 @@ dge_expressed$samples
 ### Defining the design matrix
 # convert photoresponse information to factors
 
-Photo <- as.factor(sample$experiment)
+Photo <- as.factor(sampleinfo$experiment)
 Photo
 
 # create design matrix
@@ -149,6 +152,14 @@ Photo
 design <- model.matrix(~ Photo)
 design
 
+# voom converts raw counts to logCPM values by automatically extracting library sizes and normalisation factors from x
+#v <- voom(x, design, plot=TRUE)
+#v
+# 
+# vfit <- lmFit(v, design)
+# vfit <- contrasts.fit(vfit, contrasts = contr.matrix)
+# efit <- eBayes(vfit)
+# plotSA(efit, main = "Final model: Mean-variance trend")
 # estimate a common negative binomial dispersion parameter for a DGE dataset with 
 # a general experimental design
 
@@ -179,42 +190,49 @@ fit <- glmFit(dispersions, design)
 ## Read data
 
 FPKMresults <- read.delim("rsem_all_together.tsv")
-TPMresults <- read.delim("rsem_TPM_all_together.tsv")
+names(FPKMresults) <- gsub("_FPKM","",names(FPKMresults))
 geneNumToName <- read_delim("gene_number_to_name.tsv", delim = "\t", col_names = c("GeneID", "GeneName"))
+
+# In this case we're using FPKM but can also use TPM
+#TPMresults <- read.delim("rsem_TPM_all_together.tsv")
 
 ## Create table with FPKM and gene names
 
 FPKMresults_gene <- FPKMresults %>%
   full_join(geneNumToName, by = c("gene_id" = "GeneID")) %>%
-  select(GeneName, ALA_eye = ALA_eye_FPKM, ALA_vno = ALA_vno_FPKM , ALA_tailA2 = ALA_tailA2_FPKM, 
-         ALAjuv_tail = ALAjuv_tailA2_FPKM, ALAjuv_tailB5 = ALAjuv_tailB5_FPKM,
-         ALAjuv_body = ALAjuv_body_FPKM,ATEN_tail = ATEN_tailA2_FPKM, ATEN_tailB5= ATEN_tailB5_FPKM,
-         ATEN_body =  ATEN_body_FPKM,NSC_vno = NSC_vno_FPKM, BRH_vno = BRH_vno_FPKM,
-         HMAJ_heart =HMAJ_heart_FPKM, HMAJ_testis = HMAJ_testis_FPKM) 
+  select(GeneName, ALA_tailA2, ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, ATEN_tailA2, ATEN_tailB5, ATEN_body,
+         HMAJ_heart, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno)
+
 
 ## Create TPM
 
-TPMresults_gene <- TPMresults %>%
-  full_join(geneNumToName, by = c("gene_id" = "GeneID")) %>%
-  select(GeneName, ALA_eye = ALA_eye_TPM, ALA_vno = ALA_vno_TPM , ALA_tailA2 = ALA_tailA2_TPM, 
-         ALAjuv_tail = ALAjuv_tailA2_TPM, ALAjuv_tailB5 = ALAjuv_tailB5_TPM,
-         ALAjuv_body = ALAjuv_body_TPM,ATEN_tail = ATEN_tailA2_TPM, ATEN_tailB5= ATEN_tailB5_TPM,
-         ATEN_body =  ATEN_body_TPM,NSC_vno = NSC_vno_TPM, BRH_vno = BRH_vno_TPM,
-         HMAJ_heart =HMAJ_heart_TPM, HMAJ_testis = HMAJ_testis_TPM)
-head(TPMresults_gene)
+# TPMresults_gene <- TPMresults %>%
+#   full_join(geneNumToName, by = c("gene_id" = "GeneID")) %>%
+#   select(GeneName, ALA_eye = ALA_eye_TPM, ALA_vno = ALA_vno_TPM , ALA_tailA2 = ALA_tailA2_TPM, 
+#          ALAjuv_tail = ALAjuv_tailA2_TPM, ALAjuv_tailB5 = ALAjuv_tailB5_TPM,
+#          ALAjuv_body = ALAjuv_body_TPM,ATEN_tail = ATEN_tailA2_TPM, ATEN_tailB5= ATEN_tailB5_TPM,
+#          ATEN_body =  ATEN_body_TPM,NSC_vno = NSC_vno_TPM, BRH_vno = BRH_vno_TPM,
+#          HMAJ_heart =HMAJ_heart_TPM, HMAJ_testis = HMAJ_testis_TPM)
+# head(TPMresults_gene)
 
 ## Filter by individual gene names
+#geneList <- read_tsv(file = "visualGenes.tsv", col_names = FALSE)
+# turn into vector
+#geneList <- geneList$X1
 
 geneList <- c("GNAT1", "GNAT2", "GNAT3", "grk7-a", "GUCY2D",
               "GUCY2F",  "CUCA1A", "LRAT", "PDE6B", "PDE6C", "RDH8", "RPE65",
-              "OPN3", "OPN4", "OPN5", "ROD1", "ABCA4", "ARRB2", "RHO", "L345_06817", "L345_18159", "L345_00724",
-              "L345_18159", "DHRS9")
+              "OPN3", "OPN4", "OPN5", "ROD1", "ABCA4", "ARRB2", "RHO", 
+              "L345_06817", "L345_18159", "L345_00724",
+              "DHRS9", "Krt5")
 
 visGenesFPKM <- filter(FPKMresults_gene, GeneName %in% geneList)
 View(visGenesFPKM)
 
-visGenesTPM <- filter(TPMresults_gene, GeneName %in% geneList)
-View(visGenesTPM)
+
+
+# visGenesTPM <- filter(TPMresults_gene, GeneName %in% geneList)
+# View(visGenesTPM)
 
 ## Save file
 
@@ -227,18 +245,22 @@ write.table(visGenesTPM, "visGenesFPKM.txt", sep="\t")
 
 visGeneslogFPKM <- visGenesFPKM %>%
   column_to_rownames("GeneName") %>%
+  # select(ALA_tailA2, ALAjuv_tailB5, ALAjuv_tail, ALAjuv_body, ATEN_tail, ATEN_tailB5, ATEN_body,
+         # HMAJ_heart, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
   as.matrix() %>%
   log1p()
 
-colfunc <-colorRampPalette(bias = 1, c("royalblue", "springgreen","yellow","red"))
-heatmap(visGeneslogFPKM, col= colfunc(50))
+colfunc <- brewer.pal(n = 9, name = "OrRd")
+pheatmap(visGeneslogFPKM, cluster_rows = FALSE, cluster_cols = FALSE, color = colfunc)
 
-visGeneslogTPM <- visGenesTPM %>%
-  column_to_rownames("GeneName") %>%
-  as.matrix() %>%
-  log1p()
+#colfunc <-colorRampPalette(bias = 1, c("white", "springgreen", "yellow","orange", "red"))
+# pheatmap(visGeneslogFPKM, cluster_rows = FALSE, cluster_cols = FALSE, color = colfunc)
 
-heatmap(visGeneslogTPM, col= colfunc(50))
+# visGeneslogTPM <- visGenesTPM %>%
+#   column_to_rownames("GeneName") %>%
+#   as.matrix() %>%
+#   log1p()
+
 
 dev.off()
 
