@@ -20,7 +20,7 @@ What we did to get the data:
 
 ## RNA read count data
 Consists of table of expected counts for each 'gene id' (King cobra) and snake sample. Let's view the first 6 lines of count table:
-```{r echo=FALSE}
+```{r include = FALSE}
 library(knitr)
 library(magrittr)
 library(tibble)
@@ -57,18 +57,18 @@ names(sampleinfo)
 ## MDS plot
 The function plotMDS draws a multi-dimensional scaling plot of the RNA samples in which distances correspond to leading log-fold-changes between each pair of RNA samples. The leading log-fold-change is the average (root-mean-square) of the largest absolute log-foldchanges between each pair of samples. This plot can be viewed as a type of unsupervised clustering. 
 
-First step is to turning the counts table into DGElist and normalise the data (using edgeR package)
+To see how the RNA samples are clustering, we need to transform the count table (of expected read counts) into a data matrix and DGElist object, then normalise using the 'calcNormFactors()' function.
 ```{r, include=TRUE}
 dge %<>% column_to_rownames("gene_id") %>%
   as.matrix() %>%
   edgeR::DGEList() %>%
   calcNormFactors()
 ```
-Obtain mds object:
+Then plot the MDS using 'plotMDS' function and ggplot2 (to overlay sample information and make it look pretty).
 ```{r include= FALSE}
 mds <- plotMDS(dge, gene.selection = "common", method = "logFC")
 ```
-Then group by the sample info to overlay factors like experiment, species and tissue type:
+
 ```{r echo= FALSE}
 ## Slightly ganky way of doing this, but extracting MDS coordinate object and joining with sample information.
 plot <- mds@.Data[[3]] %>%
