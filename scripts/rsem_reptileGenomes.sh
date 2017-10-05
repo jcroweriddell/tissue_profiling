@@ -1,3 +1,23 @@
+#!/bin/bash
+#SBATCH -p batch        # partition (this is the queue your job will be added to) 
+#SBATCH -N 1            # number of nodes (due to the nature of sequential processing, here uses single node)
+#SBATCH -n 8            # number of cores (here uses 2)
+#SBATCH --time=24:00:00 # time allocation, which has the format (D-HH:MM), here set to 1 hour
+#SBATCH --mem=32GB      # memory pool for all cores (here set to 32 GB)
+#SBATCH --mail-type=END    # Type of email notifications will be sent (here set to END, which means an email will be sent when the job is done)
+#SBATCH --mail-type=FAIL   # Type of email notifications will be sent (here set to FAIL, which means an email will be sent when the job is fail to complete)
+#SBATCH --mail-user=jenna.crowe-riddell@adelaide.edu.au  # Email to which notification will be sent
+
+## DESCRIPTION: script generate gene expression profiles for each snake tissue
+## 	(14 TISSUES: eye, VMO x 3, skin x 7, liver, heart, testis) by aligning to different reptile genomes (lizards, snakes, chicken, alligator)
+
+# Load our modules
+# module load HISAT2/2.0.5-foss-2016uofa
+# module load HTSeq/0.6.1p1-intel-2015c-Python-2.7.11
+# module load Java/1.8.0_71
+# module load RSEM/1.2.25-foss-2015b
+# module load Bowtie2/2.2.9-GCC-5.3.0-binutils-2.25
+
 ## Script for using RSEM to calculate read counts using different reptile genomes
 
 ## Set working and output directories
