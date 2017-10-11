@@ -19,7 +19,8 @@ Alastair Luddington
 ### Jenna
 - [x] Provide Jimmy with list of 20 visual genes to BLAST
 Note: Jenna has uploaded excel sheet with list of important genes in visual pathway, and uploaded a fasta file with sequences of top genes for Jimmy to use, the list includes visual opsins, phototransduction, retinoid metabolism. Missing: non-visual genes
-- [ ] Explore FPKM count table in R across sample (MDS plot, PCA plot, heatmap) and within samples (frequency of counts per gene). This will be useful for after Jimmy's BLASTx search
+- [X] Explore FPKM count table in R across sample (MDS plot, PCA plot, heatmap) and within samples (frequency of counts per gene). This will be useful for after Jimmy's BLASTx search
+- [ ] Convert TPM to FPKM for new Salmon quant analysis, then execute R scripts for joining GeneNames, clustering analysis and heatmap for visual genes
 
 ## Tissues to Analyse
 
