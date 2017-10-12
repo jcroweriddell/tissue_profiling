@@ -1,6 +1,7 @@
 library(magrittr)
 library(tibble)
 library(readr)
+library(stringr)
 library(dplyr)
 library(ggplot2)
 library(RColorBrewer)
@@ -11,13 +12,13 @@ biocLite("edgeR")
 
 # Set working directory and read in data
 setwd("/Users/jennacrowe-riddell/Documents/tissue_profiling/salmon_quant/tpm_results")
-dgePMucros <- read.table(file = "PMucros_quant_tpm_all.tsv", header = TRUE)
+dgePMucros <- read.table(file = "PMucros_quant_NumReads_all.tsv", header = TRUE)
 sampleinfo <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
 
 # Change column names to tissue names
 names(dgePMucros) 
-dgePMucros <- select(dgePMucros, GeneName = Name, HMAJ_testis = TPM, HMAJ_heart = TPM.1, ALA_vno = TPM.2, ALA_tailA2 = TPM.3, ATEN_tailA2 = TPM.4,
-                     ATEN_tailB5 = TPM.5, ATEN_body = TPM.6, ALA_eye = TPM.7, BRH_vno = TPM.8, ALAjuv_body = TPM.9, ALAjuv_tailA2 = TPM.10, ALAjuv_tailB5 = TPM.11, NSC_vno = TPM.12)
+dgePMucros <- select(dgePMucros, GeneName = Name, HMAJ_testis = NumReads, HMAJ_heart = NumReads.1, ALA_vno = NumReads.2, ALA_tailA2 = NumReads.3, ATEN_tailA2 = NumReads.4,
+                     ATEN_tailB5 = NumReads.5, ATEN_body = NumReads.6, ALA_eye = NumReads.7, BRH_vno = NumReads.8, ALAjuv_body = NumReads.9, ALAjuv_tailA2 = NumReads.10, ALAjuv_tailB5 = NumReads.11, NSC_vno = NumReads.12)
 
 ## Turning counts object into DGElist and normalising
 dgePMucros %<>% column_to_rownames("GeneName") %>%
