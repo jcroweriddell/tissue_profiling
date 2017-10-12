@@ -25,7 +25,7 @@ sampleinfo <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
 dge %<>% column_to_rownames("gene_id") %>%
   as.matrix() %>%
   edgeR::DGEList() %>%
-  calcNormFactors()
+  edgeR::calcNormFactors()
 
 ## Obtaining MDS data object 
 mds <- plotMDS(dge, gene.selection = "common", method = "logFC")
@@ -60,9 +60,19 @@ plot %>%
 
 ## Sample clustering
 
-plot(hclust( d = dist(t(cpm(dge)),  method = "euclidean"),
+plot(hclust( d = dist(t(edgeR::cpm(dge)),  method = "euclidean"),
              method = "ward.D"),
      hang = -1, xlab = "Samples", sub = "Distance=euclidean; Method=ward.D")
+
+simpleClust <- plot(hclust(d = dist(t(edgeR::cpm(dge)),method = "euclidean"),
+            method = "ward.D"), 
+     hang = -1, 
+     xlab = NA, 
+     ylab = NA,
+     sub = NA,
+     labels = FALSE,
+     axes = FALSE,
+     cex = 15)
 
 ## Visualise RNA read data
 
@@ -224,12 +234,11 @@ geneList <- c("GNAT1", "GNAT2", "GNAT3", "grk7-a", "GUCY2D",
               "GUCY2F",  "CUCA1A", "LRAT", "PDE6B", "PDE6C", "RDH8", "RPE65",
               "OPN3", "OPN4", "OPN5", "ROD1", "ABCA4", "ARRB2", "RHO", 
               "L345_06817", "L345_18159", "L345_00724",
-              "DHRS9", "Krt5")
+              "DHRS9")
+
 
 visGenesFPKM <- filter(FPKMresults_gene, GeneName %in% geneList)
 View(visGenesFPKM)
-
-
 
 # visGenesTPM <- filter(TPMresults_gene, GeneName %in% geneList)
 # View(visGenesTPM)
@@ -249,9 +258,27 @@ visGeneslogFPKM <- visGenesFPKM %>%
          # HMAJ_heart, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
   as.matrix() %>%
   log1p()
+visGeneslogFPKM
+
+# remove "L" genes and replace with likely protein name
+
+geneNames <- c("GUCY2D", "RDH8", "LRAT", "GNAT3", "GUCY2F", "ARRB2", "ARRB1", "RPE65", "RHO",
+                     "OPN4", "DHRS9", "OPN3", "GNAT2", "OPN5", "GRK7-A", "OPN1SW", "RCVRN", "PDE6C", "PDE6B")
+geneNames
 
 colfunc <- brewer.pal(n = 9, name = "OrRd")
-pheatmap(visGeneslogFPKM, cluster_rows = FALSE, cluster_cols = FALSE, color = colfunc)
+tissueNames <- c("A.laevis tailA", "A.laevisJ tailB", "A.laevisJ tailA", "A.tenuis tailA",
+                 "A.tenuis tailB", "A.tenuis body", "H.major heart", "H.major testis", "A.laevis eye", 
+                 "A.laevis vno", "B.rhino vno", "N.scutatus vno")
+
+pheatmap(visGeneslogFPKM, 
+         cluster_rows = FALSE, 
+         cluster_cols = FALSE,
+         border_color = NA,
+         color = colfunc,
+         labels_col = tissueNames,
+         labels_row = geneNames)
+
 
 #colfunc <-colorRampPalette(bias = 1, c("white", "springgreen", "yellow","orange", "red"))
 # pheatmap(visGeneslogFPKM, cluster_rows = FALSE, cluster_cols = FALSE, color = colfunc)
