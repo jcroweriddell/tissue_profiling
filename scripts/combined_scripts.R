@@ -235,7 +235,10 @@ geneList <- c("GNAT1", "GNAT2", "GNAT3", "grk7-a", "GUCY2D",
               "OPN3", "OPN4", "OPN5", "ROD1", "ABCA4", "ARRB2", "RHO", 
               "L345_06817", "L345_18159", "L345_00724",
               "DHRS9")
+<<<<<<< HEAD
 
+=======
+>>>>>>> 298ce19779e8a83ac228deebf0949ba2e1a3dd08
 
 visGenesFPKM <- filter(FPKMresults_gene, GeneName %in% geneList)
 View(visGenesFPKM)

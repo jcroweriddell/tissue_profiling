@@ -1,0 +1,121 @@
+## extract expected count & tpm from salmon quant.sf files
+
+# Check that row counts are same across tissues
+for i in *PMucros_quant.sf; do wc -l $i; done
+
+# Check column names to find TPM & NumReads, In this case, TPM is row [4]
+head 1_HAJ15ADXX_CAGATC_L001_PMucros_quant.sf 
+
+# Count how many tissues you have for ref genome 'PMucros'
+find ~/Documents/tissue_profiling/salmon_quant -name "*PMucros_quant.sf"
+
+# That has listed the files, but we want a count:
+ls -1q *PMucros_quant.sf | wc -l
+ 
+# Paste contents of each *refgenome.sf file then cut particular columns
+paste *PMucros_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 | less
+q
+
+# That looks good! Now let's save that as .tsv file
+paste *PMucros_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > PMucros_quant_tpm_all.tsv
+
+# Now do all the genomes! # I'm sure there's an easier way to do this!
+paste *Alligator_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > tpm_quant/Alligator_quant_tpm_all.tsv
+paste *AnoCar_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > tpm_quant/AnoCar_quant_tpm_all.tsv
+paste *Chicken_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > tpm_quant/Chicken_quant_tpm_all.tsv
+paste *GeckoJap_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > tpm_quant/Gecko_quant_tpm_all.tsv
+paste *PVil_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > tpm_quant/PVil_quant_tpm_all.tsv
+paste *PythonMol_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > tpm_quant/PythonMol_quant_tpm_all.tsv
+
+# NumReads
+paste *PMucros_quant.sf | cut -f 1,5,10,15,20,25,30,35,40,45,50,55,60,65 > NumReads_quant/PMucros_quant_NumReads_all.tsv
+
+
+# For each .tsv file, replace column names 'TPM' with tissue names. In this order:
+1_HAJ15ADXX_CAGATC_L001
+3_HAJ15ADXX_GATCAG
+4_HAJ15ADXX_TAGCTT
+5_HAJ15ADXX_GGCTAC
+A_TENIUS_LIGHT_TAIL_ANT_RIGHT_CAGATC
+A_TENUIS_LIGHT_BV_TAIL_M_TTAGGC
+A_TENUIS_LIGHT_DORSAL_GCCAAT
+ALA_L001
+B223_B_RHINOCEROS_VNO_TGACCA
+J_A_LAEVIS_BODY_DORSAL_RIGHT_CGATGT
+JUB_A_LAEVIS_ANT]TAIL_RIGHT_ACAGTG
+JUV_A_LAEVIS_VENTRAL_TAIL_ACTTGA
+NS313_N_SCUTATUS_VNO_F_ATCACG
+
+# Names I want:
+Name
+0 HMAJ_testis
+1 HMAJ_heart
+2 ALA_vno
+3 ALA_tailA2
+4 ATEN_tailA2
+5 ATEN_tailB5
+6 ATEN_body
+7 ALA_eye
+8 BRH_vno
+9 ALAjuv_body
+10 ALAjuv_tailA2
+11 ALAjuv_tailB5
+12 NSC_vno
+
+# Extracting gene information from .gff files
+path= /data/biohub/Refs/Reptiles/gff3
+# cut -f 1,9 *P.Mucros*.gff | tr ";" "\n" | grep -E '^(Name | gene)=' | less
+
+# Cut column 1 and 9 (NW number and Gene info)
+paste *P.Mucros*.gff | cut -f 1,9 > PMucros_geneInfo.tsv 
+
+# Same as above but only take Note and gene info from line 9??
+paste PMucros_geneInfo.tsv | cut -f 2 | tr ";" "\n" | grep -E '^(Note|gene)=' | less
+
+# need to figure out, how to do above but also select column 1!
+
+
+## Search for genes in .fna.gz files
+# search for single gene in Gallus genome
+zgrep ">*(GNAT1)*" GCF_000002315.4_Gallus_gallus-5.0_rna.fna.gz
+
+# search for single gene in all genomes
+zgrep ">*(GNAT1)*" GCF_*_rna.fna.gz | less
+zgrep ">*(GNAT1)*" GCF_*_rna.fna.gz | cut -f | grep -E '^(>)'
+
+
+# download from phoenix
+scp -r a162801@phoenix.adelaide.edu.au:~/fastdir//home/a1662801/VRgenes_PMucros.tsv /Users/jennacrowe-riddell/Documents/tissue_profiling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
