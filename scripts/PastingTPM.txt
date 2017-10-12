@@ -27,6 +27,10 @@ paste *GeckoJap_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > tpm_q
 paste *PVil_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > tpm_quant/PVil_quant_tpm_all.tsv
 paste *PythonMol_quant.sf | cut -f 1,4,9,14,19,24,29,34,39,44,49,54,59,64 > tpm_quant/PythonMol_quant_tpm_all.tsv
 
+# NumReads
+paste *PMucros_quant.sf | cut -f 1,5,10,15,20,25,30,35,40,45,50,55,60,65 > NumReads_quant/PMucros_quant_NumReads_all.tsv
+
+
 # For each .tsv file, replace column names 'TPM' with tissue names. In this order:
 1_HAJ15ADXX_CAGATC_L001
 3_HAJ15ADXX_GATCAG
@@ -60,7 +64,7 @@ Name
 
 # Extracting gene information from .gff files
 path= /data/biohub/Refs/Reptiles/gff3
-# cut -f 1,9 *P.Mucros*.gff | tr ";" "\n" | grep -E '^(gene)=' | less
+# cut -f 1,9 *P.Mucros*.gff | tr ";" "\n" | grep -E '^(Name | gene)=' | less
 
 # Cut column 1 and 9 (NW number and Gene info)
 paste *P.Mucros*.gff | cut -f 1,9 > PMucros_geneInfo.tsv 
@@ -69,3 +73,49 @@ paste *P.Mucros*.gff | cut -f 1,9 > PMucros_geneInfo.tsv
 paste PMucros_geneInfo.tsv | cut -f 2 | tr ";" "\n" | grep -E '^(Note|gene)=' | less
 
 # need to figure out, how to do above but also select column 1!
+
+
+## Search for genes in .fna.gz files
+# search for single gene in Gallus genome
+zgrep ">*(GNAT1)*" GCF_000002315.4_Gallus_gallus-5.0_rna.fna.gz
+
+# search for single gene in all genomes
+zgrep ">*(GNAT1)*" GCF_*_rna.fna.gz | less
+zgrep ">*(GNAT1)*" GCF_*_rna.fna.gz | cut -f | grep -E '^(>)'
+
+
+# download from phoenix
+scp -r a162801@phoenix.adelaide.edu.au:~/fastdir//home/a1662801/VRgenes_PMucros.tsv /Users/jennacrowe-riddell/Documents/tissue_profiling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
