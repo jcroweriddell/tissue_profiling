@@ -7,11 +7,12 @@ library(ggplot2)
 library(RColorBrewer)
 library(tidyverse)
 library(pheatmap)
+library(reshape2)
 source("http://bioconductor.org/biocLite.R")
 biocLite("edgeR")
 
 # Set working directory and read in data
-setwd("C:/Users/L033060262053/Documents/Research projects/Tail_photoreception/tissue_profiling/salmon_quant/tpm_quant")
+setwd("~/Projects_BioinformaticsHub/Kate_Sanders/tissue_profiling/salmon_quant/tpm_quant")
 PMucros <- read.table(file = "PMucros_quant_tpm_all.tsv", header = TRUE)
 sampleinfo <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
 
@@ -56,11 +57,16 @@ tpmToFpkm <- function(tpm, geneLength){
   return(fpkm)
 }
 
+# Subset PMucros data object
+geneLength <- PMucros$HMAJ_testis_geneLength ## Doesn't matter which geneLength column you choose. They're all the SAME!!!!!
 
-testFpkm <- tpmToFpkm(tpm = PMucros$HMAJ_testis, geneLength = PMucros$HMAJ_testis_geneLength)
+## Getting TPM dataframe
+tpm <- PMucros %>%
+  column_to_rownames("GeneName") %>%
+  select(-contains("geneLength"))
 
-tpmToFpkm()
-
+## Generating FPKM values
+testFpkm <- tpmToFpkm(tpm = tpm, geneLength = geneLength) %>% data.frame()
 
 # Clustering analysis
 
