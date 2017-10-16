@@ -12,40 +12,27 @@ source("http://bioconductor.org/biocLite.R")
 biocLite("edgeR")
 
 # Set working directory and read in data
-setwd("~/Projects_BioinformaticsHub/Kate_Sanders/tissue_profiling/salmon_quant/tpm_quant")
+setwd("/Users/jennacrowe-riddell/Documents/tissue_profiling/salmon_quant/tpm_quant/")
 PMucros <- read.table(file = "PMucros_quant_tpm_all.tsv", header = TRUE)
 sampleinfo <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
 
 # Change column names to tissue names
 names(PMucros) 
 PMucros <- select(PMucros, GeneName = Name, 
-                     HMAJ_testis_geneLength = Length, 
+                     geneLength = Length, 
                      HMAJ_testis = TPM, 
-                     HMAJ_liver_geneLength = Length.1,
                      HMAJ_liver = TPM.1, 
-                     HMAJ_heart_geneLength = Length.2,
                      HMAJ_heart = TPM.2, 
-                     ALA_vno_geneLength = Length.3,
                      ALA_vno = TPM.3, 
-                     ALA_tailA2_geneLength = Length.4,
                      ALA_tailA2 = TPM.4, 
-                     ATEN_tailA2_geneLength = Length.5,
                      ATEN_tailA2 = TPM.5,
-                     ATEN_tailB5geneLength = Length.6,
                      ATEN_tailB5 = TPM.6, 
-                     ATEN_body_geneLength = Length.7,
                      ATEN_body = TPM.7, 
-                     ALA_eye_geneLength = Length.8,
                      ALA_eye = TPM.8, 
-                     BRH_vno_geneLength = Length.9,
                      BRH_vno = TPM.9, 
-                     ALAjuv_body_geneLength = Length.10,
                      ALAjuv_body = TPM.10,
-                     ALAjuv_tailA2_geneLength = Length.11,
                      ALAjuv_tailA2 = TPM.11, 
-                     ALAjuv_tailB5_geneLength = Length.12,
                      ALAjuv_tailB5 = TPM.12, 
-                     NSC_vno_geneLength = Length.13,
                      NSC_vno = TPM.13)
 
 
@@ -58,7 +45,7 @@ tpmToFpkm <- function(tpm, geneLength){
 }
 
 # Subset PMucros data object
-geneLength <- PMucros$HMAJ_testis_geneLength ## Doesn't matter which geneLength column you choose. They're all the SAME!!!!!
+geneLength <- PMucros$geneLength ## Doesn't matter which geneLength column you choose. They're all the SAME!!!!!
 
 ## Getting TPM dataframe
 tpm <- PMucros %>%
@@ -66,10 +53,9 @@ tpm <- PMucros %>%
   select(-contains("geneLength"))
 
 ## Generating FPKM values
-testFpkm <- tpmToFpkm(tpm = tpm, geneLength = geneLength) %>% data.frame()
+Fpkm <- tpmToFpkm(tpm = tpm, geneLength = geneLength) %>% data.frame()
 
 # Clustering analysis
-
 dgePMucros <- select(PMucros, GeneName, HMAJ_testis, HMAJ_liver, HMAJ_heart, ALA_vno, ALA_tailA2, ATEN_tailA2,
                      ATEN_body, ALA_eye, BRH_vno, ALAjuv_body, ALAjuv_tailA2, ALAjuv_tailB5, NSC_vno)
 
@@ -125,9 +111,17 @@ TPM_Pmucros <- TPM_Pmucros %>%
   as.matrix() %>%
   log1p()
 
+Fpkm_heatmap <- Fpkm %>%
+  as.matrix() %>%
+  log1p()
+
 colfunc <- brewer.pal(n = 9, name = "OrRd")
 pheatmap(TPM_Pmucros, cluster_rows = FALSE, cluster_cols = FALSE, color = colfunc, cutree_rows = 2 #or 3)
 
-
+pheatmap(Fpkm_heatmap,
+         cluster_rows = FALSE, 
+         cluster_cols = FALSE, 
+         color = colfunc, 
+         cutree_rows = 2) #or 3))
 
 
