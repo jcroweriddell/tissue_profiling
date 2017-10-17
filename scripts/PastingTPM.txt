@@ -92,6 +92,7 @@ scp -r a1662801@phoenix.adelaide.edu.au:/home/a1662801/keratinGenes_PMucros.tsv 
 rsync -avP a1662801@phoenix.adelaide.edu.au:/home/a1662801/keratinGenes_PMucros.tsv /Users/jennacrowe-riddell/Documents/tissue_profiling
 
 zgrep ">*(GNAT1)*" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz | less
+zgrep -f <(sort gene_list) file_you_want_to_search
 
 
 
