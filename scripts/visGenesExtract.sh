@@ -15,41 +15,16 @@
 
 # Set variables
 REFGENOME=GCF_001527695.2_P.Mucros_1.0_rna.fna.gz
-OUTPUT=/home/a1662801/output
 DATA=/data/biohub/Refs/Reptiles/gff3
-GENELIST=/home/a1662801/visGenelist.tsv
-HOME=/home/a1662801
+GENE_LIST=visGenelist.tsv
 
 # Extract vis genes from genome
 echo "Searching for visual gene names in $ref_genome"
 
 for FQGZ in ${DATA}/*_rna.fna.gz
 	do
-			zgrep ">*($VISGENES)*" > ${OUTPUT}/visGenes_${FNGZ}.tsv
+	while read line; do zgrep ">" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz | grep "$line"; done < $GENE_LIST
 done
 
 
 echo "Finished searching in $ref_genome"
-
-zgrep -f <(sort $GENELIST) *Mucros*rna.fna.gz | less
-
-
-
-zgrep ">*visual*" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz | less
-
-
-zgrep ">*vomeronasal*" GCF_*P.Mucros*_rna.fna.gz > VRgenes_PMucros.tsv
-
-
-zgrep -f "(genes.txt)" GCF_*2_P.Mucros*_rna.fna.gz | less
-
-zgrep ">*(GNAT1)*" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz >visGenes_PMucros.tsv
-
-zgrep ">*(GNAT)*" *Mucros_*_rna.fna.gz | less
-
-while read line; do zgrep ">" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz | grep "$line"; done < $GENE_LIST
-
-
-while read line; do zgrep ">*(*" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz | grep "$line"; done < $GENE_LIST | less
-
-zgrep ">" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz | grep -f <(sort $GENE_LIST)
