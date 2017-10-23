@@ -1,0 +1,139 @@
+---
+title: "Function writing"
+author: "Jenna"
+date: "'r Sys.Date()'"
+output: 
+html_document:
+toc: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+## IGNORE THESE
+# library(readr)
+# library(magrittr)
+# library(dplyr)
+# library(edgeR)
+# library(tibble)
+# library(pheatmap)
+```
+
+```{r}
+## Ideas for functions 
+# automate name binding (gene name and gene name) -- do this for different types of count tables (FPKM, CPM etc...)
+# Rename column name function 
+# Vectorising gene list & filtering by count data 
+# Plotting function 
+```
+
+# Function writing
+
+Here i'll write a simple function to demonstrate some of the key components of function writing and good programming practices.
+
+Overall, I'd say the main thing to remember is to keep things simple. Write many functions that do things well, rather than one function that does many things OK.
+
+The first thing to think about is what you want your function to do. Write out a dot point list of actual 'functions' you want. This may include actual data manipulation processes, to simple logical checks of the data structure, to conditional statements that prevent erroneous data from being analysed. 
+
+Here we'll write a function that does 3 things. 
+
+- Conduct some logical checks of the input command
+- Import a test dataset to use
+- Produce a boxplot with the data 
+
+First we'll load the packages we need:
+```{r}
+library(datasets) ## contains the test data 
+library(ggplot2)
+```
+
+The function! I'll break down each line in more detail below. This function is pretty silly, but does work. It provides a few examples of error checking and different tests you can run on the data to ensure it's valid.
+```{r}
+boxPlotter <- function(dataset){
+  
+  #-------------------------------ERROR CHECKING-------------------------------#
+  ## Simple error check that an argument is actually passed to dataset
+  if(missing(dataset)) stop("No dataset selected. Please select one of; airquality, mpg or toothgrowth")
+  
+  ## Checking that the provided argument is a string
+  if(!is.character(dataset)) stop("dataset isn't a character string. Do not pass a data object, just a string.")
+  
+  ## Checking that a valid string is passed (i.e. one of the datasets we've coded for)
+  if(dataset != "airquality" | dataset != "mpg" | dataset != "toothgrowth") stop("Invalid dataset chosen")
+  
+  #-------------------------------Commands-------------------------------#
+  ## Here we'll set up conditionals based on what argument is provided at the function interface
+  if(dataset == "airquality"){
+    data("airquality") ## loading data 
+    airquality$Month <- factor(airquality$Month,  ## converting month to a factor
+                               labels = c("May", "Jun", "Jul", "Aug", "Sep")) ## labelling numeric values to proper names 
+    ggplot(airquality, aes(x = Month, y = Ozone)) + geom_boxplot() ## plotting month against ozone as a boxplot 
+  } 
+  else if(dataset == "mpg") {
+    data("mpg") ## loading mpg dataset 
+    ggplot(mpg, aes(class, hwy)) + geom_boxplot() ## Plotting class against highway mpg
+  }
+  else {
+    data("ToothGrowth") ## If neither of the other arugments are passed then toothgrowth must have been passed
+    ToothGrowth$dose <- as.factor(ToothGrowth$dose)
+    ggplot(ToothGrowth, aes(x=dose, y=len)) + 
+      geom_boxplot()
+  }
+}
+```
+
+# Breaking down the function
+
+
+### Conditional checks 
+
+The following check is to test if an argument has actually been passed to the necessary field. The command `missing` is a logical test to see if an argument has been passed to a function. If missing returns `TRUE` then the function will stop and print the error message. 
+```{r}
+if(missing(dataset)) stop("No dataset selected. Please select one of; airquality, mpg or toothgrowth")
+```
+
+
+This checks wether the right argument has been passed to the function. We are expecting a string (something in quotations) to this argument. The exclamation mark `!` before `is.character()` is a logical negation (NOT). Here we are saying if the argument passed to `dataset` is NOT a character, stop execution and return the error message.
+
+Logical negations can be a simple way of conduction a logical check, just make sure you check your double negatives, as they can get unruly when they begin stacking!
+```{r}
+if(!is.character(dataset)) stop("dataset isn't a character string. Do not pass a data object, just a string.")
+```
+
+
+Finally, if the previous two checks have been passed, we just need to check if the string provided actually corresponds to one of the datasets we've coded for in the function. Here we use `!=`, which means "DOES NOT EQUAL". The pipe symbol `|` is the boolean operator for OR. Here we run multiple tests in one if statement. If the string passed to dataset doesn't match "airquality" OR "mpg" OR "toothgrowth" then stop the function and return the error message
+```{r}
+if(dataset != "airquality" | dataset != "mpg" | dataset != "toothgrowth") stop("Invalid dataset chosen")
+```
+
+These are very simple, but you can see how valuable having checks like these might be. R has a whole lot of in-build logical tests e.g. `isTrue(), is.na()` etc., as well as any you want to write yourself. If you ever do write your own functions,  I highly recommend getting into the habit of thinking about what type of object you expect, and to write logical checks at every step of the way to test you've got the object that you should. You'll thank yourself later! 
+
+
+### Actual executable commands: if statement
+
+Once our argument has passed the logical tests, we move onto the actual executable code. Here, I've set up an `if statement` that will execute different code depending on what argument is passed to the function. I've kept it simple here by only having one argument with three options. You can set up as many function variables as you want (i.e. other arugments besides `dataset`) with as many values assigned to each variable as you want. 
+
+Here, if `airquality` is passed to the command, the code immediately following the first `if` statement within the curly braces is executed. If the `if` condition isn't met, we move onto the next `else if` statement. The function will iterate through each statement until a match is found, or until the final `else` statement is reached. We know the final else statement is right if none of the other statements have been executed because of our logic checks!
+
+```{r}
+if(dataset == "airquality"){
+  data("airquality") ## loading data 
+  airquality$Month <- factor(airquality$Month,  ## converting month to a factor - month is a variable in airquality
+                             labels = c("May", "Jun", "Jul", "Aug", "Sep")) ## labelling numeric values to proper names 
+  ggplot(airquality, aes(x = Month, y = Ozone)) + geom_boxplot() ## plotting month against ozone as a boxplot 
+} 
+else if(dataset == "mpg") {
+  data("mpg") ## loading mpg dataset 
+  ggplot(mpg, aes(class, hwy)) + geom_boxplot() ## Plotting class against highway mpg
+}
+else {
+  data("ToothGrowth") ## If neither of the other arugments are passed then toothgrowth must have been passed
+  ToothGrowth$dose <- as.factor(ToothGrowth$dose)
+  ggplot(ToothGrowth, aes(x=dose, y=len)) + 
+    geom_boxplot()
+}
+```
+
+When you put that all together you've got yourself a neat little plotting function.
