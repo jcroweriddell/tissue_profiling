@@ -1,0 +1,9 @@
+>XM_015812840.1 PREDICTED: Protobothrops mucrosquamatus cryptochrome circadian clock 1 (CRY1)  mRNA
+>XM_015813856.1 PREDICTED: Protobothrops mucrosquamatus CLOCK-interacting pacemaker (CIPC)  mRNA
+>XM_015818590.1 PREDICTED: Protobothrops mucrosquamatus TIMELESS interacting protein (TIPIN)  transcript variant X1  mRNA
+>XM_015818591.1 PREDICTED: Protobothrops mucrosquamatus TIMELESS interacting protein (TIPIN)  transcript variant X2  mRNA
+>XM_015818592.1 PREDICTED: Protobothrops mucrosquamatus TIMELESS interacting protein (TIPIN)  transcript variant X3  mRNA
+>XM_015819871.1 PREDICTED: Protobothrops mucrosquamatus timeless circadian clock (TIMELESS)  mRNA
+>XM_015821179.1 PREDICTED: Protobothrops mucrosquamatus clock circadian regulator (CLOCK)  partial mRNA
+>XM_015822469.1 PREDICTED: Protobothrops mucrosquamatus period circadian clock 2 (PER2)  mRNA
+>XM_015826457.1 PREDICTED: Protobothrops mucrosquamatus period circadian clock 1 (PER1)  mRNA

@@ -1,0 +1,45 @@
+>XM_015813101.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 5-like (LOC107284963)  mRNA
+>XM_015813111.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal-like (LOC107284973)  mRNA
+>XM_015813122.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal-like (LOC107284982)  mRNA
+>XM_015813133.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 6C-like (LOC107284991)  mRNA
+>XM_015813154.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal cochleal-like (LOC107285009)  mRNA
+>XM_015813165.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 5-like (LOC107285020)  mRNA
+>XM_015813347.1 PREDICTED: Protobothrops mucrosquamatus keratin-associated protein 5-3-like (LOC107285184)  mRNA
+>XM_015813348.1 PREDICTED: Protobothrops mucrosquamatus feather keratin-like (LOC107285185)  mRNA
+>XM_015813351.1 PREDICTED: Protobothrops mucrosquamatus feather keratin-like (LOC107285189)  mRNA
+>XM_015815763.1 PREDICTED: Protobothrops mucrosquamatus trichoplein  keratin filament binding (TCHP)  mRNA
+>XM_015816766.1 PREDICTED: Protobothrops mucrosquamatus keratin 8  type II (KRT8)  mRNA
+>XM_015816767.1 PREDICTED: Protobothrops mucrosquamatus keratin 18  type I (KRT18)  mRNA
+>XM_015818717.1 PREDICTED: Protobothrops mucrosquamatus keratinocyte differentiation factor 1 (KDF1)  mRNA
+>XM_015820464.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 8-like (LOC107291466)  mRNA
+>XM_015820485.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 18-like (LOC107291485)  mRNA
+>XM_015821907.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal cochleal-like (LOC107292785)  mRNA
+>XM_015821912.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 4-like (LOC107292789)  mRNA
+>XM_015821914.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal cochleal-like (LOC107292791)  mRNA
+>XM_015821915.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 5-like (LOC107292792)  transcript variant X1  mRNA
+>XM_015821916.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 5-like (LOC107292792)  transcript variant X2  mRNA
+>XM_015821917.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 5-like (LOC107292792)  transcript variant X3  mRNA
+>XM_015821918.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 5-like (LOC107292794)  mRNA
+>XM_015826064.1 PREDICTED: Protobothrops mucrosquamatus keratinocyte associated protein 2 (KRTCAP2)  mRNA
+>XM_015828003.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 5-like (LOC107298626)  mRNA
+>XM_015828005.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 6A-like (LOC107298627)  mRNA
+>XM_015830055.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 60 kDa  component III-like (LOC107300762)  partial mRNA
+>XM_015830140.1 PREDICTED: Protobothrops mucrosquamatus keratin  type II cytoskeletal 60 kDa  component III-like (LOC107300853)  partial mRNA
+>XM_015830662.1 PREDICTED: Protobothrops mucrosquamatus keratinocyte-associated protein 2-like (LOC107301438)  partial mRNA
+>XM_015830734.1 PREDICTED: Protobothrops mucrosquamatus keratin-associated protein 5-1-like (LOC107301524)  partial mRNA
+>XM_015832201.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 12-like (LOC107303022)  mRNA
+>XM_015832203.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 10-like (LOC107303023)  mRNA
+>XM_015832204.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 19-like (LOC107303024)  mRNA
+>XM_015832280.1 PREDICTED: Protobothrops mucrosquamatus keratin 24  type I (KRT24)  mRNA
+>XM_015832281.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 10-like (LOC107303091)  mRNA
+>XM_015832282.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 23-like (LOC107303092)  mRNA
+>XM_015832284.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 15-like (LOC107303093)  mRNA
+>XM_015832285.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 19-like (LOC107303094)  transcript variant X1  mRNA
+>XM_015832286.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 19-like (LOC107303094)  transcript variant X2  mRNA
+>XM_015832287.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 14-like (LOC107303095)  mRNA
+>XM_015832314.1 PREDICTED: Protobothrops mucrosquamatus keratin 222  type II (KRT222)  mRNA
+>XM_015832315.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 12-like (LOC107303119)  mRNA
+>XM_015832316.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 20-like (LOC107303120)  mRNA
+>XM_015832317.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 19-like (LOC107303121)  mRNA
+>XM_015832319.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 19-like (LOC107303122)  mRNA
+>XM_015832320.1 PREDICTED: Protobothrops mucrosquamatus keratin  type I cytoskeletal 14-like (LOC107303123)  mRNA

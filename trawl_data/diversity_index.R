@@ -4,6 +4,7 @@ library(tibble)
 library(tidyverse)
 library(ggplot2)
 library(tidyr)
+library(readr)
 
 setwd("/Users/L033060262053/Documents/working_dir/activityPatterns/")
 
@@ -12,7 +13,7 @@ setwd("/Users/L033060262053/Documents/working_dir/activityPatterns/")
 # n <- c(4,5,11,5,1,4,12,4,3,4,7,2,3,3,2)
 # df <- data.frame(site,species,n)
 
-Dof <- read.csv("Dof_combined.csv", header = TRUE, sep = ",")# Diversity index between sites within EG
+Dof <- read_csv("Dof_combined.csv", col_names = TRUE)# Diversity index between sites within EG
 
 # Brillouin index (Hb) function
 Hb <- function(ns) { 
@@ -25,6 +26,12 @@ ns <- Dof %>%
   filter(Fishery == "EG") %>%
   group_by(Site) %>% 
   count(Species)
+
+Site13 <- ns %>% 
+  filter(Site =="13") %>%
+  select(n)
+
+ns <- Site13$n
 
 head(ns)
 
@@ -39,5 +46,11 @@ df %>%
   }) %>%
   bind_rows()
   
-
+test <- ns %>% 
+  split(f = .$Site) %>%
+  lapply(function(x){
+    vec <- sum(x$n)
+    (lfactorial(vec) - sum(lfactorial(x$n)))/vec
+  }) %>%
+  bind_rows()
 

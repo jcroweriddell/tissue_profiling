@@ -1,0 +1,18 @@
+>XM_015812351.1 PREDICTED: Protobothrops mucrosquamatus opsin 5 (OPN5)  mRNA
+>XM_015813192.1 PREDICTED: Protobothrops mucrosquamatus arrestin beta 2 (ARRB2)  mRNA
+>XM_015813710.1 PREDICTED: Protobothrops mucrosquamatus S-antigen retina and pineal gland arrestin (SAG)  mRNA
+>XM_015815691.1 PREDICTED: Protobothrops mucrosquamatus opsin 4 (OPN4)  mRNA
+>XM_015816562.1 PREDICTED: Protobothrops mucrosquamatus lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  mRNA
+>XM_015816690.1 PREDICTED: Protobothrops mucrosquamatus opsin 3 (OPN3)  mRNA
+>XM_015821339.1 PREDICTED: Protobothrops mucrosquamatus guanylate cyclase activator 1A (GUCA1A)  mRNA
+>XM_015821340.1 PREDICTED: Protobothrops mucrosquamatus guanylate cyclase activator 1B (GUCA1B)  mRNA
+>XM_015821479.1 PREDICTED: Protobothrops mucrosquamatus calmodulin 1 phosphorylase kinase delta(CALM1)  mRNA
+>XM_015821725.1 PREDICTED: Protobothrops mucrosquamatus guanine nucleotide binding protein G protein  alpha transducing activity polypeptide 2 (GNAT2)  mRNA
+>XM_015822696.1 PREDICTED: Protobothrops mucrosquamatus phosphodiesterase 6C (PDE6C)  mRNA
+>XM_015823472.1 PREDICTED: Protobothrops mucrosquamatus rhodopsin (RHO)  mRNA
+>XM_015824195.1 PREDICTED: Protobothrops mucrosquamatus retinol dehydrogenase 5 (RDH5)  mRNA
+>XM_015824755.1 PREDICTED: Protobothrops mucrosquamatus guanine nucleotide binding protein G protein alpha transducing activity polypeptide 1 (GNAT1)  mRNA
+>XM_015825841.1 PREDICTED: Protobothrops mucrosquamatus opsin 1 cone pigments short-wave-sensitive (OPN1SW)  mRNA
+>XM_015827944.1 PREDICTED: Protobothrops mucrosquamatus retinal pigment epithelium-derived rhodopsin homolog (RRH)  mRNA
+>XM_015829586.1 PREDICTED: Protobothrops mucrosquamatus retinal pigment epithelium-specific protein 65kDa (RPE65)  mRNA
+
