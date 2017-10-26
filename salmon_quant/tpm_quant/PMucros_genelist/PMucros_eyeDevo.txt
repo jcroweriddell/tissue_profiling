@@ -1,0 +1,24 @@
+>XM_015810483.1 PREDICTED: Protobothrops mucrosquamatus homeobox B5 (HOXB5)  mRNA
+>XM_015814749.1 PREDICTED: Protobothrops mucrosquamatus desert hedgehog (DHH)  mRNA
+>XM_015814977.1 PREDICTED: Protobothrops mucrosquamatus homeobox D13 (HOXD13)  mRNA
+>XM_015818273.1 PREDICTED: Protobothrops mucrosquamatus homeobox C8 (HOXC8)  mRNA
+>XM_015818461.1 PREDICTED: Protobothrops mucrosquamatus nuclear receptor subfamily 2 group E member 3 (NR2E3)  mRNA
+>XM_015821550.1 PREDICTED: Protobothrops mucrosquamatus prominin 1 (PROM1)  mRNA
+>XM_015825581.1 PREDICTED: Protobothrops mucrosquamatus notch 1 (NOTCH1)  partial mRNA
+>XM_015826935.1 PREDICTED: Protobothrops mucrosquamatus USH1 protein network component harmonin (USH1C)  mRNA
+>XM_015828750.1 PREDICTED: Protobothrops mucrosquamatus RAR related orphan receptor B (RORB)  partial mRNA
+>XM_015832137.1 PREDICTED: Protobothrops mucrosquamatus orthodenticle homeobox 2 (OTX2)  transcript variant X1  mRNA
+>XM_015832138.1 PREDICTED: Protobothrops mucrosquamatus orthodenticle homeobox 2 (OTX2)  transcript variant X2  mRNA
+>XM_015832548.1 PREDICTED: Protobothrops mucrosquamatus sonic hedgehog (SHH)  transcript variant X1  mRNA
+>XM_015832549.1 PREDICTED: Protobothrops mucrosquamatus sonic hedgehog (SHH)  transcript variant X2  mRNA
+>XM_015822921.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X1  mRNA
+>XM_015822922.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X2  mRNA
+>XM_015822924.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X3  mRNA
+>XM_015822925.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X4  mRNA
+>XM_015822926.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X5  mRNA
+>XM_015822927.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X6  mRNA
+>XM_015822928.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X7  mRNA
+>XM_015819793.1 PREDICTED: Protobothrops mucrosquamatus paired box 2 (PAX2)  mRNA
+>XM_015822237.1 PREDICTED: Protobothrops mucrosquamatus neural retina leucine zipper (NRL)  mRNA
+>XM_015825214.1 PREDICTED: Protobothrops mucrosquamatus retinoschisin 1 (RS1)  mRNA
+>XM_015820330.1 PREDICTED: Protobothrops mucrosquamatus protocadherin-related 15 (PCDH15)  partial mRNA

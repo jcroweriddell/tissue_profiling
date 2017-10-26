@@ -65,7 +65,7 @@ write.table(retGenesTPM, "PMucros_R_analysis/retGenesTPM", sep = "\t")
 retGenesTPMlog <- retGenesTPM %>%
   column_to_rownames("GeneName") %>%
   select(ALA_tailA2, ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, ATEN_tailA2, ATEN_tailB5, ATEN_body,
-         HMAJ_heart, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
+         HMAJ_heart, HMAJ_liver, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
   as.matrix() %>%
   log1p()
 
@@ -75,8 +75,9 @@ pheatmap(retGenesTPMlog,
          cluster_rows = TRUE, 
          cluster_cols = FALSE, 
          color = colfunc,
-         breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 3, 4.5, 6, 7),
-         labels_row = retGenes$geneName)
+         cutree_rows = 3,
+         breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 3, 4.5, 6, 7))
+         #labels_row = retGenes$geneName)
 
 dev.off()
 

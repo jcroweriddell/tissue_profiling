@@ -1,0 +1,18 @@
+>XM_015817497.1 PREDICTED: Protobothrops mucrosquamatus paired box 9 (PAX9)  mRNA
+>XM_015817852.1 PREDICTED: Protobothrops mucrosquamatus paired box 3 (PAX3)  transcript variant X1  mRNA
+>XM_015817854.1 PREDICTED: Protobothrops mucrosquamatus paired box 3 (PAX3)  transcript variant X2  mRNA
+>XM_015817855.1 PREDICTED: Protobothrops mucrosquamatus paired box 3 (PAX3)  transcript variant X3  mRNA
+>XM_015817856.1 PREDICTED: Protobothrops mucrosquamatus paired box 3 (PAX3)  transcript variant X4  mRNA
+>XM_015819499.1 PREDICTED: Protobothrops mucrosquamatus PAX3 and PAX7 binding protein 1 (PAXBP1)  mRNA
+>XM_015819793.1 PREDICTED: Protobothrops mucrosquamatus paired box 2 (PAX2)  mRNA
+>XM_015820234.1 PREDICTED: Protobothrops mucrosquamatus paired box 5 (PAX5)  partial mRNA
+>XM_015822921.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X1  mRNA
+>XM_015822922.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X2  mRNA
+>XM_015822924.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X3  mRNA
+>XM_015822925.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X4  mRNA
+>XM_015822926.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X5  mRNA
+>XM_015822927.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X6  mRNA
+>XM_015822928.1 PREDICTED: Protobothrops mucrosquamatus paired box 6 (PAX6)  transcript variant X7  mRNA
+>XM_015827002.1 PREDICTED: Protobothrops mucrosquamatus paired box 1 (PAX1)  mRNA
+>XM_015832527.1 PREDICTED: Protobothrops mucrosquamatus PAX interacting with transcription-activation domain protein 1 (PAXIP1)  mRNA
+

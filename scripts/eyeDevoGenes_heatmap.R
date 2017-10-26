@@ -1,4 +1,4 @@
-## Generate heatmap for genes involved in Phototransduction
+## Generate heatmap for genes involved in Eye development genes
 
 library(magrittr)
 library(tibble)
@@ -14,8 +14,8 @@ library(tidyselect)
 setwd("/Users/L033060262053/Documents/Research projects/Tail_photoreception/tissue_profiling/salmon_quant/tpm_quant/")
 refGenome <- read.table(file = "PMucros_quant_tpm_all.tsv", header = TRUE)
 sampleinfo <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
-visGenes <- read_csv(file = "PMucros_genelist/PMucros_visGenes2.txt", col_names = FALSE)
-head(visGenes)
+eyeDevoGenes <- read_csv(file = "PMucros_genelist/PMucros_eyeDevo.txt", col_names = FALSE)
+head(eyeDevoGenes)
 
 # Change column names to tissue names
 names(refGenome) 
@@ -36,48 +36,47 @@ refGenome <- select(refGenome, GeneName = Name,
                     NSC_vno = TPM.13)
 
 # Change column names, remove unwanted characters
-visGenes$X1 <- gsub(">","", visGenes$X1)
+eyeDevoGenes$X1 <- gsub(">","", eyeDevoGenes$X1)
 
 # Create new column for 'Predicted' & 'geneName'
-visGenes <- separate(visGenes, X1, c("XM.geneid", "Predicted"), sep = " PREDICTED: ")
-visGenes$Predicted <- gsub("\\(", ",", visGenes$Predicted)
+eyeDevoGenes <- separate(eyeDevoGenes, X1, c("GeneName", "Predicted"), sep = " PREDICTED: ")
+eyeDevoGenes$Predicted <- gsub("\\(", ",", eyeDevoGenes$Predicted)
 
-visGenes <- separate(visGenes, Predicted, c("Predicted", "geneName"), sep = ",")
-visGenes$geneName <- gsub("\\)", "", visGenes$geneName) 
-visGenes$geneName <- gsub("mRNA", "", visGenes$geneName) 
-
-View(visGenes)
+eyeDevoGenes <- separate(eyeDevoGenes, Predicted, c("Predicted", "geneDescript"), sep = ",")
+eyeDevoGenes$geneDescript <- gsub("\\)", "", eyeDevoGenes$geneDescript) 
+eyeDevoGenes$geneDescript <- gsub("mRNA", "", eyeDevoGenes$geneDescript) 
+eyeDevoGenes$geneDescript <- gsub("transcript variant*", "", eyeDevoGenes$geneDescript) 
+View(eyeDevoGenes)
 
 # Save VR gene list
-write.table(visGenes, "PMucros_R_analysis/visGenes_XMdescription", sep = "\t")
+write.table(eyeDevoGenes, "PMucros_R_analysis/eyeDevoGenes_XMdescription", sep = "\t")
 
 # Create a vetor of XM values
-geneList <- visGenes$XM.geneid
+geneList <- eyeDevoGenes$XM.geneid
 
 # Filter refGenome by XM vOPN genes
-visGenesTPM <- filter(refGenome, GeneName %in% geneList)
+eyeDevoGenesTPM <- filter(refGenome, GeneName %in% geneList)
 
 # Then look at TPM count table across tissues!
-View(visGenesTPM)
-write.table(visGenesTPM, "PMucros_R_analysis/visGenesTPM", sep = "\t")
+View(eyeDevoGenesTPM)
+write.table(eyeDevoGenesTPM, "PMucros_R_analysis/eyeDevoGenesTPM", sep = "\t")
 
 # Heatmap
-visGenesTPMlog <- visGenesTPM %>%
+eyeDevoGenesTPMlog <- eyeDevoGenesTPM %>%
   column_to_rownames("GeneName") %>%
   select(ALA_tailA2, ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, ATEN_tailA2, ATEN_tailB5, ATEN_body,
-  HMAJ_heart, HMAJ_liver, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
+         HMAJ_heart, HMAJ_liver, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
   as.matrix() %>%
   log1p()
 
 colfunc <- brewer.pal(n = 9, name = "OrRd")
-pdf(file = "plots/visGenes_heatmap.pdf")
-pheatmap(visGenesTPMlog, 
+pdf(file = "PMucros_R_analysis/eyeDevoGenes_heatmap.pdf")
+pheatmap(eyeDevoGenesTPMlog, 
          cluster_rows = TRUE, 
          cluster_cols = FALSE, 
          color = colfunc,
          cutree_rows = 4,
-         breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 4, 5.5, 7, 9))
-        # labels_row = visGenes$geneName)
+         breaks = c(0, 0.5, 1, 2, 4, 8, 3, 6, 12, 20))
 
 dev.off()
 

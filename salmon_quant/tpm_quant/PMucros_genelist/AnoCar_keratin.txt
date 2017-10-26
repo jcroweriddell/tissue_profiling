@@ -1,84 +1,84 @@
->NM_001293119.1 Anolis carolinensis keratin 36 (krt36), mRNA
->NM_001293120.1 Anolis carolinensis keratin, type I cytoskeletal 19 (LOC100337544), mRNA
->NM_001293121.1 Anolis carolinensis keratin, type II cytoskeletal cochleal (LOC100337545), mRNA
->NM_001293122.1 Anolis carolinensis keratin, type II cuticular Hb5 (LOC100337546), mRNA
->NM_001293123.1 Anolis carolinensis keratin, type I cuticular Ha4 (LOC100337549), mRNA
->NM_001319780.1 Anolis carolinensis keratin-associated protein 10-7-like (LOC103280364), mRNA
->XM_003214948.3 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 8 (LOC100554014), transcript variant X1, mRNA
->XM_003214949.2 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 18 (LOC100554207), mRNA
->XM_003216969.3 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 4 (LOC100565886), mRNA
->XM_003216970.3 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 5 (LOC100566088), mRNA
->XM_003216971.3 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 6A (LOC100566287), mRNA
->XM_003216975.3 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal cochleal (LOC100567055), mRNA
->XM_003217022.3 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 5 (LOC100560037), mRNA
->XM_003217024.3 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 5 (LOC100560433), mRNA
->XM_003217027.2 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal cochleal (LOC100561224), mRNA
->XM_003217028.3 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 7 (LOC100561422), mRNA
->XM_003217029.2 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal (LOC100561620), transcript variant X2, mRNA
->XM_003217030.3 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 5 (LOC100561812), mRNA
->XM_003217032.3 PREDICTED: Anolis carolinensis keratin, type II cuticular Hb4 (LOC100562208), mRNA
->XM_003222460.3 PREDICTED: Anolis carolinensis keratin 222 (krt222), mRNA
->XM_003222465.3 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 14 (LOC100564200), mRNA
->XM_003222466.3 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 14 (LOC100564396), mRNA
->XM_003222573.3 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 12 (LOC100552468), mRNA
->XM_003222579.3 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 19 (LOC100553650), mRNA
->XM_003224435.3 PREDICTED: Anolis carolinensis keratin 8 (krt8), mRNA
->XM_003224442.3 PREDICTED: Anolis carolinensis keratin 18 (krt18), mRNA
->XM_003226324.3 PREDICTED: Anolis carolinensis keratin-associated beta-protein 14 (li-ac-14), mRNA
->XM_003226329.3 PREDICTED: Anolis carolinensis keratin-associated beta-protein 27 (li-ac-27), mRNA
->XM_003226333.3 PREDICTED: Anolis carolinensis keratin-associated beta-protein 12 (li-ac-12), mRNA
->XM_003226334.2 PREDICTED: Anolis carolinensis keratin-associated beta-protein 13 (li-ac-13), transcript variant X1, mRNA
->XM_003226336.1 PREDICTED: Anolis carolinensis claw keratin-like (LOC100557315), mRNA
->XM_003226344.1 PREDICTED: Anolis carolinensis claw keratin-like (LOC100558762), mRNA
->XM_003226351.2 PREDICTED: Anolis carolinensis keratin-associated beta-protein 35 (li-ac-35), mRNA
->XM_003227455.3 PREDICTED: Anolis carolinensis keratinocyte differentiation factor 1 (kdf1), mRNA
->XM_003230785.3 PREDICTED: Anolis carolinensis keratinocyte associated protein 2 (krtcap2), mRNA
->XM_008104064.2 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 5 (LOC100560234), mRNA
->XM_008104077.2 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal cochleal (LOC100562008), mRNA
->XM_008104082.2 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 80 (LOC100562605), transcript variant X1, mRNA
->XM_008104088.2 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 80 (LOC100562605), transcript variant X2, mRNA
->XM_008104089.2 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 80 (LOC100562605), transcript variant X3, mRNA
->XM_008110320.2 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 8 (LOC100554014), transcript variant X2, mRNA
->XM_008113377.2 PREDICTED: Anolis carolinensis keratin 23 (krt23), mRNA
->XM_008113383.2 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 10 (LOC103279244), mRNA
->XM_008113384.2 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 24 (LOC100552076), mRNA
->XM_008113388.2 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 15 (LOC100552862), mRNA
->XM_008113391.2 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 10 (LOC100553064), mRNA
->XM_008113392.2 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 19 (LOC100563808), mRNA
->XM_008113394.2 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 17 (LOC100554046), transcript variant X1, mRNA
->XM_008113395.2 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 17 (LOC100554046), transcript variant X2, mRNA
->XM_008113473.2 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 10 (LOC100553253), transcript variant X1, mRNA
->XM_008119114.2 PREDICTED: Anolis carolinensis keratin-associated beta-protein 3 (li-ac-3), mRNA
->XM_008119115.2 PREDICTED: Anolis carolinensis beta-keratin-related protein-like (LOC100557120), mRNA
->XM_008119117.2 PREDICTED: Anolis carolinensis claw keratin-like (LOC100558368), mRNA
->XM_008119118.2 PREDICTED: Anolis carolinensis keratin-associated beta-protein 37 (li-ac-37), mRNA
->XM_008119129.1 PREDICTED: Anolis carolinensis keratin-associated beta-protein 28 (li-ac-28), mRNA
->XM_008119132.2 PREDICTED: Anolis carolinensis keratin-associated protein 4-4 (LOC103280368), mRNA
->XM_008119133.2 PREDICTED: Anolis carolinensis keratin-associated protein 4-11 (LOC103280369), mRNA
->XM_008123665.2 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 2 epidermal-like (LOC103281655), mRNA
->XM_016990801.1 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 3-like (LOC107982338), partial mRNA
->XM_016990802.1 PREDICTED: Anolis carolinensis keratin, type II cuticular Hb5-like (LOC100562411), mRNA
->XM_016990836.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 9 (LOC103278039), mRNA
->XM_016991237.1 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 7 (LOC100560827), mRNA
->XM_016991238.1 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 4 (LOC100560629), mRNA
->XM_016991239.1 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal (LOC100561620), transcript variant X1, mRNA
->XM_016991977.1 PREDICTED: Anolis carolinensis keratin-associated protein 4-7-like (LOC107982590), mRNA
->XM_016994581.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 12-like (LOC100552270), transcript variant X1, mRNA
->XM_016994582.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 12-like (LOC100552270), transcript variant X2, mRNA
->XM_016994583.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 42-like (LOC107982248), mRNA
->XM_016994584.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 10 (LOC100553253), transcript variant X2, mRNA
->XM_016994585.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 10 (LOC100553253), transcript variant X3, mRNA
->XM_016994586.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 10 (LOC100553253), transcript variant X4, mRNA
->XM_016994587.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 10-like (LOC107983006), mRNA
->XM_016994588.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 19 (LOC100553450), mRNA
->XM_016994589.1 PREDICTED: Anolis carolinensis keratin, type I cytoskeletal 19 (LOC100553851), mRNA
->XM_016996787.1 PREDICTED: Anolis carolinensis keratin-associated protein 10-7-like (LOC103280364), transcript variant X1, mRNA
->XM_016996791.1 PREDICTED: Anolis carolinensis keratin-associated beta-protein 5 (li-ac-5), mRNA
->XM_016996792.1 PREDICTED: Anolis carolinensis keratin-associated beta-protein 13 (li-ac-13), transcript variant X2, mRNA
->XM_016996793.1 PREDICTED: Anolis carolinensis keratin-associated beta-protein 17 (li-ac-17), mRNA
->XM_016996794.1 PREDICTED: Anolis carolinensis keratin-associated protein 5-5-like (LOC107983355), mRNA
->XM_016996803.1 PREDICTED: Anolis carolinensis keratin-associated protein 10-1-like (LOC107983364), mRNA
->XM_016996804.1 PREDICTED: Anolis carolinensis keratin-associated protein 5-1-like (LOC107983365), mRNA
->XM_016996805.1 PREDICTED: Anolis carolinensis keratin-associated protein 5-10-like (LOC107983367), mRNA
->XM_016996809.1 PREDICTED: Anolis carolinensis keratin-associated protein 6-3-like (LOC100553794), mRNA
->XM_016999402.1 PREDICTED: Anolis carolinensis keratin, type II cytoskeletal 59 kDa, component IV-like (LOC107983930), partial mRNA
+>NM_001293119.1 Anolis carolinensis keratin 36 (krt36)  mRNA
+>NM_001293120.1 Anolis carolinensis keratin  type I cytoskeletal 19 (LOC100337544)  mRNA
+>NM_001293121.1 Anolis carolinensis keratin  type II cytoskeletal cochleal (LOC100337545)  mRNA
+>NM_001293122.1 Anolis carolinensis keratin  type II cuticular Hb5 (LOC100337546)  mRNA
+>NM_001293123.1 Anolis carolinensis keratin  type I cuticular Ha4 (LOC100337549)  mRNA
+>NM_001319780.1 Anolis carolinensis keratin-associated protein 10-7-like (LOC103280364)  mRNA
+>XM_003214948.3 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 8 (LOC100554014)  transcript variant X1  mRNA
+>XM_003214949.2 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 18 (LOC100554207)  mRNA
+>XM_003216969.3 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 4 (LOC100565886)  mRNA
+>XM_003216970.3 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 5 (LOC100566088)  mRNA
+>XM_003216971.3 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 6A (LOC100566287)  mRNA
+>XM_003216975.3 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal cochleal (LOC100567055)  mRNA
+>XM_003217022.3 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 5 (LOC100560037)  mRNA
+>XM_003217024.3 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 5 (LOC100560433)  mRNA
+>XM_003217027.2 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal cochleal (LOC100561224)  mRNA
+>XM_003217028.3 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 7 (LOC100561422)  mRNA
+>XM_003217029.2 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal (LOC100561620)  transcript variant X2  mRNA
+>XM_003217030.3 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 5 (LOC100561812)  mRNA
+>XM_003217032.3 PREDICTED: Anolis carolinensis keratin  type II cuticular Hb4 (LOC100562208)  mRNA
+>XM_003222460.3 PREDICTED: Anolis carolinensis keratin 222 (krt222)  mRNA
+>XM_003222465.3 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 14 (LOC100564200)  mRNA
+>XM_003222466.3 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 14 (LOC100564396)  mRNA
+>XM_003222573.3 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 12 (LOC100552468)  mRNA
+>XM_003222579.3 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 19 (LOC100553650)  mRNA
+>XM_003224435.3 PREDICTED: Anolis carolinensis keratin 8 (krt8)  mRNA
+>XM_003224442.3 PREDICTED: Anolis carolinensis keratin 18 (krt18)  mRNA
+>XM_003226324.3 PREDICTED: Anolis carolinensis keratin-associated beta-protein 14 (li-ac-14)  mRNA
+>XM_003226329.3 PREDICTED: Anolis carolinensis keratin-associated beta-protein 27 (li-ac-27)  mRNA
+>XM_003226333.3 PREDICTED: Anolis carolinensis keratin-associated beta-protein 12 (li-ac-12)  mRNA
+>XM_003226334.2 PREDICTED: Anolis carolinensis keratin-associated beta-protein 13 (li-ac-13)  transcript variant X1  mRNA
+>XM_003226336.1 PREDICTED: Anolis carolinensis claw keratin-like (LOC100557315)  mRNA
+>XM_003226344.1 PREDICTED: Anolis carolinensis claw keratin-like (LOC100558762)  mRNA
+>XM_003226351.2 PREDICTED: Anolis carolinensis keratin-associated beta-protein 35 (li-ac-35)  mRNA
+>XM_003227455.3 PREDICTED: Anolis carolinensis keratinocyte differentiation factor 1 (kdf1)  mRNA
+>XM_003230785.3 PREDICTED: Anolis carolinensis keratinocyte associated protein 2 (krtcap2)  mRNA
+>XM_008104064.2 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 5 (LOC100560234)  mRNA
+>XM_008104077.2 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal cochleal (LOC100562008)  mRNA
+>XM_008104082.2 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 80 (LOC100562605)  transcript variant X1  mRNA
+>XM_008104088.2 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 80 (LOC100562605)  transcript variant X2  mRNA
+>XM_008104089.2 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 80 (LOC100562605)  transcript variant X3  mRNA
+>XM_008110320.2 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 8 (LOC100554014)  transcript variant X2  mRNA
+>XM_008113377.2 PREDICTED: Anolis carolinensis keratin 23 (krt23)  mRNA
+>XM_008113383.2 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 10 (LOC103279244)  mRNA
+>XM_008113384.2 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 24 (LOC100552076)  mRNA
+>XM_008113388.2 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 15 (LOC100552862)  mRNA
+>XM_008113391.2 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 10 (LOC100553064)  mRNA
+>XM_008113392.2 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 19 (LOC100563808)  mRNA
+>XM_008113394.2 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 17 (LOC100554046)  transcript variant X1  mRNA
+>XM_008113395.2 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 17 (LOC100554046)  transcript variant X2  mRNA
+>XM_008113473.2 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 10 (LOC100553253)  transcript variant X1  mRNA
+>XM_008119114.2 PREDICTED: Anolis carolinensis keratin-associated beta-protein 3 (li-ac-3)  mRNA
+>XM_008119115.2 PREDICTED: Anolis carolinensis beta-keratin-related protein-like (LOC100557120)  mRNA
+>XM_008119117.2 PREDICTED: Anolis carolinensis claw keratin-like (LOC100558368)  mRNA
+>XM_008119118.2 PREDICTED: Anolis carolinensis keratin-associated beta-protein 37 (li-ac-37)  mRNA
+>XM_008119129.1 PREDICTED: Anolis carolinensis keratin-associated beta-protein 28 (li-ac-28)  mRNA
+>XM_008119132.2 PREDICTED: Anolis carolinensis keratin-associated protein 4-4 (LOC103280368)  mRNA
+>XM_008119133.2 PREDICTED: Anolis carolinensis keratin-associated protein 4-11 (LOC103280369)  mRNA
+>XM_008123665.2 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 2 epidermal-like (LOC103281655)  mRNA
+>XM_016990801.1 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 3-like (LOC107982338)  partial mRNA
+>XM_016990802.1 PREDICTED: Anolis carolinensis keratin  type II cuticular Hb5-like (LOC100562411)  mRNA
+>XM_016990836.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 9 (LOC103278039)  mRNA
+>XM_016991237.1 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 7 (LOC100560827)  mRNA
+>XM_016991238.1 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 4 (LOC100560629)  mRNA
+>XM_016991239.1 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal (LOC100561620)  transcript variant X1  mRNA
+>XM_016991977.1 PREDICTED: Anolis carolinensis keratin-associated protein 4-7-like (LOC107982590)  mRNA
+>XM_016994581.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 12-like (LOC100552270)  transcript variant X1  mRNA
+>XM_016994582.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 12-like (LOC100552270)  transcript variant X2  mRNA
+>XM_016994583.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 42-like (LOC107982248)  mRNA
+>XM_016994584.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 10 (LOC100553253)  transcript variant X2  mRNA
+>XM_016994585.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 10 (LOC100553253)  transcript variant X3  mRNA
+>XM_016994586.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 10 (LOC100553253)  transcript variant X4  mRNA
+>XM_016994587.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 10-like (LOC107983006)  mRNA
+>XM_016994588.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 19 (LOC100553450)  mRNA
+>XM_016994589.1 PREDICTED: Anolis carolinensis keratin  type I cytoskeletal 19 (LOC100553851)  mRNA
+>XM_016996787.1 PREDICTED: Anolis carolinensis keratin-associated protein 10-7-like (LOC103280364)  transcript variant X1  mRNA
+>XM_016996791.1 PREDICTED: Anolis carolinensis keratin-associated beta-protein 5 (li-ac-5)  mRNA
+>XM_016996792.1 PREDICTED: Anolis carolinensis keratin-associated beta-protein 13 (li-ac-13)  transcript variant X2  mRNA
+>XM_016996793.1 PREDICTED: Anolis carolinensis keratin-associated beta-protein 17 (li-ac-17)  mRNA
+>XM_016996794.1 PREDICTED: Anolis carolinensis keratin-associated protein 5-5-like (LOC107983355)  mRNA
+>XM_016996803.1 PREDICTED: Anolis carolinensis keratin-associated protein 10-1-like (LOC107983364)  mRNA
+>XM_016996804.1 PREDICTED: Anolis carolinensis keratin-associated protein 5-1-like (LOC107983365)  mRNA
+>XM_016996805.1 PREDICTED: Anolis carolinensis keratin-associated protein 5-10-like (LOC107983367)  mRNA
+>XM_016996809.1 PREDICTED: Anolis carolinensis keratin-associated protein 6-3-like (LOC100553794)  mRNA
+>XM_016999402.1 PREDICTED: Anolis carolinensis keratin  type II cytoskeletal 59 kDa  component IV-like (LOC107983930)  partial mRNA
