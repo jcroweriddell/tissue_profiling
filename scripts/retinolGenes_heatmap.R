@@ -55,7 +55,10 @@ write.table(retGenes, "PMucros_R_analysis/retGenes_XMdescription", sep = "\t")
 geneList <- retGenes$XM.geneid
 
 # Filter refGenome by XM vOPN genes
-retGenesTPM <- filter(refGenome, GeneName %in% geneList)
+retGenesTPM <- filter(refGenome, GeneName %in% geneList) %>%
+  left_join(y = retGenes, by = c("GeneName" = "XM.geneid")) %>%
+  select(-GeneName, -Predicted) %>%
+  arrange(geneName)
 
 # Then look at TPM count table across tissues!
 View(retGenesTPM)
@@ -63,21 +66,23 @@ write.table(retGenesTPM, "PMucros_R_analysis/retGenesTPM", sep = "\t")
 
 # Heatmap
 retGenesTPMlog <- retGenesTPM %>%
-  column_to_rownames("GeneName") %>%
-  select(ALA_tailA2, ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, ATEN_tailA2, ATEN_tailB5, ATEN_body,
-         HMAJ_heart, HMAJ_liver, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
+  column_to_rownames("geneName") %>%
+  select(ALA_eye, ALA_tailA2,ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, ATEN_tailA2, ATEN_tailB5, ATEN_body,
+         HMAJ_testis, HMAJ_heart, HMAJ_liver) %>%# set order of the tissues
   as.matrix() %>%
   log1p()
 
 colfunc <- brewer.pal(n = 9, name = "OrRd")
-pdf(file = "PMucros_R_analysis/retGenes_heatmap.pdf")
+#pdf(file = "PMucros_R_analysis/retGenes_heatmap.pdf")
 pheatmap(retGenesTPMlog, 
-         cluster_rows = TRUE, 
+         cluster_rows = FALSE, 
          cluster_cols = FALSE, 
          color = colfunc,
-         cutree_rows = 3,
-         breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 3, 4.5, 6, 7))
+         border_color = NA,
+         breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 3, 4.5, 6, 7),
+         main = "Retinal Metabolism genes",
+         filename = "/Users/L033060262053/Dropbox/Transcriptome_results/Ret_heatmap.jpeg")
          #labels_row = retGenes$geneName)
 
-dev.off()
+#dev.off()
 

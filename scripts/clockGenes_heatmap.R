@@ -55,7 +55,9 @@ write.table(clockGenes, "PMucros_R_analysis/clockGenes_XMdescription", sep = "\t
 geneList <- clockGenes$XM.geneid
 
 # Filter refGenome by XM vOPN genes
-clockGenesTPM <- filter(refGenome, GeneName %in% geneList)
+clockGenesTPM <- filter(refGenome, GeneName %in% geneList) %>%
+  left_join(y = clockGenes, by = c("GeneName" = "XM.geneid")) %>%
+  select(-GeneName, -Predicted)
 
 # Then look at TPM count table across tissues!
 View(clockGenesTPM)
@@ -63,20 +65,24 @@ write.table(clockGenesTPM, "PMucros_R_analysis/clockGenesTPM", sep = "\t")
 
 # Heatmap
 clockGenesTPMlog <- clockGenesTPM %>%
-  column_to_rownames("GeneName") %>%
+  column_to_rownames("geneName") %>%
   select(ALA_tailA2, ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, ATEN_tailA2, ATEN_tailB5, ATEN_body,
          HMAJ_heart, HMAJ_liver, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
   as.matrix() %>%
   log1p()
 
 colfunc <- brewer.pal(n = 9, name = "OrRd")
-pdf(file = "PMucros_R_analysis/clockGenes_heatmap.pdf")
+#pdf(file = "PMucros_R_analysis/clockGenes_heatmap.pdf")
+
 pheatmap(clockGenesTPMlog, 
          cluster_rows = TRUE, 
          cluster_cols = FALSE, 
          color = colfunc,
-         breaks = c(0, 0.25, 0.5, 1, 2, 4, 5, 6, 8, 10))
-         #labels_row = clockGenes$geneName)
+         border_color = NA,
+         cutree_rows = 3,
+         breaks = c(0, 0.25, 0.5, 1, 2, 4, 6, 7, 8, 9),
+         main = "Diurnal Clock genes",
+         filename = "/Users/L033060262053/Dropbox/Transcriptome_results/clock_heatmap.jpeg")
 
-dev.off()
+#dev.off()
 

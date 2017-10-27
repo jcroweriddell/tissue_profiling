@@ -39,13 +39,13 @@ refGenome <- select(refGenome, GeneName = Name,
 eyeDevoGenes$X1 <- gsub(">","", eyeDevoGenes$X1)
 
 # Create new column for 'Predicted' & 'geneName'
-eyeDevoGenes <- separate(eyeDevoGenes, X1, c("GeneName", "Predicted"), sep = " PREDICTED: ")
+eyeDevoGenes <- separate(eyeDevoGenes, X1, c("XM.geneid", "Predicted"), sep = " PREDICTED: ")
 eyeDevoGenes$Predicted <- gsub("\\(", ",", eyeDevoGenes$Predicted)
 
-eyeDevoGenes <- separate(eyeDevoGenes, Predicted, c("Predicted", "geneDescript"), sep = ",")
-eyeDevoGenes$geneDescript <- gsub("\\)", "", eyeDevoGenes$geneDescript) 
-eyeDevoGenes$geneDescript <- gsub("mRNA", "", eyeDevoGenes$geneDescript) 
-eyeDevoGenes$geneDescript <- gsub("transcript variant*", "", eyeDevoGenes$geneDescript) 
+eyeDevoGenes <- separate(eyeDevoGenes, Predicted, c("Predicted", "geneName"), sep = ",")
+eyeDevoGenes$geneName <- gsub("\\)", "", eyeDevoGenes$geneName ) 
+eyeDevoGenes$geneName <- gsub("mRNA", "", eyeDevoGenes$geneName) 
+eyeDevoGenes$geneName <- gsub("transcript variant*", "", eyeDevoGenes$geneName) 
 View(eyeDevoGenes)
 
 # Save VR gene list
@@ -55,28 +55,32 @@ write.table(eyeDevoGenes, "PMucros_R_analysis/eyeDevoGenes_XMdescription", sep =
 geneList <- eyeDevoGenes$XM.geneid
 
 # Filter refGenome by XM vOPN genes
-eyeDevoGenesTPM <- filter(refGenome, GeneName %in% geneList)
-
+eyeDevoGenesTPM <- filter(refGenome, GeneName %in% geneList) %>%
+  left_join(y = eyeDevoGenes, by = c("GeneName" = "XM.geneid")) %>%
+  select(-GeneName, -Predicted)
 # Then look at TPM count table across tissues!
 View(eyeDevoGenesTPM)
 write.table(eyeDevoGenesTPM, "PMucros_R_analysis/eyeDevoGenesTPM", sep = "\t")
 
 # Heatmap
 eyeDevoGenesTPMlog <- eyeDevoGenesTPM %>%
-  column_to_rownames("GeneName") %>%
+  column_to_rownames("geneName") %>%
   select(ALA_tailA2, ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, ATEN_tailA2, ATEN_tailB5, ATEN_body,
          HMAJ_heart, HMAJ_liver, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
   as.matrix() %>%
   log1p()
 
 colfunc <- brewer.pal(n = 9, name = "OrRd")
-pdf(file = "PMucros_R_analysis/eyeDevoGenes_heatmap.pdf")
+#pdf(file = "PMucros_R_analysis/eyeDevoGenes_heatmap.pdf")
 pheatmap(eyeDevoGenesTPMlog, 
          cluster_rows = TRUE, 
          cluster_cols = FALSE, 
          color = colfunc,
          cutree_rows = 4,
-         breaks = c(0, 0.5, 1, 2, 4, 8, 3, 6, 12, 20))
+         border_color = NA,
+         breaks = c(0, 0.25, 0.5, 1, 2, 4, 6, 7, 8, 9),
+         main = "Eye Development genes",
+         filename = "/Users/L033060262053/Dropbox/Transcriptome_results/eyeDevo_heatmap.jpeg")
 
-dev.off()
+#dev.off()
 

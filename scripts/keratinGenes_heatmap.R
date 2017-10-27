@@ -55,7 +55,9 @@ write.table(keratinGenes, "PMucros_R_analysis/keratinGenes_XMdescription", sep =
 geneList <- keratinGenes$XM.geneid
 
 # Filter refGenome by XM vOPN genes
-keratinGenesTPM <- filter(refGenome, GeneName %in% geneList)
+keratinGenesTPM <- filter(refGenome, GeneName %in% geneList) %>%
+  left_join(y = keratinGenes, by = c("GeneName" = "XM.geneid")) %>%
+  select(-GeneName, -Predicted)
 
 # Then look at TPM count table across tissues!
 View(keratinGenesTPM)
@@ -63,21 +65,23 @@ write.table(keratinGenesTPM, "PMucros_R_analysis/keratinGenesTPM", sep = "\t")
 
 # Heatmap
 keratinGenesTPMlog <- keratinGenesTPM %>%
-  column_to_rownames("GeneName") %>%
+  column_to_rownames("geneName") %>%
   select(ALA_tailA2, ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, ATEN_tailA2, ATEN_tailB5, ATEN_body,
-         HMAJ_heart, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
+         HMAJ_heart, HMAJ_liver, HMAJ_testis, ALA_eye, ALA_vno, BRH_vno, NSC_vno) %>%# set order of the tissues
   as.matrix() %>%
   log1p()
 
 colfunc <- brewer.pal(n = 9, name = "OrRd")
-pdf(file = "PMucros_R_analysis/keratinGenes_heatmap.pdf")
+#pdf(file = "PMucros_R_analysis/keratinGenes_heatmap.pdf")
 pheatmap(keratinGenesTPMlog, 
          cluster_rows = TRUE, 
          cluster_cols = FALSE, 
          color = colfunc,
-         breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 3, 4.5, 6, 7),
-         labels_row = keratinGenes$geneName,
-         cutree_rows = 3)
+         breaks = c(0, 1, 2, 3, 4, 5, 6, 7, 8),
+         cutree_rows = 3,
+         border_color = NA,
+         main = "Keratin genes",
+         filename = "/Users/L033060262053/Dropbox/Transcriptome_results/keratin_heatmap.jpeg")
 
-dev.off()
+#dev.off()
 

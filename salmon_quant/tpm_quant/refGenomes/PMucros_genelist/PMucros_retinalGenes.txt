@@ -1,0 +1,14 @@
+>XM_015815287.1 PREDICTED: Protobothrops mucrosquamatus retinaldehyde binding protein 1 (RLBP1)  mRNA
+>XM_015816562.1 PREDICTED: Protobothrops mucrosquamatus lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  mRNA
+>XM_015821297.1 PREDICTED: Protobothrops mucrosquamatus retinol binding protein 1 (RBP1)  mRNA
+>XM_015823138.1 PREDICTED: Protobothrops mucrosquamatus retinol binding protein 3 (RBP3)  mRNA
+>XM_015824195.1 PREDICTED: Protobothrops mucrosquamatus retinol dehydrogenase 5 (RDH5)  mRNA
+>XM_015829247.1 PREDICTED: Protobothrops mucrosquamatus ATP binding cassette subfamily A member 4 (ABCA4)  partial mRNA
+>XM_015829586.1 PREDICTED: Protobothrops mucrosquamatus retinal pigment epithelium-specific protein 65kDa (RPE65)  mRNA
+>XM_015823421.1 PREDICTED: Protobothrops mucrosquamatus retinal G protein coupled receptor (RGR)  mRNA
+>XM_015832275.1 PREDICTED: Protobothrops mucrosquamatus retinoic acid receptor alpha (RARA)  mRNA
+>XM_015811702.1 PREDICTED: Protobothrops mucrosquamatus retinoic acid receptor beta (RARB)  transcript variant X1  mRNA
+>XM_015811703.1 PREDICTED: Protobothrops mucrosquamatus retinoic acid receptor beta (RARB)  transcript variant X2  mRNA
+>XM_015811704.1 PREDICTED: Protobothrops mucrosquamatus retinoic acid receptor beta (RARB)  transcript variant X3  mRNA
+>XM_015817137.1 PREDICTED: Protobothrops mucrosquamatus retinoic acid receptor gamma (RARG)  mRNA
+>XM_015813058.1 PREDICTED: Protobothrops mucrosquamatus retinol dehydrogenase 14 all-trans/9-cis/11-cis (RDH14)  mRNA

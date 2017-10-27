@@ -28,7 +28,7 @@ paste *PVil_quant.sf | cut -f 1,2,4,9,14,19,24,29,34,39,44,49,54,59,64,69 > tpm_
 paste *PythonMol_quant.sf | cut -f 1,2,4,9,14,19,24,29,34,39,44,49,54,59,64,69 > tpm_quant/PythonMol_quant_tpm_all.tsv
 
 # NumReads
-paste *PMucros_quant.sf | cut -f 1,5,10,15,20,25,30,35,40,45,50,55,60,65 > NumReads_quant/PMucros_quant_NumReads_all.tsv
+paste *PMucros_quant.sf | cut -f 1,5,10,15,20,25,30,35,40,45,50,55,60,65 > numReads_quant/PMucros_quant_NumReads_all.tsv
 
 
 # For each .tsv file, replace column names 'TPM' with tissue names. In this order:

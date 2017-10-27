@@ -15,4 +15,5 @@
 >XM_015825841.1 PREDICTED: Protobothrops mucrosquamatus opsin 1 cone pigments short-wave-sensitive (OPN1SW)  mRNA
 >XM_015827944.1 PREDICTED: Protobothrops mucrosquamatus retinal pigment epithelium-derived rhodopsin homolog (RRH)  mRNA
 >XM_015828517.1 PREDICTED: Protobothrops mucrosquamatus cyclic nucleotide gated channel alpha 1 (CNGA1)  mRNA
+>XM_015821479.1 PREDICTED: Protobothrops mucrosquamatus calmodulin 1 phosphorylase kinase delta (CALM1) mRNA
 
