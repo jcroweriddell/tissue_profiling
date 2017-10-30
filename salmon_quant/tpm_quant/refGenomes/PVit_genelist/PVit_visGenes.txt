@@ -1,0 +1,38 @@
+>XM_020777983.1 PREDICTED: Pogona vitticeps phosphodiesterase 6B (PDE6B)  mRNA
+>XM_020780636.1 PREDICTED: Pogona vitticeps guanylate cyclase activator 1B (GUCA1B)  mRNA
+>XM_020780665.1 PREDICTED: Pogona vitticeps guanylate cyclase activator 1A (GUCA1A)  mRNA
+>XM_020782886.1 PREDICTED: Pogona vitticeps phosphodiesterase 6C (PDE6C)  transcript variant X1  mRNA
+>XM_020782887.1 PREDICTED: Pogona vitticeps phosphodiesterase 6C (PDE6C)  transcript variant X2  mRNA
+>XM_020784392.1 PREDICTED: Pogona vitticeps arrestin 3 (ARR3)  transcript variant X1  mRNA
+>XM_020784393.1 PREDICTED: Pogona vitticeps arrestin 3 (ARR3)  transcript variant X2  mRNA
+>XM_020784862.1 PREDICTED: Pogona vitticeps cellular retinoic acid binding protein 1 (CRABP1)  mRNA
+>XM_020787352.1 PREDICTED: Pogona vitticeps S-antigen visual arrestin (SAG)  mRNA
+>XM_020788365.1 PREDICTED: Pogona vitticeps opsin 3 (OPN3)  mRNA
+>XM_020789663.1 PREDICTED: Pogona vitticeps cyclic nucleotide gated channel alpha 1 (CNGA1)  mRNA
+>XM_020791464.1 PREDICTED: Pogona vitticeps G protein subunit alpha transducin 1 (GNAT1)  mRNA
+>XM_020792477.1 PREDICTED: Pogona vitticeps phosducin like 2 (PDCL2)  mRNA
+>XM_020792577.1 PREDICTED: Pogona vitticeps G protein-coupled receptor kinase 7 (GRK7)  mRNA
+>XM_020793433.1 PREDICTED: Pogona vitticeps phosducin like (PDCL)  mRNA
+>XM_020795115.1 PREDICTED: Pogona vitticeps phosducin (PDC)  transcript variant X1  mRNA
+>XM_020795116.1 PREDICTED: Pogona vitticeps phosducin (PDC)  transcript variant X2  mRNA
+>XM_020798790.1 PREDICTED: Pogona vitticeps recoverin (RCVRN)  mRNA
+>XM_020799228.1 PREDICTED: Pogona vitticeps regulator of G-protein signaling 9 binding protein (RGS9BP)  mRNA
+>XM_020799785.1 PREDICTED: Pogona vitticeps arrestin beta 2 (ARRB2)  mRNA
+>XM_020801528.1 PREDICTED: Pogona vitticeps opsin 5 (OPN5)  mRNA
+>XM_020805272.1 PREDICTED: Pogona vitticeps G protein subunit alpha transducin 2 (GNAT2)  mRNA
+>XM_020805635.1 PREDICTED: Pogona vitticeps phosducin like 3 (PDCL3)  mRNA
+>XM_020805958.1 PREDICTED: Pogona vitticeps opsin 4 (OPN4)  mRNA
+>XM_020806442.1 PREDICTED: Pogona vitticeps regulator of G-protein signaling 9 (RGS9)  mRNA
+>XM_020807605.1 PREDICTED: Pogona vitticeps calmodulin 1 (CALM1)  transcript variant X1  mRNA
+>XM_020807606.1 PREDICTED: Pogona vitticeps calmodulin 1 (CALM1)  transcript variant X2  mRNA
+>XM_020808834.1 PREDICTED: Pogona vitticeps retinal pigment epithelium-derived rhodopsin homolog (RRH)  mRNA
+>XM_020809552.1 PREDICTED: Pogona vitticeps cyclic nucleotide gated channel alpha 3 (CNGA3)  mRNA
+>XM_020809620.1 PREDICTED: Pogona vitticeps G protein-coupled receptor kinase 1 (GRK1)  mRNA
+>XM_020809626.1 PREDICTED: Pogona vitticeps guanylate cyclase 2D  retinal (GUCY2D)  mRNA
+>XM_020812457.1 PREDICTED: Pogona vitticeps opsin 1  short wave sensitive (OPN1SW)  mRNA
+>XM_020813194.1 PREDICTED: Pogona vitticeps rhodopsin (RHO)  mRNA
+>XM_020813268.1 PREDICTED: Pogona vitticeps phosphodiesterase 6G (PDE6G)  transcript variant X1  mRNA
+>XM_020813278.1 PREDICTED: Pogona vitticeps phosphodiesterase 6G (PDE6G)  transcript variant X2  mRNA
+>XM_020813287.1 PREDICTED: Pogona vitticeps phosphodiesterase 6G (PDE6G)  transcript variant X3  mRNA
+>XM_020814679.1 PREDICTED: Pogona vitticeps phosphodiesterase 6D (PDE6D)  mRNA
+>XM_020815481.1 PREDICTED: Pogona vitticeps phosphodiesterase 6H (PDE6H)  mRNA

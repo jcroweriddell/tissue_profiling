@@ -1,0 +1,20 @@
+>XM_006257984.3 PREDICTED: Alligator mississippiensis retinol binding protein 1 (RBP1)  mRNA
+>XM_006260918.3 PREDICTED: Alligator mississippiensis ribosome binding protein 1 (RRBP1)  transcript variant X1  mRNA
+>XM_006264069.3 PREDICTED: Alligator mississippiensis lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  mRNA
+>XM_006267670.3 PREDICTED: Alligator mississippiensis retinol dehydrogenase 5 (RDH5)  mRNA
+>XM_006270171.3 PREDICTED: Alligator mississippiensis retinal G protein coupled receptor (RGR)  transcript variant X2  mRNA
+>XM_006270780.3 PREDICTED: Alligator mississippiensis retinoic acid receptor alpha (RARA)  transcript variant X4  mRNA
+>XM_006270781.3 PREDICTED: Alligator mississippiensis retinoic acid receptor alpha (RARA)  transcript variant X5  mRNA
+>XM_006273833.3 PREDICTED: Alligator mississippiensis RPE65  retinoid isomerohydrolase (RPE65)  mRNA
+>XM_006276180.3 PREDICTED: Alligator mississippiensis retinol binding protein 3 (RBP3)  mRNA
+>XM_014601203.2 PREDICTED: Alligator mississippiensis retinol dehydrogenase 8 all-trans (RDH8)  transcript variant X2  mRNA
+>XM_014604740.2 PREDICTED: Alligator mississippiensis retinoic acid receptor alpha (RARA)  transcript variant X1  mRNA
+>XM_014604741.2 PREDICTED: Alligator mississippiensis retinoic acid receptor alpha (RARA)  transcript variant X3  mRNA
+>XM_014605960.2 PREDICTED: Alligator mississippiensis retinaldehyde binding protein 1 (RLBP1)  transcript variant X1  mRNA
+>XM_014605961.2 PREDICTED: Alligator mississippiensis retinaldehyde binding protein 1 (RLBP1)  transcript variant X2  mRNA
+>XM_019476890.1 PREDICTED: Alligator mississippiensis retinoic acid receptor alpha (RARA)  transcript variant X2  mRNA
+>XM_019479061.1 PREDICTED: Alligator mississippiensis ATP binding cassette subfamily A member 4 (ABCA4)  mRNA
+>XM_019495176.1 PREDICTED: Alligator mississippiensis retinol dehydrogenase 8 all-trans (RDH8)  transcript variant X1  mRNA
+>XM_019495178.1 PREDICTED: Alligator mississippiensis retinol dehydrogenase 8 all-trans (RDH8)  transcript variant X3  mRNA
+>XM_019495179.1 PREDICTED: Alligator mississippiensis retinol dehydrogenase 8 all-trans (RDH8)  transcript variant X4  mRNA
+>XM_019497053.1 PREDICTED: Alligator mississippiensis retinal G protein coupled receptor (RGR)  transcript variant X1  mRNA

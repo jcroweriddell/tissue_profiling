@@ -1,0 +1,21 @@
+>NM_001291387.1 Anolis carolinensis rhodopsin (rho), mRNA
+>XM_003225221.3 PREDICTED: Anolis carolinensis SAGA complex associated factor 29 (sgf29), transcript variant X2, mRNA
+>XM_008112114.2 PREDICTED: Anolis carolinensis retinal pigment epithelium-derived rhodopsin homolog (rrh), mRNA
+>XM_008116731.2 PREDICTED: Anolis carolinensis SPT3 homolog, SAGA and STAGA complex component (supt3h), transcript variant X1, mRNA
+>XM_008116743.2 PREDICTED: Anolis carolinensis SPT3 homolog, SAGA and STAGA complex component (supt3h), transcript variant X2, mRNA
+>XM_008116749.2 PREDICTED: Anolis carolinensis SPT3 homolog, SAGA and STAGA complex component (supt3h), transcript variant X3, mRNA
+>XM_008117532.2 PREDICTED: Anolis carolinensis SAGA complex associated factor 29 (sgf29), transcript variant X1, mRNA
+>XM_016991170.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X1, mRNA
+>XM_016991171.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X2, mRNA
+>XM_016991172.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X3, mRNA
+>XM_016991173.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X4, mRNA
+>XM_016991174.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X5, mRNA
+>XM_016991175.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X6, mRNA
+>XM_016991176.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X7, mRNA
+>XM_016991177.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X8, mRNA
+>XM_016991178.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X9, mRNA
+>XM_016991179.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X10, mRNA
+>XM_016991180.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X11, mRNA
+>XM_016996070.1 PREDICTED: Anolis carolinensis recoverin (rcvrn), mRNA
+>XM_016996320.1 PREDICTED: Anolis carolinensis SPT3 homolog, SAGA and STAGA complex component (supt3h), transcript variant X4, mRNA
+>XR_001729916.1 PREDICTED: Anolis carolinensis SPT20 homolog, SAGA complex component (supt20h), transcript variant X12, misc_RNA

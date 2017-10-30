@@ -12,10 +12,10 @@ library(pheatmap)
 library(tidyselect)
 
 # Set working directory and read in data
-setwd("/Users/L033060262053/Documents/Research projects/Tail_photoreception/tissue_profiling/salmon_quant/tpm_quant/")
+setwd("~/Documents/tissue_profiling/salmon_quant/tpm_quant/")
 
-refGenome <- read.table(file = "PMucros_quant_tpm_all.tsv", header = TRUE)
-visGenes <- read_csv(file = "PMucros_genelist/PMucros_visGenes2.txt", col_names = FALSE)
+refGenome <- read.table(file = "Alligator_quant_tpm_all.tsv", header = TRUE)
+visGenes <- read_csv(file = "refGenomes/Alligator_genelist/Alligator_visGenes.txt", col_names = FALSE)
 
 # Change column names to tissue names
 names(refGenome) 
@@ -65,27 +65,27 @@ visGenes$Predicted <- gsub("\\(", ",", visGenes$Predicted)
 visGenes <- separate(visGenes, Predicted, c("Predicted", "geneName"), sep = ",")
 visGenes$geneName <- gsub("\\)", "", visGenes$geneName) 
 visGenes$geneName <- gsub("mRNA", "", visGenes$geneName) 
-
+visGenes$geneName <- gsub("transcript variant*", "", visGenes$geneName) 
 View(visGenes)
 
 # Save VR gene list
-#write.table(visGenes, "PMucros_R_analysis/visGenes_XMdescription", sep = "\t")
+write.table(visGenes, "refGenomes/Alligator_heatmaps/visGenes_XMdescription", sep = "\t")
 
 # Create a vetor of XM values
 geneList <- visGenes$XM.geneid
 
 # Filter refGenome by XM vOPN genes
-visGenesFPKM <- filter(FpkmRefGenome, GeneName %in% geneList) %>%
+visGenesTPM <- filter(refGenome, GeneName %in% geneList) %>%
   left_join(y = visGenes, by = c("GeneName" = "XM.geneid")) %>%
   select(-GeneName, -Predicted) %>%
   arrange(geneName)
 
 # Then look at TPM count table across tissues!
-View(visGenesFPKM)
-write.table(visGenesTPM, "PMucros_R_analysis/visGenesTPM", sep = "\t")
+View(visGenesTPM)
+write.table(visGenesTPM, "refGenomes/Alligator_heatmaps/visGenesTPM", sep = "\t")
 
 # Heatmap
-visGenesFPKMlog <- visGenesFPKM %>%
+visGenesTPMlog <- visGenesTPM %>%
   column_to_rownames("geneName") %>%
   select(ALA_eye, ALA_tailA2,ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, ATEN_tailA2, ATEN_tailB5, ATEN_body,
          HMAJ_testis, HMAJ_heart, HMAJ_liver) %>%# set order of the tissues
@@ -95,15 +95,15 @@ visGenesFPKMlog <- visGenesFPKM %>%
 colfunc <- brewer.pal(n = 9, name = "OrRd")
 
 #pdf(file = "plots/visGenes_heatmap.pdf")
-pheatmap(visGenesFPKMlog, 
+pheatmap(visGenesTPMlog, 
          cluster_rows = FALSE, 
          cluster_cols = FALSE, 
          color = colfunc,
          border_color = NA,
          breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 4, 5.5, 7, 9),
-         main = "Phototransduction genes")
-         #filename = "/Users/L033060262053/Dropbox/Transcriptome_results/visual_heatmap.jpeg")
+         main = "Alligator - phototransduction genes",
+         filename = "Alligator_visGenes_heatmap.jpeg")
         # labels_row = visGenes$geneName)
 
-#dev.off()
+dev.off()
 

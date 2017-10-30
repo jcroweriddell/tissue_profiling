@@ -1,0 +1,14 @@
+>XM_007422250.1 PREDICTED: Python bivittatus retinol binding protein 1 (RBP1)  mRNA
+>XM_007422849.1 PREDICTED: Python bivittatus ATP binding cassette subfamily A member 4 (ABCA4)  mRNA
+>XM_007427726.1 PREDICTED: Python bivittatus retinol dehydrogenase 8 all-trans (RDH8)  mRNA
+>XM_007433193.1 PREDICTED: Python bivittatus retinaldehyde binding protein 1 (RLBP1)  mRNA
+>XM_007433578.2 PREDICTED: Python bivittatus retinal pigment epithelium-specific protein 65kDa (RPE65)  mRNA
+>XM_007435434.1 PREDICTED: Python bivittatus retinol dehydrogenase 5 (RDH5)  mRNA
+>XM_007436463.2 PREDICTED: Python bivittatus lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  mRNA
+>XM_007437054.1 PREDICTED: Python bivittatus retinol binding protein 3 (RBP3)  mRNA
+>XM_007421678.2 PREDICTED: Python bivittatus retinol dehydrogenase 14 all-trans/9-cis/11-cis (RDH14)  transcript variant X1  mRNA
+>XM_007421679.2 PREDICTED: Python bivittatus retinol dehydrogenase 14 all-trans/9-cis/11-cis (RDH14)  transcript variant X2  mRNA
+>XM_007420691.1 PREDICTED: Python bivittatus retinoic acid receptor alpha (RARA)  transcript variant X1  mRNA
+>XM_007420692.1 PREDICTED: Python bivittatus retinoic acid receptor alpha (RARA)  transcript variant X2  mRNA
+>XM_007420693.1 PREDICTED: Python bivittatus retinoic acid receptor alpha (RARA)  transcript variant X3  mRNA
+

@@ -1,0 +1,27 @@
+>XM_015405511.1 PREDICTED: Gekko japonicus programmed cell death 6 (PDCD6)  partial mRNA
+>XM_015406006.1 PREDICTED: Gekko japonicus regulator of G-protein signaling 9 (RGS9)  mRNA
+>XM_015406638.1 PREDICTED: Gekko japonicus phosphodiesterase 6C (PDE6C)  mRNA
+>XM_015408649.1 PREDICTED: Gekko japonicus phosphodiesterase 6D (PDE6D)  mRNA
+>XM_015410642.1 PREDICTED: Gekko japonicus guanylate cyclase activator 1A (GUCA1A)  mRNA
+>XM_015410644.1 PREDICTED: Gekko japonicus guanylate cyclase activator 1B (GUCA1B)  mRNA
+>XM_015413472.1 PREDICTED: Gekko japonicus G protein-coupled receptor kinase 7 (GRK7)  mRNA
+>XM_015414417.1 PREDICTED: Gekko japonicus recoverin (RCVRN)  mRNA
+>XM_015414864.1 PREDICTED: Gekko japonicus regulator of G-protein signaling 9 binding protein (RGS9BP)  mRNA
+>XM_015415248.1 PREDICTED: Gekko japonicus phosducin (PDC)  mRNA
+>XM_015415465.1 PREDICTED: Gekko japonicus opsin 1 (cone pigments)  long-wave-sensitive (OPN1LW)  mRNA
+>XM_015418419.1 PREDICTED: Gekko japonicus phosducin like (PDCL)  transcript variant X1  mRNA
+>XM_015418420.1 PREDICTED: Gekko japonicus phosducin like (PDCL)  transcript variant X2  mRNA
+>XM_015418685.1 PREDICTED: Gekko japonicus opsin 4 (OPN4)  mRNA
+>XM_015419657.1 PREDICTED: Gekko japonicus cyclic nucleotide gated channel alpha 3 (CNGA3)  mRNA
+>XM_015421244.1 PREDICTED: Gekko japonicus guanine nucleotide binding protein (G protein)  alpha transducing activity polypeptide 1 (GNAT1)  mRNA
+>XM_015421319.1 PREDICTED: Gekko japonicus phosphodiesterase 6H (PDE6H)  mRNA
+>XM_015423263.1 PREDICTED: Gekko japonicus calmodulin 1 phosphorylase kinase  delta (CALM1)  mRNA
+>XM_015423556.1 PREDICTED: Gekko japonicus guanine nucleotide binding protein (G protein)  alpha transducing activity polypeptide 2 (GNAT2)  mRNA
+>XM_015423893.1 PREDICTED: Gekko japonicus G protein-coupled receptor kinase 1 (GRK1)  mRNA
+>XM_015424566.1 PREDICTED: Gekko japonicus opsin 3 (OPN3)  mRNA
+>XM_015425230.1 PREDICTED: Gekko japonicus rhodopsin (RHO)  mRNA
+>XM_015426390.1 PREDICTED: Gekko japonicus retinal pigment epithelium-derived rhodopsin homolog (RRH)  mRNA
+>XM_015426813.1 PREDICTED: Gekko japonicus S-antigen; retina and pineal gland arrestin (SAG)  mRNA
+>XM_015427348.1 PREDICTED: Gekko japonicus opsin 1 cone pigments  short-wave-sensitive (OPN1SW)  mRNA
+>XM_015427875.1 PREDICTED: Gekko japonicus arrestin  beta 2 (ARRB2)  mRNA
+>XM_015429707.1 PREDICTED: Gekko japonicus phosducin like 3 (PDCL3)  mRNA

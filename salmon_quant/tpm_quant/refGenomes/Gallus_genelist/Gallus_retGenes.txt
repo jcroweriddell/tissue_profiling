@@ -1,0 +1,22 @@
+>NM_001024575.1 PREDICTED: Gallus gallus retinol binding protein 3 (RBP3)  mRNA
+>NM_001024694.1 PREDICTED: Gallus gallus retinaldehyde binding protein 1 (RLBP1)  mRNA
+>NM_001031216.1 PREDICTED: Gallus gallus retinal G protein coupled receptor (RGR)  mRNA
+>NM_001277416.1 PREDICTED: Gallus gallus retinol binding protein 1 (RBP1)  mRNA
+>NM_204536.1 PREDICTED: Gallus gallus retinoic acid receptor alpha (RARA)  mRNA
+>NM_204713.1 PREDICTED: Gallus gallus retinol dehydrogenase 5 (RDH5)  mRNA
+>NM_204884.1 PREDICTED: Gallus gallus RPE65  retinoid isomerohydrolase (RPE65)  mRNA
+>XM_015276907.1 PREDICTED: Gallus gallus retinol binding protein 1  cellular (RBP1)  transcript variant X1  mRNA
+>XM_015285071.1 PREDICTED: Gallus gallus retinol dehydrogenase 14 all-trans/9-cis/11-cis (RDH14)  mRNA
+>XM_015290643.1 PREDICTED: Gallus gallus retinol dehydrogenase 8 all-trans (RDH8)  mRNA
+>XM_015290702.1 PREDICTED: Gallus gallus ATP-binding cassette  sub-family A ABC1  member 4 (ABCA4)  transcript variant X1  mRNA
+>XM_015290703.1 PREDICTED: Gallus gallus ATP-binding cassette  sub-family A ABC1  member 4 (ABCA4)  transcript variant X2  mRNA
+>XM_015290704.1 PREDICTED: Gallus gallus ATP-binding cassette  sub-family A ABC1  member 4 (ABCA4)  transcript variant X3  mRNA
+>XM_015290705.1 PREDICTED: Gallus gallus ATP-binding cassette  sub-family A ABC1  member 4 (ABCA4)  transcript variant X4  mRNA
+>XM_015290706.1 PREDICTED: Gallus gallus ATP-binding cassette  sub-family A ABC1  member 4 (ABCA4)  transcript variant X5  mRNA
+>XM_015290707.1 PREDICTED: Gallus gallus ATP-binding cassette  sub-family A ABC1  member 4 (ABCA4)  transcript variant X6  mRNA
+>XM_015290966.1 PREDICTED: Gallus gallus retinal pigment epithelium-specific protein 65kDa (RPE65)  transcript variant X1  mRNA
+>XM_015290967.1 PREDICTED: Gallus gallus retinal pigment epithelium-specific protein 65kDa (RPE65)  transcript variant X2  mRNA
+>XM_015290969.1 PREDICTED: Gallus gallus retinal pigment epithelium-specific protein 65kDa (RPE65)  transcript variant X3  mRNA
+>XM_015290970.1 PREDICTED: Gallus gallus retinal pigment epithelium-specific protein 65kDa (RPE65)  transcript variant X4  mRNA
+>XM_015290971.1 PREDICTED: Gallus gallus retinal pigment epithelium-specific protein 65kDa (RPE65)  transcript variant X5  mRNA
+>XM_420371.5 PREDICTED: Gallus gallus lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  mRNA

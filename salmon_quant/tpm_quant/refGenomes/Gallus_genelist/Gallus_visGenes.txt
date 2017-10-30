@@ -1,0 +1,58 @@
+>NM_001007881.2 PREDICTED: Gallus gallus guanylate cyclase activator 1B (GUCA1B)  mRNA
+>NM_001030539.1 PREDICTED: Gallus gallus cellular retinoic acid binding protein 1 (CRABP1)  mRNA
+>NM_001030606.1 PREDICTED: Gallus gallus rhodopsin (RHO)  mRNA
+>NM_001030812.1 PREDICTED: Gallus gallus phosducin like 3 (PDCL3)  mRNA
+>NM_001044653.1 PREDICTED: Gallus gallus opsin 4 (OPN4)  mRNA
+>NM_001079759.2 PREDICTED: Gallus gallus retinal pigment epithelium-derived rhodopsin homolog (RRH)  mRNA
+>NM_001097533.1 PREDICTED: Gallus gallus arrestin 3 (ARR3)  mRNA
+>NM_001110364.1 PREDICTED: Gallus gallus calmodulin 1 (CALM1)  mRNA
+>NM_001130743.1 PREDICTED: Gallus gallus opsin 5 (OPN5)  mRNA
+>NM_001162892.2 PREDICTED: Gallus gallus opsin 5-like 2 (OPN5L2)  mRNA
+>NM_001310056.1 PREDICTED: Gallus gallus opsin 5-like 1 (OPN5L1)  mRNA
+>NM_204320.2 PREDICTED: Gallus gallus guanylate cyclase activator 1A (GUCA1A)  mRNA
+>NM_204408.1 PREDICTED: Gallus gallus phosphodiesterase 6H (PDE6H)  mRNA
+>NM_204445.2 PREDICTED: Gallus gallus phosphodiesterase 6G (PDE6G)  mRNA
+>NM_204505.1 PREDICTED: Gallus gallus regulator of G-protein signaling 9 binding protein (RGS9BP)  mRNA
+>NM_204625.2 PREDICTED: Gallus gallus photopigment melanopsin-like (OPN4-1)  mRNA
+>NM_204690.2 PREDICTED: Gallus gallus G protein subunit alpha transducin 2 (GNAT2)  mRNA
+>NM_204691.1 PREDICTED: Gallus gallus G protein subunit alpha transducin 1 (GNAT1)  mRNA
+>NM_204695.1 PREDICTED: Gallus gallus G protein-coupled receptor kinase 1 (GRK1)  mRNA
+>NM_204986.1 PREDICTED: Gallus gallus phosphodiesterase 6C (PDE6C)  mRNA
+>NM_205220.2 PREDICTED: Gallus gallus cyclic nucleotide gated channel alpha 1 (CNGA1)  mRNA
+>NM_205221.1 PREDICTED: Gallus gallus cyclic nucleotide gated channel alpha 3 (CNGA3)  mRNA
+>NM_205438.1 PREDICTED: Gallus gallus opsin 1 cone pigments  short-wave-sensitive violet cone opsin (OPN1SW)  mRNA
+>NM_205440.1 PREDICTED: Gallus gallus opsin 1 cone pigment  long-wave-sensitive color blindness  protan (OPN1LW)  mRNA
+>NM_205490.1 PREDICTED: Gallus gallus opsin  green sensitive rhodopsin-like (OPN1MSW)  mRNA
+>NM_205514.1 PREDICTED: Gallus gallus recoverin (RCVRN)  mRNA
+>XM_003640950.3 PREDICTED: Gallus gallus rhodopsin  GQ-coupled-like (LOC100858777)  mRNA
+>XM_004943303.2 PREDICTED: Gallus gallus phosducin (PDC)  mRNA
+>XM_015276114.1 PREDICTED: Gallus gallus photopigment melanopsin-like (OPN4-1)  transcript variant X1  mRNA
+>XM_015276115.1 PREDICTED: Gallus gallus photopigment melanopsin-like (OPN4-1)  transcript variant X2  mRNA
+>XM_015276116.1 PREDICTED: Gallus gallus photopigment melanopsin-like (OPN4-1)  transcript variant X3  mRNA
+>XM_015276117.1 PREDICTED: Gallus gallus photopigment melanopsin-like (OPN4-1)  transcript variant X4  mRNA
+>XM_015276118.1 PREDICTED: Gallus gallus photopigment melanopsin-like (OPN4-1)  transcript variant X5  mRNA
+>XM_015276119.1 PREDICTED: Gallus gallus photopigment melanopsin-like (OPN4-1)  transcript variant X6  mRNA
+>XM_015276120.1 PREDICTED: Gallus gallus photopigment melanopsin-like (OPN4-1)  transcript variant X7  mRNA
+>XM_015277207.1 PREDICTED: Gallus gallus S-antigen  retina and pineal gland arrestin (SAG)  transcript variant X1  mRNA
+>XM_015277208.1 PREDICTED: Gallus gallus S-antigen  retina and pineal gland arrestin (SAG)  transcript variant X2  mRNA
+>XM_015277209.1 PREDICTED: Gallus gallus S-antigen  retina and pineal gland arrestin (SAG)  transcript variant X3  mRNA
+>XM_015277210.1 PREDICTED: Gallus gallus S-antigen  retina and pineal gland arrestin (SAG)  transcript variant X4  mRNA
+>XM_015277691.1 PREDICTED: Gallus gallus cyclic nucleotide gated channel alpha 3 (CNGA3)  transcript variant X1  mRNA
+>XM_015278319.1 PREDICTED: Gallus gallus arrestin 3  retinal (ARR3)  transcript variant X1  mRNA
+>XM_015279956.1 PREDICTED: Gallus gallus regulator of G-protein signaling 9 (RGS9)  mRNA
+>XM_015280491.1 PREDICTED: Gallus gallus phosphodiesterase 6B  cGMP-specific  rod  beta congenital stationary night blindness 3  autosomal dominant (PDE6B)  mRNA
+>XM_015284399.1 PREDICTED: Gallus gallus phosphodiesterase 6H  cGMP-specific  cone  gamma (PDE6H)  transcript variant X1  mRNA
+>XM_015285151.1 PREDICTED: Gallus gallus opsin 5 (OPN5)  transcript variant X1  mRNA
+>XM_015285540.1 PREDICTED: Gallus gallus phosducin-like 2 (PDCL2)  transcript variant X2  mRNA
+>XM_015287980.1 PREDICTED: Gallus gallus opsin 4 (OPN4)  transcript variant X1  mRNA
+>XM_015288575.1 PREDICTED: Gallus gallus phosphodiesterase 6C  cGMP-specific  cone  alpha prime (PDE6C)  transcript variant X1  mRNA
+>XM_015288576.1 PREDICTED: Gallus gallus phosphodiesterase 6C  cGMP-specific  cone  alpha prime (PDE6C)  transcript variant X2  mRNA
+>XM_015288577.1 PREDICTED: Gallus gallus phosphodiesterase 6C  cGMP-specific  cone  alpha prime (PDE6C)  transcript variant X3  mRNA
+>XM_015288578.1 PREDICTED: Gallus gallus phosphodiesterase 6C  cGMP-specific  cone  alpha prime (PDE6C)  transcript variant X4  mRNA
+>XM_015291499.1 PREDICTED: Gallus gallus phosphodiesterase 6D  cGMP-specific  rod  delta (PDE6D)  mRNA
+>XM_015298691.1 PREDICTED: Gallus gallus guanine nucleotide binding protein G protein  alpha transducing activity polypeptide 2 (GNAT2)  transcript variant X1  mRNA
+>XM_420702.5 PREDICTED: Gallus gallus phosducin-like 2 (PDCL2)  transcript variant X1  mRNA
+>XM_425387.5 PREDICTED: Gallus gallus phosphodiesterase 6G  cGMP-specific  rod  gamma (PDE6G)  transcript variant X1  mRNA
+>XM_426139.4 PREDICTED: Gallus gallus opsin 3 (OPN3)  mRNA
+>XM_426681.4 PREDICTED: Gallus gallus G protein-coupled receptor kinase 7 (GRK7)  mRNA
+>XR_001463429.1 PREDICTED: Gallus gallus photopigment melanopsin-like (OPN4-1)  transcript variant X8  misc_RNA

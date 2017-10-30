@@ -1,0 +1,49 @@
+>NM_001287282.1 PREDICTED: Alligator mississippiensis rhodopsin (RHO)  mRNA
+>XM_006259253.3 PREDICTED: Alligator mississippiensis phosphodiesterase 6B (PDE6B)  mRNA
+>XM_006261341.3 PREDICTED: Alligator mississippiensis cellular retinoic acid binding protein 1 (CRABP1)  mRNA
+>XM_006263322.2 PREDICTED: Alligator mississippiensis G protein-coupled receptor kinase 7 (GRK7)  mRNA
+>XM_006263608.3 PREDICTED: Alligator mississippiensis phosducin like 2 (PDCL2)  mRNA
+>XM_006264079.2 PREDICTED: Alligator mississippiensis retinal pigment epithelium-derived rhodopsin homolog (RRH)  transcript variant X1  mRNA
+>XM_006264150.3 PREDICTED: Alligator mississippiensis phosphodiesterase 6D (PDE6D)  mRNA
+>XM_006265542.3 PREDICTED: Alligator mississippiensis G protein subunit alpha transducin 1 (GNAT1)  transcript variant X1  mRNA
+>XM_006266510.3 PREDICTED: Alligator mississippiensis recoverin (RCVRN)  mRNA
+>XM_006267249.3 PREDICTED: Alligator mississippiensis phosducin like (PDCL)  mRNA
+>XM_006268077.2 PREDICTED: Alligator mississippiensis guanylate cyclase activator 1A (GUCA1A)  mRNA
+>XM_006268078.3 PREDICTED: Alligator mississippiensis guanylate cyclase activator 1B (GUCA1B)  mRNA
+>XM_006268823.3 PREDICTED: Alligator mississippiensis opsin 3 (OPN3)  mRNA
+>XM_006271860.3 PREDICTED: Alligator mississippiensis guanylate cyclase 2D  retinal (GUCY2D)  transcript variant X3  mRNA
+>XM_006272092.3 PREDICTED: Alligator mississippiensis cyclic nucleotide gated channel alpha 3 (CNGA3)  mRNA
+>XM_006278042.3 PREDICTED: Alligator mississippiensis calmodulin 1 (CALM1)  mRNA
+>XM_014595577.2 PREDICTED: Alligator mississippiensis regulator of G-protein signaling 9 binding protein (RGS9BP)  mRNA
+>XM_014600396.2 PREDICTED: Alligator mississippiensis phosducin like 3 (PDCL3)  mRNA
+>XM_014601607.2 PREDICTED: Alligator mississippiensis opsin 5 (OPN5)  mRNA
+>XM_014601818.2 PREDICTED: Alligator mississippiensis regulator of G-protein signaling 9 (RGS9)  transcript variant X2  mRNA
+>XM_014607308.2 PREDICTED: Alligator mississippiensis arrestin beta 2 (ARRB2)  mRNA
+>XM_019480880.1 PREDICTED: Alligator mississippiensis phosphodiesterase 6H (PDE6H)  transcript variant X1  mRNA
+>XM_019480881.1 PREDICTED: Alligator mississippiensis phosphodiesterase 6H (PDE6H)  transcript variant X2  mRNA
+>XM_019480882.1 PREDICTED: Alligator mississippiensis phosphodiesterase 6H (PDE6H)  transcript variant X3  mRNA
+>XM_019480883.1 PREDICTED: Alligator mississippiensis phosphodiesterase 6H (PDE6H)  transcript variant X4  mRNA
+>XM_019481206.1 PREDICTED: Alligator mississippiensis cyclic nucleotide gated channel alpha 1 (CNGA1)  mRNA
+>XM_019482073.1 PREDICTED: Alligator mississippiensis G protein subunit alpha transducin 1 (GNAT1)  transcript variant X2  mRNA
+>XM_019484244.1 PREDICTED: Alligator mississippiensis phosphodiesterase 6C (PDE6C)  mRNA
+>XM_019484687.1 PREDICTED: Alligator mississippiensis rhodopsin kinase (LOC102572840)  partial mRNA
+>XM_019486096.1 PREDICTED: Alligator mississippiensis S-antigen visual arrestin (SAG)  transcript variant X1  mRNA
+>XM_019486097.1 PREDICTED: Alligator mississippiensis S-antigen visual arrestin (SAG)  transcript variant X2  mRNA
+>XM_019486098.1 PREDICTED: Alligator mississippiensis S-antigen visual arrestin (SAG)  transcript variant X3  mRNA
+>XM_019486099.1 PREDICTED: Alligator mississippiensis S-antigen visual arrestin (SAG)  transcript variant X4  mRNA
+>XM_019486100.1 PREDICTED: Alligator mississippiensis S-antigen visual arrestin (SAG)  transcript variant X5  mRNA
+>XM_019486101.1 PREDICTED: Alligator mississippiensis S-antigen visual arrestin (SAG)  transcript variant X6  mRNA
+>XM_019486102.1 PREDICTED: Alligator mississippiensis S-antigen visual arrestin (SAG)  transcript variant X7  mRNA
+>XM_019487888.1 PREDICTED: Alligator mississippiensis arrestin 3 (ARR3)  mRNA
+>XM_019488917.1 PREDICTED: Alligator mississippiensis phosphodiesterase 6G (PDE6G)  transcript variant X1  mRNA
+>XM_019488918.1 PREDICTED: Alligator mississippiensis phosphodiesterase 6G (PDE6G)  transcript variant X2  mRNA
+>XM_019492490.1 PREDICTED: Alligator mississippiensis G protein subunit alpha transducin 2 (GNAT2)  transcript variant X1  mRNA
+>XM_019492491.1 PREDICTED: Alligator mississippiensis G protein subunit alpha transducin 2 (GNAT2)  transcript variant X2  mRNA
+>XM_019493802.1 PREDICTED: Alligator mississippiensis guanylate cyclase 2D  retinal (GUCY2D)  transcript variant X1  mRNA
+>XM_019493803.1 PREDICTED: Alligator mississippiensis guanylate cyclase 2D  retinal (GUCY2D)  transcript variant X2  mRNA
+>XM_019494450.1 PREDICTED: Alligator mississippiensis regulator of G-protein signaling 9 (RGS9)  transcript variant X1  mRNA
+>XM_019494452.1 PREDICTED: Alligator mississippiensis regulator of G-protein signaling 9 (RGS9)  transcript variant X3  mRNA
+>XM_019494453.1 PREDICTED: Alligator mississippiensis regulator of G-protein signaling 9 (RGS9)  transcript variant X4  mRNA
+>XM_019497071.1 PREDICTED: Alligator mississippiensis opsin 4 (OPN4)  mRNA
+>XM_019500065.1 PREDICTED: Alligator mississippiensis retinal pigment epithelium-derived rhodopsin homolog (RRH)  transcript variant X2  mRNA
+>XM_019500176.1 PREDICTED: Alligator mississippiensis phosducin (PDC)  mRNA

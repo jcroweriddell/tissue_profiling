@@ -1,0 +1,29 @@
+>XM_007419845.1 PREDICTED: Python bivittatus phosphodiesterase 6G (PDE6G)  mRNA
+>XM_007421612.1 PREDICTED: Python bivittatus regulator of G-protein signaling 9 (RGS9)  mRNA
+>XM_007423196.1 PREDICTED: Python bivittatus phosphodiesterase 6H (PDE6H)  mRNA
+>XM_007423262.1 PREDICTED: Python bivittatus rhodopsin (RHO)  mRNA
+>XM_007423293.1 PREDICTED: Python bivittatus phosducin like (PDCL)  mRNA
+>XM_007425521.1 PREDICTED: Python bivittatus guanylate cyclase activator 1B (GUCA1B)  mRNA
+>XM_007425526.1 PREDICTED: Python bivittatus guanylate cyclase activator 1A (GUCA1A)  mRNA
+>XM_007426696.1 PREDICTED: Python bivittatus guanylate cyclase 2D  membrane retina-specific (GUCY2D)  mRNA
+>XM_007426840.1 PREDICTED: Python bivittatus recoverin (RCVRN)  mRNA
+>XM_007427679.1 PREDICTED: Python bivittatus guanine nucleotide binding protein G protein  alpha transducing activity polypeptide 1 (GNAT1)  mRNA
+>XM_007430850.2 PREDICTED: Python bivittatus regulator of G-protein signaling 9 binding protein (RGS9BP)  mRNA
+>XM_007431756.2 PREDICTED: Python bivittatus phosphodiesterase 6C (PDE6C)  transcript variant X1  mRNA
+>XM_007431757.2 PREDICTED: Python bivittatus phosphodiesterase 6C (PDE6C)  transcript variant X2  mRNA
+>XM_007431937.1 PREDICTED: Python bivittatus phosphodiesterase 6B (PDE6B)  mRNA
+>XM_007434301.1 PREDICTED: Python bivittatus G protein-coupled receptor kinase 7 (GRK7)  mRNA
+>XM_007434412.2 PREDICTED: Python bivittatus phosducin like 3 (PDCL3)  mRNA
+>XM_007436672.1 PREDICTED: Python bivittatus cyclic nucleotide gated channel alpha 1 (CNGA1)  mRNA
+>XM_007436935.1 PREDICTED: Python bivittatus phosducin (PDC)  mRNA
+>XM_007440093.1 PREDICTED: Python bivittatus opsin 3 (OPN3)  mRNA
+>XM_007441007.2 PREDICTED: Python bivittatus phosducin like 2 (PDCL2)  partial mRNA
+>XM_007441284.2 PREDICTED: Python bivittatus phosphodiesterase 6D (PDE6D)  mRNA
+>XM_007441636.1 PREDICTED: Python bivittatus opsin 1 cone pigments  short-wave-sensitive (OPN1SW)  mRNA
+>XM_007444533.1 PREDICTED: Python bivittatus arrestin  beta 2 (ARRB2)  mRNA
+>XM_015887948.1 PREDICTED: Python bivittatus guanine nucleotide binding protein G protein  alpha transducing activity polypeptide 2 (GNAT2)  mRNA
+>XM_015888599.1 PREDICTED: Python bivittatus retinal pigment epithelium-derived rhodopsin homolog (RRH)  mRNA
+>XM_015888684.1 PREDICTED: Python bivittatus phosphodiesterase 6C (PDE6C)  transcript variant X3  mRNA
+>XM_015889325.1 PREDICTED: Python bivittatus opsin 5 (OPN5)  mRNA
+>XM_015890389.1 PREDICTED: Python bivittatus S-antigen; retina and pineal gland arrestin (SAG)  mRNA
+>XM_007429400.1 PREDICTED: Python bivittatus opsin 4 (OPN4) mRNA

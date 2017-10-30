@@ -1,0 +1,28 @@
+>XM_020779145.1 PREDICTED: Pogona vitticeps retinol dehydrogenase 8 (all-trans) (RDH8)  mRNA
+>XM_020781374.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X1  mRNA
+>XM_020781375.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X2  mRNA
+>XM_020781376.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X3  mRNA
+>XM_020781377.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X4  mRNA
+>XM_020781378.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X5  mRNA
+>XM_020781379.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X6  mRNA
+>XM_020781380.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X7  mRNA
+>XM_020781381.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X8  mRNA
+>XM_020781383.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X9  mRNA
+>XM_020781384.1 PREDICTED: Pogona vitticeps lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  transcript variant X10  mRNA
+>XM_020781695.1 PREDICTED: Pogona vitticeps retinaldehyde binding protein 1 (RLBP1)  mRNA
+>XM_020783351.1 PREDICTED: Pogona vitticeps retinol dehydrogenase 5 (RDH5)  transcript variant X1  mRNA
+>XM_020783360.1 PREDICTED: Pogona vitticeps retinol dehydrogenase 5 (RDH5)  transcript variant X2  mRNA
+>XM_020788698.1 PREDICTED: Pogona vitticeps ATP binding cassette subfamily A member 4 (ABCA4)  mRNA
+>XM_020793162.1 PREDICTED: Pogona vitticeps retinol binding protein 1 (RBP1)  mRNA
+>XM_020795284.1 PREDICTED: Pogona vitticeps RPE65  retinoid isomerohydrolase (RPE65)  transcript variant X1  mRNA
+>XM_020795285.1 PREDICTED: Pogona vitticeps RPE65  retinoid isomerohydrolase (RPE65)  transcript variant X2  mRNA
+>XM_020796842.1 PREDICTED: Pogona vitticeps retinal G protein coupled receptor (RGR)  transcript variant X1  mRNA
+>XM_020796843.1 PREDICTED: Pogona vitticeps retinal G protein coupled receptor (RGR)  transcript variant X2  mRNA
+>XM_020796844.1 PREDICTED: Pogona vitticeps retinal G protein coupled receptor (RGR)  transcript variant X3  mRNA
+>XM_020796845.1 PREDICTED: Pogona vitticeps retinal G protein coupled receptor (RGR)  transcript variant X4  mRNA
+>XM_020805865.1 PREDICTED: Pogona vitticeps retinoic acid receptor alpha (RARA)  transcript variant X1  mRNA
+>XM_020805866.1 PREDICTED: Pogona vitticeps retinoic acid receptor alpha (RARA)  transcript variant X2  mRNA
+>XM_020805867.1 PREDICTED: Pogona vitticeps retinoic acid receptor alpha (RARA)  transcript variant X3  mRNA
+>XM_020805868.1 PREDICTED: Pogona vitticeps retinoic acid receptor alpha (RARA)  transcript variant X4  mRNA
+>XM_020805871.1 PREDICTED: Pogona vitticeps retinoic acid receptor alpha (RARA)  transcript variant X5  mRNA
+>XM_020809637.1 PREDICTED: Pogona vitticeps retinol binding protein 3 (RBP3)  mRNA

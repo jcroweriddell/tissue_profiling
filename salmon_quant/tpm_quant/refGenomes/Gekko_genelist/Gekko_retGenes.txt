@@ -1,0 +1,12 @@
+>XM_015407850.1 PREDICTED: Gekko japonicus ribosome binding protein 1 (RRBP1)  partial mRNA
+>XM_015407949.1 PREDICTED: Gekko japonicus retinol binding protein 3 (RBP3)  partial mRNA
+>XM_015409459.1 PREDICTED: Gekko japonicus retinoic acid receptor  alpha (RARA)  transcript variant X1  mRNA
+>XM_015409460.1 PREDICTED: Gekko japonicus retinoic acid receptor  alpha (RARA)  transcript variant X2  mRNA
+>XM_015410074.1 PREDICTED: Gekko japonicus lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  mRNA
+>XM_015412033.1 PREDICTED: Gekko japonicus retinol dehydrogenase 14 all-trans/9-cis/11-cis (RDH14)  mRNA
+>XM_015413325.1 PREDICTED: Gekko japonicus ATP binding cassette subfamily A member 4 (ABCA4)  mRNA
+>XM_015415790.1 PREDICTED: Gekko japonicus retinal pigment epithelium-specific protein 65kDa (RPE65)  mRNA
+>XM_015416333.1 PREDICTED: Gekko japonicus retinol dehydrogenase 8 all-trans (RDH8)  mRNA
+>XM_015416766.1 PREDICTED: Gekko japonicus retinal G protein coupled receptor (RGR)  mRNA
+>XM_015424703.1 PREDICTED: Gekko japonicus retinol dehydrogenase 5 (RDH5)  mRNA
+>XM_015425902.1 PREDICTED: Gekko japonicus retinaldehyde binding protein 1 (RLBP1)  mRNA

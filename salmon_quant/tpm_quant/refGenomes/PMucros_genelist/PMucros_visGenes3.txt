@@ -1,0 +1,26 @@
+>XM_015810365.1 PREDICTED: Protobothrops mucrosquamatus regulator of G-protein signaling 9 (RGS9)  mRNA
+>XM_015812351.1 PREDICTED: Protobothrops mucrosquamatus opsin 5 (OPN5)  mRNA
+>XM_015813192.1 PREDICTED: Protobothrops mucrosquamatus arrestin  beta 2 (ARRB2)  mRNA
+>XM_015813313.1 PREDICTED: Protobothrops mucrosquamatus phosducin (PDC)  mRNA
+>XM_015813710.1 PREDICTED: Protobothrops mucrosquamatus S-antigen; retina and pineal gland arrestin (SAG)  mRNA
+>XM_015814449.1 PREDICTED: Protobothrops mucrosquamatus phosphodiesterase 6H (PDE6H)  mRNA
+>XM_015815331.1 PREDICTED: Protobothrops mucrosquamatus phosphodiesterase 6G (PDE6G)  mRNA
+>XM_015815691.1 PREDICTED: Protobothrops mucrosquamatus opsin 4 (OPN4)  mRNA
+>XM_015816355.1 PREDICTED: Protobothrops mucrosquamatus cellular retinoic acid binding protein 1 (CRABP1)  mRNA
+>XM_015816690.1 PREDICTED: Protobothrops mucrosquamatus opsin 3 (OPN3)  mRNA
+>XM_015821339.1 PREDICTED: Protobothrops mucrosquamatus guanylate cyclase activator 1A (GUCA1A)  mRNA
+>XM_015821340.1 PREDICTED: Protobothrops mucrosquamatus guanylate cyclase activator 1B (GUCA1B)  mRNA
+>XM_015821479.1 PREDICTED: Protobothrops mucrosquamatus calmodulin 1 phosphorylase kinase  delta (CALM1)  mRNA
+>XM_015821677.1 PREDICTED: Protobothrops mucrosquamatus regulator of G-protein signaling 9 binding protein (RGS9BP)  mRNA
+>XM_015821725.1 PREDICTED: Protobothrops mucrosquamatus guanine nucleotide binding protein G protein  alpha transducing activity polypeptide 2 (GNAT2)  mRNA
+>XM_015822152.1 PREDICTED: Protobothrops mucrosquamatus phosducin like (PDCL)  mRNA
+>XM_015822696.1 PREDICTED: Protobothrops mucrosquamatus phosphodiesterase 6C (PDE6C)  mRNA
+>XM_015823472.1 PREDICTED: Protobothrops mucrosquamatus rhodopsin (RHO)  mRNA
+>XM_015824755.1 PREDICTED: Protobothrops mucrosquamatus guanine nucleotide binding protein G protein alpha transducing activity polypeptide 1 (GNAT1)  mRNA
+>XM_015825087.1 PREDICTED: Protobothrops mucrosquamatus DEP domain containing 1B (DEPDC1B)  partial mRNA
+>XM_015825389.1 PREDICTED: Protobothrops mucrosquamatus phosphodiesterase 6D (PDE6D)  mRNA
+>XM_015825841.1 PREDICTED: Protobothrops mucrosquamatus opsin 1 cone pigments  short-wave-sensitive (OPN1SW)  mRNA
+>XM_015827944.1 PREDICTED: Protobothrops mucrosquamatus retinal pigment epithelium-derived rhodopsin homolog (RRH)  mRNA
+>XM_015828035.1 PREDICTED: Protobothrops mucrosquamatus phosducin like 2 (PDCL2)  mRNA
+>XM_015828517.1 PREDICTED: Protobothrops mucrosquamatus cyclic nucleotide gated channel alpha 1 (CNGA1)  mRNA
+>XM_015829790.1 PREDICTED: Protobothrops mucrosquamatus cyclic nucleotide gated channel alpha 3 (CNGA3)  mRNA

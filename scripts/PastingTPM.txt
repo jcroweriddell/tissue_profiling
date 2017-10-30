@@ -94,13 +94,19 @@ rsync -avP a1662801@phoenix.adelaide.edu.au:/home/a1662801/keratinGenes_PMucros.
 zgrep ">*(GNAT1)*" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz | less
 zgrep -f <(sort gene_list) file_you_want_to_search
 
+zcat GCF_*Python*.fna.gz | grep -Ff <(soft vis_genes.txt) - | less
+
+zcat <file.fna> | grep -Ff genes.txt - | head
+
+# to copy from Phoenix to laptop:
+rsync -avP a1662801@phoenix.adelaide.edu.au:/home/a1662801/Python_visGenes.txt /Users/jennacrowe-riddell/Documents/tissue_profiling/salmon_quant/tpm_quant/refGenomes/Python_genelist
+
+# to copy from laptop to Phoenix
+rsync -avP file.on.laptop a1234567@phoenix.adelaide.edu.au:/path/to/directory/on/phoenix
 
 
 
-
-
-
-
+zgrep ">*(GNAT1)*" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz | less
 
 
 
