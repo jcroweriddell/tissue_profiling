@@ -11,4 +11,5 @@
 >XM_007420691.1 PREDICTED: Python bivittatus retinoic acid receptor alpha (RARA)  transcript variant X1  mRNA
 >XM_007420692.1 PREDICTED: Python bivittatus retinoic acid receptor alpha (RARA)  transcript variant X2  mRNA
 >XM_007420693.1 PREDICTED: Python bivittatus retinoic acid receptor alpha (RARA)  transcript variant X3  mRNA
+>XM_007427726.1 PREDICTED: Python bivittatus retinol dehydrogenase 8 all-trans (RDH8), mRNA
 

@@ -27,3 +27,5 @@
 >XM_015889325.1 PREDICTED: Python bivittatus opsin 5 (OPN5)  mRNA
 >XM_015890389.1 PREDICTED: Python bivittatus S-antigen; retina and pineal gland arrestin (SAG)  mRNA
 >XM_007429400.1 PREDICTED: Python bivittatus opsin 4 (OPN4) mRNA
+>XM_007434301.1 PREDICTED: Python bivittatus G protein-coupled receptor kinase 7 (GRK7), mRNA
+>XM_007432290.1 PREDICTED: Python bivittatus guanylyl cyclase-activating protein 1-like LOC103057518 (GUCA1C-like), mRNA

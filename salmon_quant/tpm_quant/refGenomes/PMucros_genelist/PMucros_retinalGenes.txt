@@ -11,4 +11,5 @@
 >XM_015811703.1 PREDICTED: Protobothrops mucrosquamatus retinoic acid receptor beta (RARB)  transcript variant X2  mRNA
 >XM_015811704.1 PREDICTED: Protobothrops mucrosquamatus retinoic acid receptor beta (RARB)  transcript variant X3  mRNA
 >XM_015817137.1 PREDICTED: Protobothrops mucrosquamatus retinoic acid receptor gamma (RARG)  mRNA
+>XM_015823256.1 PREDICTED: Protobothrops mucrosquamatus retinol dehydrogenase 8-like LOC107294050 (RDH8-like), mRNA
 >XM_015813058.1 PREDICTED: Protobothrops mucrosquamatus retinol dehydrogenase 14 all-trans/9-cis/11-cis (RDH14)  mRNA
