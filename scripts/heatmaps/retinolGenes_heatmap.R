@@ -13,7 +13,7 @@ library(tidyselect)
 # Set working directory and read in data
 setwd("/Users/L033060262053/Documents/Research projects/Tail_photoreception/tissue_profiling/salmon_quant/tpm_quant/")
 refGenome <- read.table(file = "Chicken_quant_tpm_all.tsv", header = TRUE)
-retGenes <- read_csv(file = "refGenomes/Gallus_genelist/Gallus_retGenes.txt", col_names = FALSE)
+retGenes <- read_csv(file = "refGenomes/Python_genelist/Python_retGenes.txt", col_names = FALSE)
 
 # Change column names to tissue names
 names(refGenome) 
@@ -45,7 +45,7 @@ retGenes$geneName <- gsub("transcript variant*", "", retGenes$geneName)
 View(retGenes)
 
 # Save VR gene list
-write.table(retGenes, "refGenomes/Gallus_heatmaps/retGenes_XMdescription", sep = "\t")
+write.table(retGenes, "refGenomes/PMucros/retGenes_XMdescription", sep = "\t")
 
 # Create a vetor of XM values
 geneList <- retGenes$XM.geneid
@@ -77,8 +77,8 @@ pheatmap(retGenesTPMlog,
          color = colfunc,
          border_color = NA,
          breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 3, 4.5, 6, 7),
-         main = "Gallus- retinal metabolism genes",
-         filename = "Gallus_retGenes_heatmap.jpeg")
+         main = "Python- retinal metabolism genes",
+         filename = "Python_retGenes_heatmap2.jpeg")
          #labels_row = retGenes$geneName)
 
 #dev.off()

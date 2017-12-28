@@ -14,8 +14,8 @@ library(tidyselect)
 # Set working directory and read in data
 setwd("~/Documents/tissue_profiling/salmon_quant/tpm_quant/")
 
-refGenome <- read.table(file = "Alligator_quant_tpm_all.tsv", header = TRUE)
-visGenes <- read_csv(file = "refGenomes/Alligator_genelist/Alligator_visGenes.txt", col_names = FALSE)
+refGenome <- read.table(file = "PMucros_quant_tpm_all.tsv", header = TRUE)
+visGenes <- read_csv(file = "refGenomes/PMucros_genelist/PMucros_visGenes5.txt", col_names = FALSE)
 
 # Change column names to tissue names
 names(refGenome) 
@@ -69,7 +69,7 @@ visGenes$geneName <- gsub("transcript variant*", "", visGenes$geneName)
 View(visGenes)
 
 # Save VR gene list
-write.table(visGenes, "refGenomes/Alligator_heatmaps/visGenes_XMdescription", sep = "\t")
+write.table(visGenes, "refGenomes/PMucros_heatmaps/visGenes_XMdescription", sep = "\t")
 
 # Create a vetor of XM values
 geneList <- visGenes$XM.geneid
@@ -80,9 +80,14 @@ visGenesTPM <- filter(refGenome, GeneName %in% geneList) %>%
   select(-GeneName, -Predicted) %>%
   arrange(geneName)
 
+visGenesFpkm <- filter(refGenome, GeneName %in% geneList) %>%
+  left_join(y = visGenes, by = c("GeneName" = "XM.geneid")) %>%
+  select(-GeneName, -Predicted) %>%
+  arrange(geneName)
+
 # Then look at TPM count table across tissues!
 View(visGenesTPM)
-write.table(visGenesTPM, "refGenomes/Alligator_heatmaps/visGenesTPM", sep = "\t")
+write.table(visGenesTPM, "refGenomes/PMucros_heatmaps/visGenesTPM", sep = "\t")
 
 # Heatmap
 visGenesTPMlog <- visGenesTPM %>%
@@ -101,9 +106,10 @@ pheatmap(visGenesTPMlog,
          color = colfunc,
          border_color = NA,
          breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 4, 5.5, 7, 9),
-         main = "Alligator - phototransduction genes",
-         filename = "Alligator_visGenes_heatmap.jpeg")
+         main = "P.Mucrus - phototransduction genes")
+         #filename = "Python_visGenes_heatmap.jpeg")
         # labels_row = visGenes$geneName)
 
 dev.off()
 
+sessionInfo()

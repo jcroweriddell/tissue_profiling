@@ -64,6 +64,9 @@ Name
 13 ALAjuv_body
 14 NSC_vno
 
+bowtie2-build /home/a1662801/ref_seq/trinity/Trinity.fasta trinity_Alaevis
+
+
 # Extracting gene information from .gff files
 path= /data/biohub/Refs/Reptiles/gff3
 # cut -f 1,9 *P.Mucros*.gff | tr ";" "\n" | grep -E '^(Name | gene)=' | less
@@ -98,25 +101,38 @@ zcat GCF_*Python*.fna.gz | grep -Ff <(soft vis_genes.txt) - | less
 
 zcat <file.fna> | grep -Ff genes.txt - | head
 
-# to copy from Phoenix to laptop:
-rsync -avP a1662801@phoenix.adelaide.edu.au:/home/a1662801/Python_visGenes.txt /Users/jennacrowe-riddell/Documents/tissue_profiling/salmon_quant/tpm_quant/refGenomes/Python_genelist
+# to copy from Phoenix to laptop from laptop:
+scp -r a1662801@phoenix.adelaide.edu.au:/data/biohub/160801_Jenna_seaSnakeRNAseq/RNAseq/protoborthops/GCF_001527695.2_P.Mucros_1.0_genomic.gff /Users/jennacrowe-riddell/Documents/tissue_profiling/alignments
+
 
 # to copy from laptop to Phoenix
-rsync -avP file.on.laptop a1234567@phoenix.adelaide.edu.au:/path/to/directory/on/phoenix
+rsync -avP file.on.laptop a1662801@phoenix.adelaide.edu.au:/home/a1662801
+
+rsync -avP /Users/jennacrowe-riddell/Documents/working_dir/OPN4_OPN5_Protobothrops.fasta  a1662801@phoenix.adelaide.edu.au:/home/a1662801
+
+2-A_TENUIS_LIGHT_DORSAL_GCCAAT_L002_R1.fastq.gz
+2-A_TENUIS_LIGHT_DORSAL_GCCAAT_L002_R2.fastq.gz
+
+J_A_LAEVIS_BODY_DORSAL_RIGHT_CGATGT_L002_truncated1.fq.gz
+J_A_LAEVIS_BODY_DORSAL_RIGHT_CGATGT_L002_truncated2.fq.gz
 
 
+/data/biohub/160801_Jenna_seaSnakeRNAseq/RNAseq/protoborthops
 
-zgrep ">*(GNAT1)*" GCF_001527695.2_P.Mucros_1.0_rna.fna.gz | less
-
-
-
+scp -r a1662801@phoenix.adelaide.edu.au:/data/biohub/160801_Jenna_seaSnakeRNAseq/RNAseq/protoborthops/alignments/ALA_eye.mapped.OPN4_OPN5_Protobothrops.sorted.bam.bai /Users/jennacrowe-riddell/Documents/working_dir/alignments
 
 
+scp -r a1662801@phoenix.adelaide.edu.au:/home/a1662801/test_4599549.out /Users/jennacrowe-riddell/Documents/working_dir/
 
+# check how full directory is on phoenix, well tell you how much youve used in your homedir - folder by folder
+cd ~
+du -h -d 1
+cd $FASTDIR
+du -h -d 1
 
+/fast/users/a1662801/trinity_out_dir
 
-
-
+scp -r a1662801@phoenix.adelaide.edu.au:/fast/users/a1662801/trinity_out_dir/Trinity.fasta /Users/jennacrowe-riddell/Documents/working_dir/
 
 
 
