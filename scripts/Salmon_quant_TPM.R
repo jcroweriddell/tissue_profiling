@@ -1,3 +1,7 @@
+###############################################################################
+## Required packages
+###############################################################################
+
 library(magrittr)
 library(tibble)
 library(readr)
@@ -9,101 +13,176 @@ library(tidyverse)
 library(pheatmap)
 library(reshape2)
 library(tibble)
-source("http://bioconductor.org/biocLite.R")
-biocLite("edgeR")
+library(BiocInstaller)
+library(edgeR)
+library(tidyr)
+# library(limma)
 
-# Set working directory and read in data
-setwd("/Users/L033060262053/Documents/Research projects/Tail_photoreception/tissue_profiling/salmon_quant/")
-setwd("~/Documents/tissue_profiling/salmon_quant/tpm_quant/")
-refGenome <- read.table(file = "PMucros_quant_tpm_all.tsv", header = TRUE)
-sampleinfo <- read_csv(file = "sample_info_tissues.csv", col_names = TRUE)
+###############################################################################
+## User defined functions
+###############################################################################
 
-# Change column names to tissue names
-names(refGenome) 
-refGenome <- select(refGenome, GeneName = Name, 
-                  HMAJ_testis = TPM,
-                  HMAJ_liver = TPM.1,
-                  HMAJ_heart = TPM.2,
-                  ALA_vno = TPM.3,
-                  ALA_tailA2 = TPM.4,
-                  ATEN_tailA2 = TPM.6,
-                  ATEN_tailB5 = TPM.7,
-                  ATEN_body = TPM.8,
-                  ALA_eye = TPM.5,
-                  BRH_vno = TPM.9,
-                  ALAjuv_body = TPM.12,
-                  ALAjuv_tailA2 = TPM.10,
-                  ALAjuv_tailB5 = TPM.11,
-                  NSC_vno = TPM.13)
+# Function - TPM to FPKM
+TPMToFpkm <- function(TPM, geneLength){
+  
+  count <- apply(TPM, 2, function(e){ e/1000*geneLength })
+  fpkm <- apply(count, 2, function(e){ e*1000*1000000/sum(e)/geneLength })
+  
+  return(fpkm)
+  
+}
 
-# Clustering analysis
-dge <- select(refGenome, GeneName, HMAJ_testis, HMAJ_liver, HMAJ_heart, ALA_tailA2, ATEN_tailB5, ATEN_tailA2,
-                     ATEN_body, ALA_eye, ALAjuv_body, ALAjuv_tailA2, ALAjuv_tailB5)
+###############################################################################
+## Data directories + Data import
+###############################################################################
 
-## Turning counts object into DGElist and normalising
-dge %<>% column_to_rownames("GeneName") %>%
+# Set working directory (what's going on here?)
+dir <- "~/Documents/tissue_profiling/salmon_quant/tpm_quant/"
+vis_dir <- paste0(dir,"refGenomes/PMucros_genelist/")
+
+## Importing data
+refGenome <- read.table(file = paste0(dir,"PMucros_quant_tpm_all.tsv"), header = TRUE)
+sampleinfo <- read_csv(file = paste0(dir,"sample_info_tissues.csv"), col_names = TRUE)
+visGenes <- read_csv(file = paste0(vis_dir,"PMucros_visGenes5.txt"), col_names = FALSE)
+
+###############################################################################
+## Count matrix clean-up
+###############################################################################
+
+## Gene length - used in TPM --> FPKM conversions below
+gene_length <- refGenome[["Length"]]
+
+## Changing column name to tissue name
+refGenome <- select(refGenome, 
+                    GeneName = Name, 
+                    HMAJ_testis = TPM,
+                    HMAJ_liver = TPM.1,
+                    HMAJ_heart = TPM.2,
+                    ALA_vno = TPM.3,
+                    ALA_tailA2 = TPM.4,
+                    ATEN_tailA2 = TPM.6,
+                    ATEN_tailB5 = TPM.7,
+                    ATEN_body = TPM.8,
+                    ALA_eye = TPM.5,
+                    BRH_vno = TPM.9,
+                    ALAjuv_body = TPM.12,
+                    ALAjuv_tailA2 = TPM.10,
+                    ALAjuv_tailB5 = TPM.11,
+                    NSC_vno = TPM.13)
+
+## Selecting columns (potentially just leave these out in the step above?)
+dge <- select(refGenome, -c(NSC_vno,
+                            BRH_vno,
+                            ALA_vno))
+
+###############################################################################
+## Generating DGElist object + MDS plots
+###############################################################################
+
+## Generating DGElist object
+dge %<>% 
+  column_to_rownames("GeneName") %>%
   as.matrix() %>%
   edgeR::DGEList() %>%
   edgeR::calcNormFactors()
 
 ## Obtaining MDS data object 
-mds <- limma::plotMDS(dge, gene.selection = "common", method = "logFC")
+mds <- plotMDS(dge, 
+               gene.selection = "common", 
+               method = "logFC")
 
-## Slightly ganky way of doing this, but extracting MDS coordinate object and joining with sample information.
-plot <- mds@.Data[[3]] %>%
+## Generating dataframe to plot
+plotObj <- mds@.Data[[3]] %>%
   as.data.frame() %>%
   rownames_to_column("group") %>%
-  set_colnames(c("group","x","y")) %>%
+  rename(x = V1, y = V2) %>%
   left_join(sampleinfo, by = c("group"="gene_id"))
 
-
-## Plotting MDS using ggplot (nicer plot), includes overlap of experimental condition and species
-#pdf(file = "plots/MDS_refGenome.pdf") #dev.off()
-plotgg <- plot %>%
+## MDS plot
+pdf(file = ..., width = , height = , ...) ## Prefer this to save files
+plotgg <- plotObj %>%
   ggplot(aes(x, y, colour = Species, shape = Species, label = Tissue)) +
   geom_point(size = 4) +
   geom_text(hjust = 0, nudge_x = 0.1, check_overlap = TRUE) + 
   theme_bw(base_size = 15) +
   theme(legend.text = element_text(size = 12)) + 
   labs(x = "Dimension 1",
-       y=  "Dimension 2")
-plotgg + geom_vline(xintercept = 0, linetype = 3) + 
+       y=  "Dimension 2") + 
+  geom_vline(xintercept = 0, linetype = 3) + 
   geom_hline(yintercept = 0, linetype = 3) +
   theme_linedraw(base_size = 20)
-ggsave("clustering/MDSplot_allsamples.jpeg")
+dev.off()
 
+###############################################################################
+## Converting TPM to FPKM
+###############################################################################
 
-
-
-
-
-## Sample clustering heirachical clustering
-#pdf(file = "plots/hclust_refGenome.pdf")
-#plot(hclust( d = dist(t(edgeR::cpm(dgerefGenome)),  method = "euclidean"),
-#             method = "ward.D"),
-#     hang = -1, xlab = "Samples", sub = "Distance=euclidean; Method=ward.D")
-#dev.off()
-
-# Convert TPM to FPKM
-# Load TPMToFpkm function
-TPMToFpkm <- function(TPM, geneLength){
-  count <- apply(TPM, 2, function(e){ e/1000*geneLength })
-  fpkm <- apply(count, 2, function(e){ e*1000*1000000/sum(e)/geneLength })
-  return(fpkm)
-}
-
-# Subset refGenome data object
-geneLength <- refGenome$geneLength ## Doesn't matter which geneLength column you choose. They're all the SAME!!!!!
-
-## Getting TPM dataframe
+## Getting TPM dataframe - This hasn't been updated (geneLength isn't in any of the above regGenome objects...)
 TPM <- refGenome %>%
-  column_to_rownames("GeneName") %>%
-  select(-contains("geneLength"))
+  column_to_rownames("GeneName") #%>%
+  #select(-contains("geneLength"))
 
 ## Generating FPKM values
-Fpkm <- TPMToFpkm(TPM = TPM, geneLength = geneLength) %>% 
-  data.frame() %>% rownames_to_column("GeneName")
+Fpkm <- TPMToFpkm(TPM = TPM, geneLength = gene_length) %>% 
+  data.frame() %>% 
+  rownames_to_column("GeneName")
 
+###############################################################################
+## Generating visual genes table
+###############################################################################
 
+## Clean up visGenes table
+visGenes %<>%
+  mutate(X1=gsub(">","",X1)) %>%
+  separate(X1, c("XM.geneid", "Predicted"), sep = " PREDICTED: ") %>%
+  mutate(Predicted=gsub("\\(", ",", Predicted)) %>%
+  separate(Predicted, c("Predicted", "geneName"), sep = ",") %>%
+  mutate(geneName=gsub("\\)", "",geneName),
+         geneName=gsub("mRNA","",geneName),
+         geneName=gsub("transcript variant*","",geneName))
 
+# Save VR gene list
+write.table(visGenes, "refGenomes/PMucros_heatmaps/visGenes_XMdescription", sep = "\t")
+
+# Create a vetor of XM values
+geneList <- visGenes[["XM.geneid"]]
+
+###############################################################################
+## Filter refGenome by RefSeq (XM) gene IDs
+###############################################################################
+
+# Filter refGenome by RefSeq (XM) gene IDs
+visGenesFpkm <- filter(refGenome, GeneName %in% geneList) %>%
+  left_join(y = visGenes, by = c("GeneName" = "XM.geneid")) %>%
+  select(-GeneName, -Predicted) %>%
+  arrange(geneName)
+
+# Then look at TPM count table across tissues!
+View(visGenesFpkm)
+write.table(visGenesFpkm, "refGenomes/PMucros_heatmaps/visGenesFpkm", sep = "\t")
+
+###############################################################################
+# Heatmap visualisation
+###############################################################################
+
+visGenesFpkmlog <- visGenesFpkm %>%
+  column_to_rownames("geneName") %>%
+  select(ALA_eye, ALA_tailA2,ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, 
+         ATEN_tailA2, ATEN_tailB5, ATEN_body,HMAJ_testis, HMAJ_heart, HMAJ_liver) %>%# set order of the tissues
+  as.matrix() %>%
+  log1p()
+
+colfunc <- brewer.pal(n = 9, name = "OrRd")
+
+pheatmap(visGenesFpkmlog, 
+         cluster_rows = FALSE, 
+         cluster_cols = FALSE, 
+         color = colfunc,
+         border_color = NA,
+         breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 4, 5.5, 7, 9),
+         filename = "Pmucros_visGenes_Fpkmheatmap.jpeg")
+
+dev.off()
+
+sessionInfo()
 
