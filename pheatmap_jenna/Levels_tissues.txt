@@ -1,0 +1,12 @@
+sample,	tissue
+ALA_eye, nonskin
+HMAJ_testis, nonskin
+HMAJ_heart, nonskin
+HMAJ_liver, nonskin
+ALA_tailA2, skin
+ALAjuv_tailA2, skin
+ATEN_tailA2, skin
+ALAjuv_tailB5, skin
+ATEN_tailB5, skin
+ALAjuv_body, skin
+ATEN_body, skin

@@ -36,14 +36,29 @@ TPMToFpkm <- function(TPM, geneLength){
 ## Data directories + Data import
 ###############################################################################
 
-# Set working directory (what's going on here?)
-dir <- "~/Documents/tissue_profiling/salmon_quant/tpm_quant/"
-vis_dir <- paste0(dir,"refGenomes/PMucros_genelist/")
+# Al - I set these paths for my computer. Changes these for your own
+
+dir <- "../salmon_quant/tpm_quant/"
+vis_dir <- "~/Projects_BioinformaticsHub/Kate_Sanders/tissue_profiling/pheatmap_jenna/"
+write_dir <- "path/to/save/data/objects"
+
+## NOTE 1: You shouldn't have to set `vis_dir` as it will be the working
+## directory of this project. I set it here just so you could see 
+## what I was doing.
+
+## NOTE 2: The path to `write_dir` will be a relative path, which would look
+## something like this `../path/to/output`. 
 
 ## Importing data
 refGenome <- read.table(file = paste0(dir,"PMucros_quant_tpm_all.tsv"), header = TRUE)
 sampleinfo <- read_csv(file = paste0(dir,"sample_info_tissues.csv"), col_names = TRUE)
-visGenes <- read_csv(file = paste0(vis_dir,"PMucros_visGenes5.txt"), col_names = FALSE)
+
+## Importing visual genes of
+fl <- list.files(path = vis_dir, pattern = "PMucros_", full.names = TRUE)
+names(fl) <- c("opn","retinal","visGenes5")
+vis_lst <- lapply(fl, function(x){
+  read_csv(file = x, col_names = FALSE)
+})
 
 ###############################################################################
 ## Count matrix clean-up
@@ -87,8 +102,8 @@ dge %<>%
   edgeR::calcNormFactors()
 
 ## Obtaining MDS data object 
-mds <- plotMDS(dge, 
-               gene.selection = "common", 
+mds <- plotMDS(dge,
+               gene.selection = "common",
                method = "logFC")
 
 ## Generating dataframe to plot
@@ -98,29 +113,28 @@ plotObj <- mds@.Data[[3]] %>%
   rename(x = V1, y = V2) %>%
   left_join(sampleinfo, by = c("group"="gene_id"))
 
-## MDS plot
-pdf(file = ..., width = , height = , ...) ## Prefer this to save files
-plotgg <- plotObj %>%
+# ## MDS plot
+# pdf(file = ..., width = , height = , ...) ## Prefer this to save files
+plotObj %>%
   ggplot(aes(x, y, colour = Species, shape = Species, label = Tissue)) +
   geom_point(size = 4) +
-  geom_text(hjust = 0, nudge_x = 0.1, check_overlap = TRUE) + 
+  geom_text(hjust = 0, nudge_x = 0.1, check_overlap = TRUE) +
   theme_bw(base_size = 15) +
-  theme(legend.text = element_text(size = 12)) + 
+  theme(legend.text = element_text(size = 12)) +
   labs(x = "Dimension 1",
-       y=  "Dimension 2") + 
-  geom_vline(xintercept = 0, linetype = 3) + 
+       y=  "Dimension 2") +
+  geom_vline(xintercept = 0, linetype = 3) +
   geom_hline(yintercept = 0, linetype = 3) +
   theme_linedraw(base_size = 20)
-dev.off()
+# dev.off()
 
 ###############################################################################
 ## Converting TPM to FPKM
 ###############################################################################
 
-## Getting TPM dataframe - This hasn't been updated (geneLength isn't in any of the above regGenome objects...)
+## Getting TPM dataframe (this is literally just turning a column to rownames)
 TPM <- refGenome %>%
-  column_to_rownames("GeneName") #%>%
-  #select(-contains("geneLength"))
+  column_to_rownames("GeneName")
 
 ## Generating FPKM values
 Fpkm <- TPMToFpkm(TPM = TPM, geneLength = gene_length) %>% 
@@ -131,18 +145,21 @@ Fpkm <- TPMToFpkm(TPM = TPM, geneLength = gene_length) %>%
 ## Generating visual genes table
 ###############################################################################
 
-## Clean up visGenes table
-visGenes %<>%
-  mutate(X1=gsub(">","",X1)) %>%
-  separate(X1, c("XM.geneid", "Predicted"), sep = " PREDICTED: ") %>%
-  mutate(Predicted=gsub("\\(", ",", Predicted)) %>%
-  separate(Predicted, c("Predicted", "geneName"), sep = ",") %>%
-  mutate(geneName=gsub("\\)", "",geneName),
-         geneName=gsub("mRNA","",geneName),
-         geneName=gsub("transcript variant*","",geneName))
+visGenes <- lapply(names(vis_lst), function(x){
+  df <- vis_lst[[x]] %>%
+    mutate(X1=gsub(">","",X1)) %>%
+    separate(X1, c("XM.geneid", "Predicted"), sep = " PREDICTED: ") %>%
+    mutate(Predicted=gsub("\\(", ",", Predicted)) %>%
+    separate(Predicted, c("Predicted", "geneName"), sep = ",") %>%
+    mutate(geneName=gsub("\\)", "",geneName),
+           geneName=gsub("mRNA","",geneName),
+           geneName=gsub("transcript variant*","",geneName)) %>%
+    mutate(group = x)
+}) %>% bind_rows() %>%
+  arrange(group)
 
-# Save VR gene list
-write.table(visGenes, "refGenomes/PMucros_heatmaps/visGenes_XMdescription", sep = "\t")
+## Setting the groups column as a factor variable - helps with orienting the data 
+visGenes$group <- factor(visGenes$group)
 
 # Create a vetor of XM values
 geneList <- visGenes[["XM.geneid"]]
@@ -155,32 +172,56 @@ geneList <- visGenes[["XM.geneid"]]
 visGenesFpkm <- filter(refGenome, GeneName %in% geneList) %>%
   left_join(y = visGenes, by = c("GeneName" = "XM.geneid")) %>%
   select(-GeneName, -Predicted) %>%
-  arrange(geneName)
-
-# Then look at TPM count table across tissues!
-View(visGenesFpkm)
-write.table(visGenesFpkm, "refGenomes/PMucros_heatmaps/visGenesFpkm", sep = "\t")
+  arrange(group)
 
 ###############################################################################
 # Heatmap visualisation
 ###############################################################################
 
+## Generating matrix object
 visGenesFpkmlog <- visGenesFpkm %>%
   column_to_rownames("geneName") %>%
-  select(ALA_eye, ALA_tailA2,ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body, 
+  select(-group) %>%
+  select(ALA_eye, ALA_tailA2,ALAjuv_tailB5, ALAjuv_tailA2, ALAjuv_body,
          ATEN_tailA2, ATEN_tailB5, ATEN_body,HMAJ_testis, HMAJ_heart, HMAJ_liver) %>%# set order of the tissues
   as.matrix() %>%
   log1p()
 
+## Setting the annotation dataframe (this is used to generate the category legend)
+ann_df <- select(visGenesFpkm, geneName, Category = group) %>% 
+  column_to_rownames("geneName")
+
+## Colour for the heatmap
 colfunc <- brewer.pal(n = 9, name = "OrRd")
 
+## Colours for the categories
+mycolors <- brewer.pal(8, "Accent")[c(1,4,5)]
+names(mycolors) <- unique(ann_df$Category)
+anno_colours <- list(Category = mycolors)
+
+## plotting function
+# pdf(filename = paste0(write_dir,"/pheatmap_visualGenes.png"),width = ...,height = ...)
 pheatmap(visGenesFpkmlog, 
          cluster_rows = FALSE, 
          cluster_cols = FALSE, 
          color = colfunc,
          border_color = NA,
-         breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 4, 5.5, 7, 9),
-         filename = "Pmucros_visGenes_Fpkmheatmap.jpeg")
+         gaps_row = c(6,19),
+         annotation_row = ann_df,
+         annotation_colors = anno_colours,
+         breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 4, 5.5, 7, 9))
+# dev.off()
+
+###############################################################################
+## Writing useful data objects
+###############################################################################
+
+saveRDS(object = dge, file = paste0(write_dir,"/dge.RDS")) 
+saveRDS(object = Fpkm, file = paste0(write_dir,"/Fpkm.RDS")) 
+saveRDS(object = visGenes, file = paste0(write_dir,"/visGenes.RDS")) 
+saveRDS(object = visGenesFpkmlog, file = paste0(write_dir,"/visGenesFpkmlog.RDS"))  visGenesFpkmlog
+
+###############################################################################
 
 dev.off()
 

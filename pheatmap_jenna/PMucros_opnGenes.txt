@@ -1,0 +1,6 @@
+>XM_015815691.1 PREDICTED: Protobothrops mucrosquamatus opsin 4 (OPN4)  mRNA
+>XM_015816690.1 PREDICTED: Protobothrops mucrosquamatus opsin 3 (OPN3)  mRNA
+>XM_015823472.1 PREDICTED: Protobothrops mucrosquamatus rhodopsin (RHO)  mRNA
+>XM_015825841.1 PREDICTED: Protobothrops mucrosquamatus opsin 1 cone pigments  short-wave-sensitive (OPN1SW)  mRNA
+>XM_015812260.1 PREDICTED: Protobothrops mucrosquamatus red-sensitive opsin LOC107284233 (OPN1LW), mRNA
+>XM_015812351.1 PREDICTED: Protobothrops mucrosquamatus opsin 5 (OPN5)  mRNA

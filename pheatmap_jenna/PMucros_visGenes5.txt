@@ -1,0 +1,26 @@
+>XM_015813192.1 PREDICTED: Protobothrops mucrosquamatus arrestin  beta 2 (ARRB2)  mRNA
+>XM_015813313.1 PREDICTED: Protobothrops mucrosquamatus phosducin (PDC)  mRNA
+>XM_015813710.1 PREDICTED: Protobothrops mucrosquamatus S-antigen; retina and pineal gland arrestin (SAG)  mRNA
+>XM_015814449.1 PREDICTED: Protobothrops mucrosquamatus phosphodiesterase 6H (PDE6H)  mRNA
+>XM_015815331.1 PREDICTED: Protobothrops mucrosquamatus phosphodiesterase 6G (PDE6G)  mRNA
+>XM_015816355.1 PREDICTED: Protobothrops mucrosquamatus cellular retinoic acid binding protein 1 (CRABP1)  mRNA
+>XM_015821339.1 PREDICTED: Protobothrops mucrosquamatus guanylate cyclase activator 1A (GUCA1A)  mRNA
+>XM_015821340.1 PREDICTED: Protobothrops mucrosquamatus guanylate cyclase activator 1B (GUCA1B)  mRNA
+>XM_015821479.1 PREDICTED: Protobothrops mucrosquamatus calmodulin 1 phosphorylase kinase  delta (CALM1)  mRNA
+>XM_015821725.1 PREDICTED: Protobothrops mucrosquamatus guanine nucleotide binding protein G protein  alpha transducing activity polypeptide 2 (GNAT2)  mRNA
+>XM_015822152.1 PREDICTED: Protobothrops mucrosquamatus phosducin like (PDCL)  mRNA
+>XM_015822696.1 PREDICTED: Protobothrops mucrosquamatus phosphodiesterase 6C (PDE6C)  mRNA
+>XM_015824755.1 PREDICTED: Protobothrops mucrosquamatus guanine nucleotide binding protein G protein alpha transducing activity polypeptide 1 (GNAT1)  mRNA
+>XM_015828035.1 PREDICTED: Protobothrops mucrosquamatus phosducin like 2 (PDCL2)  mRNA
+>XM_015828517.1 PREDICTED: Protobothrops mucrosquamatus cyclic nucleotide gated channel alpha 1 (CNGA1)  mRNA
+>XM_015829790.1 PREDICTED: Protobothrops mucrosquamatus cyclic nucleotide gated channel alpha 3 (CNGA3)  mRNA
+>XM_015821098.1 PREDICTED: Protobothrops mucrosquamatus G protein-coupled receptor kinase 7-like LOC10729203 (GRK7-like), mRNA
+>XM_015817244.1 PREDICTED: Protobothrops mucrosquamatus G protein-coupled receptor kinase 5 (GRK5), partial mRNA
+>XM_015822416.1 PREDICTED: Protobothrops mucrosquamatus guanylate cyclase activator 1C (GUCA1C), mRNA
+>XM_015824642.1 PREDICTED: Protobothrops mucrosquamatus guanine nucleotide binding protein G protein alpha 11 Gq class (GNA11), mRNA
+>XM_015813545.1 PREDICTED: Protobothrops mucrosquamatus phospholipase C beta 1 (PLCB1), mRNA
+>XM_015828430.1 PREDICTED: Protobothrops mucrosquamatus phospholipase C beta 3 (PLCB3), partial mRNA
+>XM_015812080.1 PREDICTED: Protobothrops mucrosquamatus cyclic nucleotide gated channel beta 1 (CNGB1), mRNA
+>XM_015813093.1 PREDICTED: Protobothrops mucrosquamatus cyclic nucleotide gated channel beta 3 (CNGB3), mRNA
+>XM_015828048.1 PREDICTED: Protobothrops mucrosquamatus rod cGMP-specific 3'5'-cyclic phosphodiesterase subunit beta-like LOC107298673 (PDE6B-like), mRNA
+>XM_015825389.1 PREDICTED: Protobothrops mucrosquamatus phosphodiesterase 6D (PDE6D), mRNA

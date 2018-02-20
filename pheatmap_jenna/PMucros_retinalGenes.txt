@@ -1,0 +1,13 @@
+>XM_015815287.1 PREDICTED: Protobothrops mucrosquamatus retinaldehyde binding protein 1 (RLBP1)  mRNA
+>XM_015816562.1 PREDICTED: Protobothrops mucrosquamatus lecithin retinol acyltransferase phosphatidylcholine--retinol O-acyltransferase (LRAT)  mRNA
+>XM_015821297.1 PREDICTED: Protobothrops mucrosquamatus retinol binding protein 1 (RBP1)  mRNA
+>XM_015823138.1 PREDICTED: Protobothrops mucrosquamatus retinol binding protein 3 (RBP3)  mRNA
+>XM_015824195.1 PREDICTED: Protobothrops mucrosquamatus retinol dehydrogenase 5 (RDH5)  mRNA
+>XM_015829247.1 PREDICTED: Protobothrops mucrosquamatus ATP binding cassette subfamily A member 4  partial (ABCA4) mRNA
+>XM_015829586.1 PREDICTED: Protobothrops mucrosquamatus retinal pigment epithelium-specific protein 65kDa (RPE65)  mRNA
+>XM_015823421.1 PREDICTED: Protobothrops mucrosquamatus retinal G protein coupled receptor (RGR)  mRNA
+>XM_015823256.1 PREDICTED: Protobothrops mucrosquamatus retinol dehydrogenase 8-like LOC107294050 (RDH8-like), mRNA
+>XM_015813058.1 PREDICTED: Protobothrops mucrosquamatus retinol dehydrogenase 14 all-trans/9-cis/11-cis (RDH14)  mRNA
+>XM_015814101.1 PREDICTED: Protobothrops mucrosquamatus retinol dehydrogenase LOC107285841 (RDH12-like), mRNA
+>XM_015821677.1 PREDICTED: Protobothrops mucrosquamatus regulator of G-protein signaling 9 binding protein (RGS9BP), mRNA
+>XM_015810365.1 PREDICTED: Protobothrops mucrosquamatus regulator of G-protein signaling 9 (RGS9), mRNA
