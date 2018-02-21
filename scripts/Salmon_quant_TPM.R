@@ -191,10 +191,21 @@ visGenesFpkmlog <- visGenesFpkm %>%
 ann_df <- select(visGenesFpkm, geneName, Category = group) %>% 
   column_to_rownames("geneName")
 
+## Column annotation
+skin_noSkin <- c("no skin","skin","skin","skin","no skin","skin","skin","skin","no skin","no skin","no skin","skin","no skin","no skin")
+ann_col <- sampleinfo %>%
+  as.data.frame() %>%
+  select(gene_id) %>%
+  mutate(Tissue = skin_noSkin) %>%
+  filter(!(gene_id == "BRH_vno")) %>%
+  filter(!(gene_id == "NSC_vno")) %>%
+  filter(!(gene_id == "ALA_vno")) %>%
+  column_to_rownames("gene_id")
+
 ## Colour for the heatmap
 colfunc <- brewer.pal(n = 9, name = "OrRd")
 
-## Colours for the categories
+## Colours for the rows
 mycolors <- brewer.pal(8, "Accent")[c(1,4,5)]
 names(mycolors) <- unique(ann_df$Category)
 anno_colours <- list(Category = mycolors)
@@ -209,6 +220,7 @@ pheatmap(visGenesFpkmlog,
          gaps_row = c(6,19),
          annotation_row = ann_df,
          annotation_colors = anno_colours,
+         annotation_col = ann_col,
          breaks = c(0, 0.25, 0.5, 0.75, 1, 2, 4, 5.5, 7, 9))
 # dev.off()
 
